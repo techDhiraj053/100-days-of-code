@@ -6,4 +6,12 @@
 
 **Thoughts:** It was a great exercise in recreating core JavaScript functionality from scratch without relying on the built-in `Array.filter` method. I used a standard `for` loop to evaluate the truthiness of the callback function.
 
-**Link to work:** [Day 1 - Filter Elements](./day1-filter-elements.js)
+**Link to work:** [Day 1 - Filter Elements](./day1-filter-elements.js).
+
+### Day 2: March 19, 2026
+
+**Today's Progress:** Day 2 of the 30 Days of JavaScript challenge! I solved problem #2626: Array Reduce Transformation.
+
+**Thoughts:** Recreating the built-in `Array.reduce` method from scratch was a great way to understand how accumulators work. I handled the empty array edge case first, then used a standard `for` loop to continuously update the state using the provided callback function.
+
+**Link to work:** [Day 2 - Array Reduce Transformation](./day2-array-reduce.js)
