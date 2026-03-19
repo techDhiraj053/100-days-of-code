@@ -10,7 +10,7 @@
 
 ### Day 2: March 19, 2026
 
-**Today's Progress:** Day 2 of the 30 Days of JavaScript challenge! I solved problem #2626: Array Reduce Transformation.
+**Today's Progress:** Day 2 of the 30 Days of JavaScript challenge!! I solved problem #2626: Array Reduce Transformation.
 
 **Thoughts:** Recreating the built-in `Array.reduce` method from scratch was a great way to understand how accumulators work. I handled the empty array edge case first, then used a standard `for` loop to continuously update the state using the provided callback function.
 
