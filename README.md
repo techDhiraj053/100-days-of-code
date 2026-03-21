@@ -23,3 +23,11 @@
 **Thoughts:** I wrote a function that takes an array of functions and returns a new composite function. I used a reverse `for` loop to evaluate the functions from right to left, passing the result of each function as the input to the next one.
 
 **Link to work:** [Day 3 - Function Composition](./day3-function-composition.js)
+
+### Day 4: March 21, 2026
+
+**Today's Progress:** Day 4 of the 30 Days of JavaScript challenge! Solved the "Return Length of Arguments Passed" problem.
+
+**Thoughts:** This was a great exercise in understanding the ES6 rest parameter syntax (`...args`). It is a very clean way to gather an indefinite number of arguments into a standard array, which let me easily return the array's `.length` property.
+
+**Link to work:** [Day 4 - Arguments Length](./day4-arguments-length.js)
