@@ -31,3 +31,11 @@
 **Thoughts:** This was a great exercise in understanding the ES6 rest parameter syntax (`...args`). It is a very clean way to gather an indefinite number of arguments into a standard array, which let me easily return the array's `.length` property.
 
 **Link to work:** [Day 4 - Arguments Length](./day4-arguments-length.js)
+
+### Day 5: March 22, 2026
+
+**Today's Progress:** Day 5 of the 30 Days of JavaScript challenge! Solved the "Allow One Function Call" problem.
+
+**Thoughts:** This was a perfect exercise in understanding JavaScript closures. I used a boolean flag (`called`) in the outer function, and the inner returned function uses that flag to permanently remember if it has already been executed.
+
+**Link to work:** [Day 5 - Allow One Function Call](./day5-allow-one-function-call.js)
