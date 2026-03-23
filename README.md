@@ -39,3 +39,11 @@
 **Thoughts:** This was a perfect exercise in understanding JavaScript closures. I used a boolean flag (`called`) in the outer function, and the inner returned function uses that flag to permanently remember if it has already been executed.
 
 **Link to work:** [Day 5 - Allow One Function Call](./day5-allow-one-function-call.js)
+
+### Day 6: March 23, 2026
+
+**Today's Progress:** Decided to skip ahead in the 30 Days of JavaScript challenge to focus on new concepts. Today I solved problem #2623: Memoize.
+
+**Thoughts:** Memoization is a powerful caching technique. I used a JavaScript `Map()` to store the cached results. By using the rest parameter `...args` and `JSON.stringify()`, I created a unique string key for every combination of arguments passed into the function, allowing me to check if that specific calculation had already been performed.
+
+**Link to work:** [Day 6 - Memoize](./day6-memoize.js)
