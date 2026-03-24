@@ -47,3 +47,11 @@
 **Thoughts:** Memoization is a powerful caching technique. I used a JavaScript `Map()` to store the cached results. By using the rest parameter `...args` and `JSON.stringify()`, I created a unique string key for every combination of arguments passed into the function, allowing me to check if that specific calculation had already been performed.
 
 **Link to work:** [Day 6 - Memoize](./day6-memoize.js)
+
+### Day 7: March 24, 2026
+
+**Today's Progress:** One full week of coding! Today I solved problem #2723: Add Two Promises on LeetCode.
+
+**Thoughts:** This problem was a great way to practice asynchronous JavaScript. I learned that an `async` function automatically wraps its return value in a Promise, so I just needed to `await` the resolution of the two input promises and return their sum.
+
+**Link to work:** [Day 7 - Add Two Promises](./day7-add-two-promises.js)
