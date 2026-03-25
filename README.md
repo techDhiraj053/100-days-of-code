@@ -58,8 +58,15 @@
 
 ### Day 8: March 25, 2026
 
-**Today's Progress:** Kicking off week two! Solved problem #2621: Sleep.
+**Today's Progress:** Kicking off week two with a double feature! First, I solved problem #2621: Sleep. Then, I tackled a Medium problem, #167: Two Sum II - Input Array Is Sorted, in both JavaScript and Java.
 
-**Thoughts:** JavaScript doesn't have a native `sleep` method, so I learned how to create one. By wrapping a `setTimeout` function inside a new `Promise` and immediately passing the `resolve` function to it, I was able to create a clean, asynchronous pause for the code stream.
+**Thoughts:**
 
-**Link to work:** [Day 8 - Sleep](./day8-sleep.js)
+- For the `sleep` function, I learned how to create a custom asynchronous pause using a `Promise` and `setTimeout`.
+- For `Two Sum II`, I utilized the Two-Pointer technique. Since the array is sorted, tracking an index at the start and end of the array and shrinking the window inward is a highly efficient `O(n)` solution that requires no extra space.
+
+**Link to work:**
+
+- [Day 8 - Sleep](./day8-sleep.js)
+- [Day 8 - Two Sum II (JS)](./day8-two-sum-ii.js)
+- [Day 8 - Two Sum II (Java)](./day8-two-sum-ii.java)
