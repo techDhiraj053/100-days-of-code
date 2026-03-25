@@ -55,3 +55,11 @@
 **Thoughts:** This problem was a great way to practice asynchronous JavaScript. I learned that an `async` function automatically wraps its return value in a Promise, so I just needed to `await` the resolution of the two input promises and return their sum.
 
 **Link to work:** [Day 7 - Add Two Promises](./day7-add-two-promises.js)
+
+### Day 8: March 25, 2026
+
+**Today's Progress:** Kicking off week two! Solved problem #2621: Sleep.
+
+**Thoughts:** JavaScript doesn't have a native `sleep` method, so I learned how to create one. By wrapping a `setTimeout` function inside a new `Promise` and immediately passing the `resolve` function to it, I was able to create a clean, asynchronous pause for the code stream.
+
+**Link to work:** [Day 8 - Sleep](./day8-sleep.js)
