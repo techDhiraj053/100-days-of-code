@@ -70,3 +70,11 @@
 - [Day 8 - Sleep](./day8-sleep.js)
 - [Day 8 - Two Sum II (JS)](./day8-two-sum-ii.js)
 - [Day 8 - Two Sum II (Java)](./day8-two-sum-ii.java)
+
+### Day 9: March 26, 2026
+
+**Today's Progress:** Continued the JavaScript challenge and solved problem #2715: Timeout Cancellation.
+
+**Thoughts:** I learned how to properly manage and clean up timers in JavaScript. By storing the ID returned by `setTimeout` in a variable, I can use a closure to return a cancellation function that runs `clearTimeout(timeOut)`. This prevents the delayed function from executing if the cancellation is triggered first.
+
+**Link to work:** [Day 9 - Timeout Cancellation](./day9-timeout-cancellation.js)
