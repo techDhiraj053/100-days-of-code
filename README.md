@@ -73,8 +73,16 @@
 
 ### Day 9: March 26, 2026
 
-**Today's Progress:** Continued the JavaScript challenge and solved problem #2715: Timeout Cancellation.
+**Today's Progress:** A massive day! First, I solved problem #2715: Timeout Cancellation in JavaScript. Then, I solved #26: Remove Duplicates from Sorted Array in three different languages: C++, Java, and JavaScript!
 
-**Thoughts:** I learned how to properly manage and clean up timers in JavaScript. By storing the ID returned by `setTimeout` in a variable, I can use a closure to return a cancellation function that runs `clearTimeout(timeOut)`. This prevents the delayed function from executing if the cancellation is triggered first.
+**Thoughts:**
 
-**Link to work:** [Day 9 - Timeout Cancellation](./day9-timeout-cancellation.js)
+- For `Timeout Cancellation`, I learned how to manage and clean up timers using a closure and `clearTimeout`.
+- For `Remove Duplicates`, I implemented an efficient Two-Pointer algorithm (`officer` and `cm`). By keeping track of the last unique element's position, I could overwrite duplicates in-place, achieving an optimal `O(n)` time and `O(1)` space complexity without needing a secondary array.
+
+**Link to work:**
+
+- [Day 9 - Timeout Cancellation](./day9-timeout-cancellation.js)
+- [Day 9 - Remove Duplicates (C++)](./day9-remove-duplicates.cpp)
+- [Day 9 - Remove Duplicates (Java)](./day9-remove-duplicates.java)
+- [Day 9 - Remove Duplicates (JS)](./day9-remove-duplicates.js)
