@@ -86,3 +86,11 @@
 - [Day 9 - Remove Duplicates (C++)](./day9-remove-duplicates.cpp)
 - [Day 9 - Remove Duplicates (Java)](./day9-remove-duplicates.java)
 - [Day 9 - Remove Duplicates (JS)](./day9-remove-duplicates.js)
+
+### Day 10: March 27, 2026
+
+**Today's Progress:** Hit double digits! Solved problem #2725: Interval Cancellation.
+
+**Thoughts:** Building on yesterday's timeout logic, today I handled repeating intervals. Because `setInterval` has an initial delay, I had to immediately invoke `fn(...args)` once before setting up the interval. Then, just like yesterday, I returned a closure that executes `clearInterval` to stop the repeating execution.
+
+**Link to work:** [Day 10 - Interval Cancellation](./day10-interval-cancellation.js)
