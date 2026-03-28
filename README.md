@@ -94,3 +94,11 @@
 **Thoughts:** Building on yesterday's timeout logic, today I handled repeating intervals. Because `setInterval` has an initial delay, I had to immediately invoke `fn(...args)` once before setting up the interval. Then, just like yesterday, I returned a closure that executes `clearInterval` to stop the repeating execution.
 
 **Link to work:** [Day 10 - Interval Cancellation](./day10-interval-cancellation.js)
+
+### Day 11: March 28, 2026
+
+**Today's Progress:** Solved a Medium-level problem today! #2637: Promise Time Limit.
+
+**Thoughts:** This was a great opportunity to use the `Promise.race()` method. I created a custom Promise that automatically rejects after `t` milliseconds using `setTimeout`. By passing both the original function execution and my custom timeout Promise into `Promise.race()`, the wrapper function cleanly returns whichever Promise settles first.
+
+**Link to work:** [Day 11 - Promise Time Limit](./day11-promise-time-limit.js)
