@@ -102,3 +102,11 @@
 **Thoughts:** This was a great opportunity to use the `Promise.race()` method. I created a custom Promise that automatically rejects after `t` milliseconds using `setTimeout`. By passing both the original function execution and my custom timeout Promise into `Promise.race()`, the wrapper function cleanly returns whichever Promise settles first.
 
 **Link to work:** [Day 11 - Promise Time Limit](./day11-promise-time-limit.js)
+
+### Day 12: March 29, 2026
+
+**Today's Progress:** Tackled another Medium-level JavaScript problem! Solved #2622: Cache With Time Limit.
+
+**Thoughts:** I implemented a custom Cache class using a JavaScript `Map`. To handle the time limits, I used a "lazy evaluation" technique. Instead of setting up active timers (`setTimeout`) to delete keys, I calculate the absolute expiration timestamp (`Date.now() + duration`) and store it with the value. Then, whenever `get()` or `count()` is called, I simply compare the current time to the stored expiration time. This avoids the overhead of managing multiple timer IDs!
+
+**Link to work:** [Day 12 - Time Limited Cache](./day12-time-limited-cache.js)
