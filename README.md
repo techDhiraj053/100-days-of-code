@@ -6,7 +6,7 @@
 
 **Thoughts:** It was a great exercise in recreating core JavaScript functionality from scratch without relying on the built-in `Array.filter` method. I used a standard `for` loop to evaluate the truthiness of the callback function.
 
-**Link to work:** [Day 1 - Filter Elements](./day1-filter-elements.js).
+**Link to work:** [Day 1 - Filter Elements](./Day01/day1-filter-elements.js)
 
 ### Day 2: March 19, 2026
 
@@ -14,7 +14,7 @@
 
 **Thoughts:** Recreating the built-in `Array.reduce` method from scratch was a great way to understand how accumulators work. I handled the empty array edge case first, then used a standard `for` loop to continuously update the state using the provided callback function.
 
-**Link to work:** [Day 2 - Array Reduce Transformation](./day2-array-reduce.js)
+**Link to work:** [Day 2 - Array Reduce Transformation](./Day02/day2-array-reduce.js)
 
 ### Day 3: March 20, 2026
 
@@ -22,7 +22,7 @@
 
 **Thoughts:** I wrote a function that takes an array of functions and returns a new composite function. I used a reverse `for` loop to evaluate the functions from right to left, passing the result of each function as the input to the next one.
 
-**Link to work:** [Day 3 - Function Composition](./day3-function-composition.js)
+**Link to work:** [Day 3 - Function Composition](./Day03/day3-function-composition.js)
 
 ### Day 4: March 21, 2026
 
@@ -30,7 +30,7 @@
 
 **Thoughts:** This was a great exercise in understanding the ES6 rest parameter syntax (`...args`). It is a very clean way to gather an indefinite number of arguments into a standard array, which let me easily return the array's `.length` property.
 
-**Link to work:** [Day 4 - Arguments Length](./day4-arguments-length.js)
+**Link to work:** [Day 4 - Arguments Length](./Day04/day4-arguments-length.js)
 
 ### Day 5: March 22, 2026
 
@@ -38,7 +38,7 @@
 
 **Thoughts:** This was a perfect exercise in understanding JavaScript closures. I used a boolean flag (`called`) in the outer function, and the inner returned function uses that flag to permanently remember if it has already been executed.
 
-**Link to work:** [Day 5 - Allow One Function Call](./day5-allow-one-function-call.js)
+**Link to work:** [Day 5 - Allow One Function Call](./Day05/day5-allow-one-function-call.js)
 
 ### Day 6: March 23, 2026
 
@@ -46,7 +46,7 @@
 
 **Thoughts:** Memoization is a powerful caching technique. I used a JavaScript `Map()` to store the cached results. By using the rest parameter `...args` and `JSON.stringify()`, I created a unique string key for every combination of arguments passed into the function, allowing me to check if that specific calculation had already been performed.
 
-**Link to work:** [Day 6 - Memoize](./day6-memoize.js)
+**Link to work:** [Day 6 - Memoize](./Day06/day6-memoize.js)
 
 ### Day 7: March 24, 2026
 
@@ -54,7 +54,7 @@
 
 **Thoughts:** This problem was a great way to practice asynchronous JavaScript. I learned that an `async` function automatically wraps its return value in a Promise, so I just needed to `await` the resolution of the two input promises and return their sum.
 
-**Link to work:** [Day 7 - Add Two Promises](./day7-add-two-promises.js)
+**Link to work:** [Day 7 - Add Two Promises](./Day07/day7-add-two-promises.js)
 
 ### Day 8: March 25, 2026
 
@@ -67,9 +67,9 @@
 
 **Link to work:**
 
-- [Day 8 - Sleep](./day8-sleep.js)
-- [Day 8 - Two Sum II (JS)](./day8-two-sum-ii.js)
-- [Day 8 - Two Sum II (Java)](./day8-two-sum-ii.java)
+- [Day 8 - Sleep](./Day08/day8-sleep.js)
+- [Day 8 - Two Sum II (JS)](./Day08/day8-two-sum-ii.js)
+- [Day 8 - Two Sum II (Java)](./Day08/day8-two-sum-ii.java)
 
 ### Day 9: March 26, 2026
 
@@ -82,10 +82,10 @@
 
 **Link to work:**
 
-- [Day 9 - Timeout Cancellation](./day9-timeout-cancellation.js)
-- [Day 9 - Remove Duplicates (C++)](./day9-remove-duplicates.cpp)
-- [Day 9 - Remove Duplicates (Java)](./day9-remove-duplicates.java)
-- [Day 9 - Remove Duplicates (JS)](./day9-remove-duplicates.js)
+- [Day 9 - Timeout Cancellation](./Day09/day9-timeout-cancellation.js)
+- [Day 9 - Remove Duplicates (C++)](./Day09/day9-remove-duplicates.cpp)
+- [Day 9 - Remove Duplicates (Java)](./Day09/day9-remove-duplicates.java)
+- [Day 9 - Remove Duplicates (JS)](./Day09/day9-remove-duplicates.js)
 
 ### Day 10: March 27, 2026
 
@@ -93,7 +93,7 @@
 
 **Thoughts:** Building on yesterday's timeout logic, today I handled repeating intervals. Because `setInterval` has an initial delay, I had to immediately invoke `fn(...args)` once before setting up the interval. Then, just like yesterday, I returned a closure that executes `clearInterval` to stop the repeating execution.
 
-**Link to work:** [Day 10 - Interval Cancellation](./day10-interval-cancellation.js)
+**Link to work:** [Day 10 - Interval Cancellation](./Day10/day10-interval-cancellation.js)
 
 ### Day 11: March 28, 2026
 
@@ -101,7 +101,7 @@
 
 **Thoughts:** This was a great opportunity to use the `Promise.race()` method. I created a custom Promise that automatically rejects after `t` milliseconds using `setTimeout`. By passing both the original function execution and my custom timeout Promise into `Promise.race()`, the wrapper function cleanly returns whichever Promise settles first.
 
-**Link to work:** [Day 11 - Promise Time Limit](./day11-promise-time-limit.js)
+**Link to work:** [Day 11 - Promise Time Limit](./Day11/day11-promise-time-limit.js)
 
 ### Day 12: March 29, 2026
 
@@ -109,7 +109,7 @@
 
 **Thoughts:** I implemented a custom Cache class using a JavaScript `Map`. To handle the time limits, I used a "lazy evaluation" technique. Instead of setting up active timers (`setTimeout`) to delete keys, I calculate the absolute expiration timestamp (`Date.now() + duration`) and store it with the value. Then, whenever `get()` or `count()` is called, I simply compare the current time to the stored expiration time. This avoids the overhead of managing multiple timer IDs!
 
-**Link to work:** [Day 12 - Time Limited Cache](./day12-time-limited-cache.js)
+**Link to work:** [Day 12 - Time Limited Cache](./Day12/day12-time-limited-cache.js)
 
 ### Day 13: March 30, 2026
 
@@ -118,11 +118,11 @@
 **Thoughts:**
 
 - **Debounce:** I used a closure and `clearTimeout` to ensure a function only fires after a user has stopped triggering the event for a specified time.
-- **Segregate 0s and 1s:** I implemented an efficient $O(n)$ time and $O(1)$ space solution using a single pass. By keeping a `left` pointer to track the boundary of the 0s, I swapped any encountered 0s to the front. It was great practice using different swap techniques across three languages (temp variables in Java, `swap()` in C++, and array destructuring in JS).
+- **Segregate 0s and 1s:** I implemented an efficient `O(n)` time and `O(1)` space solution using a single pass. By keeping a `left` pointer to track the boundary of the 0s, I swapped any encountered 0s to the front. It was great practice using different swap techniques across three languages (temp variables in Java, `swap()` in C++, and array destructuring in JS).
 
 **Link to work:**
 
-- [Day 13 - Debounce](./day13-debounce.js)
-- [Day 13 - Segregate 0s and 1s (Java)](./day13-segregate-0s-and-1s.java)
-- [Day 13 - Segregate 0s and 1s (C++)](./day13-segregate-0s-and-1s.cpp)
-- [Day 13 - Segregate 0s and 1s (JS)](./day13-segregate-0s-and-1s.js)
+- [Day 13 - Debounce](./Day13/day13-debounce.js)
+- [Day 13 - Segregate 0s and 1s (Java)](./Day13/day13-segregate-0s-and-1s.java)
+- [Day 13 - Segregate 0s and 1s (C++)](./Day13/day13-segregate-0s-and-1s.cpp)
+- [Day 13 - Segregate 0s and 1s (JS)](./Day13/day13-segregate-0s-and-1s.js)
