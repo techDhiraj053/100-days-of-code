@@ -113,8 +113,16 @@
 
 ### Day 13: March 30, 2026
 
-**Today's Progress:** Solved a classic frontend interview question! #2627: Debounce (Medium).
+**Today's Progress:** An action-packed day! First, I solved a classic frontend interview question, #2627: Debounce (Medium). Then, I solved an algorithmic problem, "Segregate 0s and 1s", in three different languages: Java, C++, and JavaScript.
 
-**Thoughts:** Debouncing is an essential technique for optimizing performance, especially for events like keystrokes in a search input or window resizing. I used a closure to store a `timer` variable. Whenever the returned function is invoked, it immediately calls `clearTimeout(timer)` to cancel any pending execution and starts a new `setTimeout`. This guarantees the original function only fires after the user has stopped triggering the event for `t` milliseconds.
+**Thoughts:**
 
-**Link to work:** [Day 13 - Debounce](./day13-debounce.js)
+- **Debounce:** I used a closure and `clearTimeout` to ensure a function only fires after a user has stopped triggering the event for a specified time.
+- **Segregate 0s and 1s:** I implemented an efficient $O(n)$ time and $O(1)$ space solution using a single pass. By keeping a `left` pointer to track the boundary of the 0s, I swapped any encountered 0s to the front. It was great practice using different swap techniques across three languages (temp variables in Java, `swap()` in C++, and array destructuring in JS).
+
+**Link to work:**
+
+- [Day 13 - Debounce](./day13-debounce.js)
+- [Day 13 - Segregate 0s and 1s (Java)](./day13-segregate-0s-and-1s.java)
+- [Day 13 - Segregate 0s and 1s (C++)](./day13-segregate-0s-and-1s.cpp)
+- [Day 13 - Segregate 0s and 1s (JS)](./day13-segregate-0s-and-1s.js)
