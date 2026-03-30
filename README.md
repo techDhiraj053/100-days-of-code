@@ -110,3 +110,11 @@
 **Thoughts:** I implemented a custom Cache class using a JavaScript `Map`. To handle the time limits, I used a "lazy evaluation" technique. Instead of setting up active timers (`setTimeout`) to delete keys, I calculate the absolute expiration timestamp (`Date.now() + duration`) and store it with the value. Then, whenever `get()` or `count()` is called, I simply compare the current time to the stored expiration time. This avoids the overhead of managing multiple timer IDs!
 
 **Link to work:** [Day 12 - Time Limited Cache](./day12-time-limited-cache.js)
+
+### Day 13: March 30, 2026
+
+**Today's Progress:** Solved a classic frontend interview question! #2627: Debounce (Medium).
+
+**Thoughts:** Debouncing is an essential technique for optimizing performance, especially for events like keystrokes in a search input or window resizing. I used a closure to store a `timer` variable. Whenever the returned function is invoked, it immediately calls `clearTimeout(timer)` to cancel any pending execution and starts a new `setTimeout`. This guarantees the original function only fires after the user has stopped triggering the event for `t` milliseconds.
+
+**Link to work:** [Day 13 - Debounce](./day13-debounce.js)
