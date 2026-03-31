@@ -126,3 +126,12 @@
 - [Day 13 - Segregate 0s and 1s (Java)](./Day13/day13-segregate-0s-and-1s.java)
 - [Day 13 - Segregate 0s and 1s (C++)](./Day13/day13-segregate-0s-and-1s.cpp)
 - [Day 13 - Segregate 0s and 1s (JS)](./Day13/day13-segregate-0s-and-1s.js)
+
+
+### Day 14: March 31, 2026
+
+**Today's Progress:** Solved a core JavaScript concurrency problem! #2721: Execute Asynchronous Functions in Parallel (Medium).
+
+**Thoughts:** Recreating the built-in `Promise.all()` method from scratch was a great way to deeply understand parallel execution in JS. I created a custom Promise that iterates through the input functions. By using the array `index` inside the `.forEach` loop, I ensured the results were stored in the exact same order as the input, regardless of which promise resolved first. A counter (`completed`) keeps track of when to finally resolve the outer promise, while a `.catch` ensures it rejects immediately upon any failure.
+
+**Link to work:** [Day 14 - Execute Async Functions](./Day14/day14-execute-async-functions.js)
