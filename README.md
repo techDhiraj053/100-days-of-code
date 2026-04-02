@@ -142,3 +142,16 @@
 **Thoughts:** Consistency is key. Even on busy days, keeping the streak alive is important. Since I had already solved the basic version of this closure problem in the past, I challenged myself to write a more robust "Senior" version today. I updated the closure to use `fn.apply(this, args)` instead of just `fn(...args)`. This ensures that if the returned function is used as a method on an object, it won't lose its proper `this` binding context—a crucial detail for real-world production code!
 
 **Link to work:** [Day 15 - Allow One Call (Advanced)](./Day15/day15-allow-one-call-advanced.js)
+
+### Day 16: April 2, 2026
+
+**Today's Progress:** Kept the streak alive on a very busy day by revisiting the "Return Length of Arguments Passed" problem (#2703). Instead of just submitting the basic solution, I explored three different ways to interact with function arguments in JavaScript.
+
+**Thoughts:** I used today to dive deeper into JS fundamentals. I wrote three variations of the solution:
+
+1. The modern ES6 approach using the rest parameter (`...args`).
+2. The legacy ES5 approach using the hidden, array-like `arguments` object (which is a great piece of trivia for interviews).
+3. A manual algorithmic approach that counts the arguments without relying on the built-in `.length` property.
+   It was a great way to turn a simple problem into a deeper learning moment!
+
+**Link to work:** [Day 16 - Arguments Length (Advanced)](./Day16/day16-arguments-length-advanced.js)
