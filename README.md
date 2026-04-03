@@ -155,3 +155,11 @@
    It was a great way to turn a simple problem into a deeper learning moment!
 
 **Link to work:** [Day 16 - Arguments Length (Advanced)](./Day16/day16-arguments-length-advanced.js)
+
+### Day 17: April 3, 2026
+
+**Today's Progress:** Kept the momentum going on a packed day! I utilized spaced repetition to re-solve problem #2629: Function Composition, upgrading my approach to a more advanced, declarative syntax.
+
+**Thoughts:** When I first solved this problem, I used a standard reverse `for` loop to evaluate the functions from right to left. Today, I challenged myself to write cleaner, more idiomatic JavaScript. I refactored the solution to use `Array.prototype.reduceRight()`. Passing the initial input `x` as the starting accumulator allows `reduceRight` to cleanly pass the output of one function directly into the next without needing any mutable external variables. It turns a multi-line loop into a clean one-liner!
+
+**Link to work:** [Day 17 - Function Composition (Advanced)](./Day17/day17-function-composition-advanced.js)
