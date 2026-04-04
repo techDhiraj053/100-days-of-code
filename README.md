@@ -163,3 +163,11 @@
 **Thoughts:** When I first solved this problem, I used a standard reverse `for` loop to evaluate the functions from right to left. Today, I challenged myself to write cleaner, more idiomatic JavaScript. I refactored the solution to use `Array.prototype.reduceRight()`. Passing the initial input `x` as the starting accumulator allows `reduceRight` to cleanly pass the output of one function directly into the next without needing any mutable external variables. It turns a multi-line loop into a clean one-liner!
 
 **Link to work:** [Day 17 - Function Composition (Advanced)](./Day17/day17-function-composition-advanced.js)
+
+### Day 18: April 4, 2026
+
+**Today's Progress:** Pushed through a very busy day to maintain the streak! I revisited problem #2626: Array Reduce Transformation, but I completely changed my algorithmic approach to use Recursion instead of Iteration.
+
+**Thoughts:** Solving a problem with a `for` loop is straightforward, but I wanted to challenge myself to solve this without using any loops at all. I implemented a recursive helper function that tracks the current index and the accumulated value. This approach requires a solid understanding of base cases and the JavaScript call stack. It is a fantastic way to practice functional programming concepts and prepare for technical interview follow-up questions!
+
+**Link to work:** [Day 18 - Array Reduce (Recursive)](./Day18/day18-array-reduce-recursive.js)
