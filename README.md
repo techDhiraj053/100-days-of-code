@@ -171,3 +171,11 @@
 **Thoughts:** Solving a problem with a `for` loop is straightforward, but I wanted to challenge myself to solve this without using any loops at all. I implemented a recursive helper function that tracks the current index and the accumulated value. This approach requires a solid understanding of base cases and the JavaScript call stack. It is a fantastic way to practice functional programming concepts and prepare for technical interview follow-up questions!
 
 **Link to work:** [Day 18 - Array Reduce (Recursive)](./Day18/day18-array-reduce-recursive.js)
+
+### Day 19: April 5, 2026
+
+**Today's Progress:** Tackled problem #2727: Is Object Empty.
+
+**Thoughts:** I initially solved this using a clean ternary operator with `Object.keys()`. However, the prompt challenged me to find an `O(1)` time complexity solution. I learned that `Object.keys()` is actually an `O(n)` operation because it has to iterate through the entire object to build an array of keys in memory. To achieve true `O(1)` time, I used a `for...in` loop. If the object or array has even a single item, the loop executes once, instantly returns `false`, and exits. If it's empty, the loop skips and returns `true`. Efficient and clever!
+
+**Link to work:** [Day 19 - Is Object Empty](./Day19/day19-is-object-empty.js)
