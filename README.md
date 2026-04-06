@@ -179,3 +179,11 @@
 **Thoughts:** I initially solved this using a clean ternary operator with `Object.keys()`. However, the prompt challenged me to find an `O(1)` time complexity solution. I learned that `Object.keys()` is actually an `O(n)` operation because it has to iterate through the entire object to build an array of keys in memory. To achieve true `O(1)` time, I used a `for...in` loop. If the object or array has even a single item, the loop executes once, instantly returns `false`, and exits. If it's empty, the loop skips and returns `true`. Efficient and clever!
 
 **Link to work:** [Day 19 - Is Object Empty](./Day19/day19-is-object-empty.js)
+
+### Day 20: April 6, 2026
+
+**Today's Progress:** Reached the 20-day milestone! Solved problem #2677: Chunk Array.
+
+**Thoughts:** To recreate the behavior of Lodash's `_.chunk` method, I used a `for` loop but modified the incrementer to step forward by the target `size` instead of just `1`. Inside the loop, using `Array.prototype.slice(i, i + size)` safely extracts the exact chunk needed. One of the great things about `slice()` is that it naturally handles the edge case where the remaining elements are fewer than the chunk size—it just grabs whatever is left until the end of the array without throwing an out-of-bounds error.
+
+**Link to work:** [Day 20 - Chunk Array](./Day20/day20-chunk-array.js)
