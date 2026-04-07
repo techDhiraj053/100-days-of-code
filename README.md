@@ -187,3 +187,11 @@
 **Thoughts:** To recreate the behavior of Lodash's `_.chunk` method, I used a `for` loop but modified the incrementer to step forward by the target `size` instead of just `1`. Inside the loop, using `Array.prototype.slice(i, i + size)` safely extracts the exact chunk needed. One of the great things about `slice()` is that it naturally handles the edge case where the remaining elements are fewer than the chunk size—it just grabs whatever is left until the end of the array without throwing an out-of-bounds error.
 
 **Link to work:** [Day 20 - Chunk Array](./Day20/day20-chunk-array.js)
+
+### Day 21: April 7, 2026
+
+**Today's Progress:** Pushed through a very busy day to keep the streak alive! I utilized spaced repetition to revisit problem #2634: Filter Elements from Array, but I implemented a completely different functional approach.
+
+**Thoughts:** Writing a basic `for` loop to filter an array is easy, so I challenged myself to build a `filter` polyfill using `Array.prototype.reduce()`. It is a great exercise in functional programming. By passing an empty array `[]` as the initial value to the reducer, I can conditionally `push` items into the accumulator only if they pass the callback function `fn`. It proves that `reduce` is the ultimate "Swiss Army Knife" of JavaScript array methods!
+
+**Link to work:** [Day 21 - Filter Elements (Advanced)](./Day21/day21-filter-elements-advanced.js)
