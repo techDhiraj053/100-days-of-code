@@ -1,5 +1,11 @@
 # 100 Days of Code Journal
 
+> "Consistency is what transforms average into excellence."
+
+🎯 **Goal:** Complete 100 days of consistent coding, focusing on core JavaScript concepts, data structures, and algorithmic problem-solving.
+
+---
+
 ### Day 1: March 18, 2026
 
 **Today's Progress:** Started my journey by working on the 30 Days of JavaScript challenge on LeetCode! Today I solved problem #2634: Filter Elements from Array.
