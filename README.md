@@ -201,3 +201,11 @@
 **Thoughts:** Writing a basic `for` loop to filter an array is easy, so I challenged myself to build a `filter` polyfill using `Array.prototype.reduce()`. It is a great exercise in functional programming. By passing an empty array `[]` as the initial value to the reducer, I can conditionally `push` items into the accumulator only if they pass the callback function `fn`. It proves that `reduce` is the ultimate "Swiss Army Knife" of JavaScript array methods!
 
 **Link to work:** [Day 21 - Filter Elements (Advanced)](./Day21/day21-filter-elements-advanced.js)
+
+### Day 22: April 8, 2026
+
+**Today's Progress:** Solved problem #2619: Array Prototype Last.
+
+**Thoughts:** This was a great exercise in extending JavaScript's built-in objects by modifying the prototype chain (`Array.prototype`). I learned that inside a prototype method, the `this` keyword refers to the specific instance of the array calling the method. While the classic `this[this.length - 1]` approach works perfectly, I implemented a cleaner, more modern version using the ES2022 `Array.prototype.at()` method, which natively supports negative indexing!
+
+**Link to work:** [Day 22 - Array Prototype Last](./Day22/day22-array-prototype-last.js)
