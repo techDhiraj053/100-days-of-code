@@ -209,3 +209,11 @@
 **Thoughts:** This was a great exercise in extending JavaScript's built-in objects by modifying the prototype chain (`Array.prototype`). I learned that inside a prototype method, the `this` keyword refers to the specific instance of the array calling the method. While the classic `this[this.length - 1]` approach works perfectly, I implemented a cleaner, more modern version using the ES2022 `Array.prototype.at()` method, which natively supports negative indexing!
 
 **Link to work:** [Day 22 - Array Prototype Last](./Day22/day22-array-prototype-last.js)
+
+### Day 23: April 9, 2026
+
+**Today's Progress:** Solved a Medium-level problem today! #2631: Group By.
+
+**Thoughts:** I was tasked with writing a polyfill for a `groupBy` method on the `Array.prototype`. My initial logic used a standard `for` loop to build out an object dictionary. However, I decided to refactor this into a purely functional approach using `Array.prototype.reduce()`. It was a massive "aha!" moment to realize that the `reduce` accumulator doesn't just have to be a number or an array—it can be an entirely new Object! By starting with an empty object `{}`, I dynamically generated keys using the callback function `fn` and pushed the items into their respective arrays, returning the object on each iteration.
+
+**Link to work:** [Day 23 - Group By](./Day23/day23-group-by.js)
