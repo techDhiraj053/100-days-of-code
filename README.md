@@ -217,3 +217,11 @@
 **Thoughts:** I was tasked with writing a polyfill for a `groupBy` method on the `Array.prototype`. My initial logic used a standard `for` loop to build out an object dictionary. However, I decided to refactor this into a purely functional approach using `Array.prototype.reduce()`. It was a massive "aha!" moment to realize that the `reduce` accumulator doesn't just have to be a number or an array—it can be an entirely new Object! By starting with an empty object `{}`, I dynamically generated keys using the callback function `fn` and pushed the items into their respective arrays, returning the object on each iteration.
 
 **Link to work:** [Day 23 - Group By](./Day23/day23-group-by.js)
+
+### Day 24: April 10, 2026
+
+**Today's Progress:** Solved problem #2724: Sort By.
+
+**Thoughts:** Writing the custom comparator function `(a, b) => fn(a) - fn(b)` to sort an array of objects based on a callback's mathematical output was straightforward. However, I used this problem to review the concept of **Immutability**. The native `Array.prototype.sort()` method sorts elements in place, mutating the original array. Since unpredictable mutations can cause major bugs in modern UI state management, I upgraded my solution to use the ES6 spread operator (`[...arr].sort(...)`). This guarantees my function remains pure and returns a brand new sorted array without altering the original input!
+
+**Link to work:** [Day 24 - Sort By](./Day24/day24-sort-by.js)
