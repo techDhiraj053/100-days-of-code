@@ -225,3 +225,11 @@
 **Thoughts:** Writing the custom comparator function `(a, b) => fn(a) - fn(b)` to sort an array of objects based on a callback's mathematical output was straightforward. However, I used this problem to review the concept of **Immutability**. The native `Array.prototype.sort()` method sorts elements in place, mutating the original array. Since unpredictable mutations can cause major bugs in modern UI state management, I upgraded my solution to use the ES6 spread operator (`[...arr].sort(...)`). This guarantees my function remains pure and returns a brand new sorted array without altering the original input!
 
 **Link to work:** [Day 24 - Sort By](./Day24/day24-sort-by.js)
+
+### Day 25: April 11, 2026
+
+**Today's Progress:** Hit the quarter-century mark! Day 25. I revisited problem #2635: Apply Transform Over Each Element in Array.
+
+**Thoughts:** I initially solved this map polyfill using a standard imperative `for` loop. Today, I wanted to challenge myself to write a purely functional solution. I implemented the custom `.map()` method by leveraging `Array.prototype.reduce()`. By passing an empty array as the initial value to the reducer, I was able to sequentially transform each item and push it into the accumulated array. It's a great exercise that proves `reduce` really is the foundational building block for almost all other array transformations in JavaScript!
+
+**Link to work:** [Day 25 - Array Map (Advanced)](./Day25/day25-array-map-advanced.js)
