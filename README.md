@@ -233,3 +233,11 @@
 **Thoughts:** I initially solved this map polyfill using a standard imperative `for` loop. Today, I wanted to challenge myself to write a purely functional solution. I implemented the custom `.map()` method by leveraging `Array.prototype.reduce()`. By passing an empty array as the initial value to the reducer, I was able to sequentially transform each item and push it into the accumulated array. It's a great exercise that proves `reduce` really is the foundational building block for almost all other array transformations in JavaScript!
 
 **Link to work:** [Day 25 - Array Map (Advanced)](./Day25/day25-array-map-advanced.js)
+
+### Day 26: April 12, 2026
+
+**Today's Progress:** Pushed through despite feeling pretty under the weather to keep the streak alive! I revisited problem #2665: Counter II, upgrading the architecture from functional closures to Object-Oriented Programming.
+
+**Thoughts:** My original solution to this problem relied on JavaScript closures to hide and maintain the `current` state inside a returned object. Today, I challenged myself to rewrite it using ES6 Classes. I created a `Counter` class with a `constructor` to manage the `initValue` and `currentValue` states, and attached the methods directly to the class. It is a great exercise in understanding how different paradigms (Functional vs OOP) can be used to solve the exact same state-management problems in modern JavaScript!
+
+**Link to work:** [Day 26 - Counter II (OOP)](./Day26/day26-counter-ii-oop.js)
