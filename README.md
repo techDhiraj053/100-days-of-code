@@ -241,3 +241,11 @@
 **Thoughts:** My original solution to this problem relied on JavaScript closures to hide and maintain the `current` state inside a returned object. Today, I challenged myself to rewrite it using ES6 Classes. I created a `Counter` class with a `constructor` to manage the `initValue` and `currentValue` states, and attached the methods directly to the class. It is a great exercise in understanding how different paradigms (Functional vs OOP) can be used to solve the exact same state-management problems in modern JavaScript!
 
 **Link to work:** [Day 26 - Counter II (OOP)](./Day26/day26-counter-ii-oop.js)
+
+### Day 27: April 13, 2026
+
+**Today's Progress:** Still recovering, but managed to solve a Medium-level problem! #2722: Join Two Arrays by ID.
+
+**Thoughts:** This problem was a great test of dictionary mapping and object merging. I iterated through the arrays and used the `id` as a key in a Hash Map dictionary. To merge objects with identical IDs, I used the ES6 spread operator (`{ ...obj1, ...obj2 }`). Because the spread operator evaluates from left to right, any overlapping properties from the second array seamlessly overwrite the first. I also learned about the "Sparse Array Trap"—making sure to initialize my map as an Object `{}` rather than an Array `[]` to prevent memory bloat if the numerical IDs have massive gaps between them!
+
+**Link to work:** [Day 27 - Join Two Arrays](./Day27/day27-join-arrays.js)
