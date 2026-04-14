@@ -249,3 +249,11 @@
 **Thoughts:** This problem was a great test of dictionary mapping and object merging. I iterated through the arrays and used the `id` as a key in a Hash Map dictionary. To merge objects with identical IDs, I used the ES6 spread operator (`{ ...obj1, ...obj2 }`). Because the spread operator evaluates from left to right, any overlapping properties from the second array seamlessly overwrite the first. I also learned about the "Sparse Array Trap"—making sure to initialize my map as an Object `{}` rather than an Array `[]` to prevent memory bloat if the numerical IDs have massive gaps between them!
 
 **Link to work:** [Day 27 - Join Two Arrays](./Day27/day27-join-arrays.js)
+
+### Day 28: April 14, 2026
+
+**Today's Progress:** Solved a Medium-level data structure problem! #2625: Flatten Deeply Nested Array.
+
+**Thoughts:** I needed to write a polyfill for `Array.prototype.flat()`, but with a specific depth constraint. I implemented a Depth-First Search (DFS) algorithm using a recursive `helper` function. By iterating through the arrays and checking `Array.isArray(item) && depth > 0`, I could carefully control how many layers deep the flattening goes. Using a closure to hold the `result` array and pushing items one-by-one is highly optimal—it prevents the call stack overflow errors that can happen when using the ES6 spread operator on massive, highly-nested datasets.
+
+**Link to work:** [Day 28 - Flatten Array](./Day28/day28-flatten-nested-array.js)
