@@ -257,3 +257,11 @@
 **Thoughts:** I needed to write a polyfill for `Array.prototype.flat()`, but with a specific depth constraint. I implemented a Depth-First Search (DFS) algorithm using a recursive `helper` function. By iterating through the arrays and checking `Array.isArray(item) && depth > 0`, I could carefully control how many layers deep the flattening goes. Using a closure to hold the `result` array and pushing items one-by-one is highly optimal—it prevents the call stack overflow errors that can happen when using the ES6 spread operator on massive, highly-nested datasets.
 
 **Link to work:** [Day 28 - Flatten Array](./Day28/day28-flatten-nested-array.js)
+
+### Day 29: April 15, 2026
+
+**Today's Progress:** Still fighting off a fever, but kept the streak alive! Revisited problem #2704: To Be Or Not To Be, and upgraded the underlying architecture.
+
+**Thoughts:** This problem asks you to build a mini assertion library. When I first solved it, I used a basic functional closure. Today, to show progression, I refactored it using Object-Oriented Programming (ES6 Classes). By creating an `Assertion` class, the `expect` wrapper function simply returns a new instance of that class. This is a much closer representation of how professional testing frameworks like Jest actually operate under the hood!
+
+**Link to work:** [Day 29 - To Be Or Not To Be (OOP)](./Day29/day29-to-be-or-not-to-be-oop.js)
