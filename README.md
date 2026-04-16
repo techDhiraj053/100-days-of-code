@@ -265,3 +265,11 @@
 **Thoughts:** This problem asks you to build a mini assertion library. When I first solved it, I used a basic functional closure. Today, to show progression, I refactored it using Object-Oriented Programming (ES6 Classes). By creating an `Assertion` class, the `expect` wrapper function simply returns a new instance of that class. This is a much closer representation of how professional testing frameworks like Jest actually operate under the hood!
 
 **Link to work:** [Day 29 - To Be Or Not To Be (OOP)](./Day29/day29-to-be-or-not-to-be-oop.js)
+
+### Day 30: April 16, 2026
+
+**Today's Progress:** I hit the 30-Day Milestone! 🎉 Even though I have been fighting off a fever for the last week, I refused to break the streak. Today I revisited problem #2620: Counter, but completely overhauled the underlying architecture.
+
+**Thoughts:** My original solution to this problem relied on a basic lexical closure to store and increment the state of `n`. To challenge myself and celebrate Day 30, I rewrote the solution using an **ES6 Generator Function** (`function*`). By setting up a `while(true)` loop and using the `yield` keyword, the generator pauses execution after returning a value and remembers its state for the next call. It is incredibly satisfying to use advanced concepts like lazy evaluation to solve state-management problems!
+
+**Link to work:** [Day 30 - Counter (Generators)](./Day30/day30-counter-generator.js)
