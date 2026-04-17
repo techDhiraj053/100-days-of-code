@@ -273,3 +273,11 @@
 **Thoughts:** My original solution to this problem relied on a basic lexical closure to store and increment the state of `n`. To challenge myself and celebrate Day 30, I rewrote the solution using an **ES6 Generator Function** (`function*`). By setting up a `while(true)` loop and using the `yield` keyword, the generator pauses execution after returning a value and remembers its state for the next call. It is incredibly satisfying to use advanced concepts like lazy evaluation to solve state-management problems!
 
 **Link to work:** [Day 30 - Counter (Generators)](./Day30/day30-counter-generator.js)
+
+### Day 31: April 17, 2026
+
+**Today's Progress:** Officially starting Month 2! Still recovering from this prolonged fever, but I knocked out problem #2705: Compact Object.
+
+**Thoughts:** I initially solved this using a standard recursive Depth-First Search with imperative `for...of` and `for...in` loops. To celebrate hitting Day 31, I refactored the logic to use a purely functional approach. I utilized `obj.map(compactObject).filter(Boolean)` for the array handling, which is incredibly elegant. For the object handling, I brought back my trusty friend `Array.prototype.reduce()` to iterate through the object keys and conditionally build a brand new, compacted object. This declarative style is much cleaner and highly readable!
+
+**Link to work:** [Day 31 - Compact Object](./Day31/day31-compact-object.js)
