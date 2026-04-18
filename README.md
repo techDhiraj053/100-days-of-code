@@ -281,3 +281,11 @@
 **Thoughts:** I initially solved this using a standard recursive Depth-First Search with imperative `for...of` and `for...in` loops. To celebrate hitting Day 31, I refactored the logic to use a purely functional approach. I utilized `obj.map(compactObject).filter(Boolean)` for the array handling, which is incredibly elegant. For the object handling, I brought back my trusty friend `Array.prototype.reduce()` to iterate through the object keys and conditionally build a brand new, compacted object. This declarative style is much cleaner and highly readable!
 
 **Link to work:** [Day 31 - Compact Object](./Day31/day31-compact-object.js)
+
+### Day 32: April 18, 2026
+
+**Today's Progress:** Solved problem #2695: Array Wrapper.
+
+**Thoughts:** This problem was a fascinating dive into JavaScript's implicit type coercion. When you try to add two objects together with the `+` operator, JS automatically looks for a `valueOf()` method. I initially solved this using ES5 prototype mutation, but I refactored it into a clean ES6 `class` to reflect modern standards. Inside the class, overriding `valueOf()` with a `.reduce()` sum, and overriding `toString()` with a template literal and `.join(',')` allowed my custom objects to behave exactly like native primitives!
+
+**Link to work:** [Day 32 - Array Wrapper (ES6 Class)](./Day32/day32-array-wrapper-class.js)
