@@ -289,3 +289,11 @@
 **Thoughts:** This problem was a fascinating dive into JavaScript's implicit type coercion. When you try to add two objects together with the `+` operator, JS automatically looks for a `valueOf()` method. I initially solved this using ES5 prototype mutation, but I refactored it into a clean ES6 `class` to reflect modern standards. Inside the class, overriding `valueOf()` with a `.reduce()` sum, and overriding `toString()` with a template literal and `.join(',')` allowed my custom objects to behave exactly like native primitives!
 
 **Link to work:** [Day 32 - Array Wrapper (ES6 Class)](./Day32/day32-array-wrapper-class.js)
+
+### Day 33: April 19, 2026
+
+**Today's Progress:** Solved a Medium-level systems design problem! #2694: Event Emitter.
+
+**Thoughts:** Today I built a custom Publisher/Subscriber (Pub/Sub) class, similar to Node.js's `EventEmitter` or the DOM's Event Target interface. My initial instinct was to use a standard JavaScript object dictionary with arrays to hold the callbacks, and `Array.filter()` to handle unsubscribing. However, `filter()` is an $O(n)$ operation. To make this class production-ready for thousands of listeners, I refactored it to use a `Map` for the event dictionary and `Set`s for the callbacks. This brilliant optimization drops the time complexity of the `unsubscribe` method down to $O(1)$!
+
+**Link to work:** [Day 33 - Event Emitter](./Day33/day33-event-emitter.js)
