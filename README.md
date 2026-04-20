@@ -300,8 +300,10 @@
 
 ### Day 34: April 20, 2026
 
-**Today's Progress:** Solved problem #2726: Calculator with Method Chaining.
+**Today's Progress:** Double feature today! Solved problem #2726: Calculator with Method Chaining in JavaScript, and then switched gears to solve problem #2078: Two Furthest Houses With Different Colors in Java.
 
-**Thoughts:** This problem was a fantastic introduction to building a "Fluent Interface." By ensuring that every mathematical method returns `this`, we pass the current class instance forward, allowing the next method to be chained sequentially. To make this production-ready, I upgraded the architecture to use **Private Class Fields** (`#result`). In modern OOP JavaScript, encapsulating state is critical. By making the value private, I guarantee that no external code can directly mutate the calculator's running total without passing through the validated class methods!
+**Thoughts:** 1. **Calculator:** Built a "Fluent Interface" using ES2022 private class fields (`#result`) to encapsulate state and allow method chaining. 2. **Furthest Houses:** It felt great to jump into some Java! Instead of a brute-force $O(N^2)$ nested loop, I used a greedy approach. The maximum distance will always be bounded by either the first house or the last house. By doing two linear passes, I brought the time complexity down to $O(N)$. I also focused heavily on "Clean Code" principles, ensuring my variable names (`firstHouse`, `lastHouse`) were entirely self-documenting!
 
-**Link to work:** [Day 34 - Calculator Chaining](./Day34/day34-calculator-chaining.js)
+**Link to work:** \* [Calculator Chaining](./Day34/day34-calculator-chaining.js)
+
+- [Two Furthest Houses](./Day34/TwoFurthestHouses.java)
