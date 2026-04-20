@@ -297,3 +297,11 @@
 **Thoughts:** Today I built a custom Publisher/Subscriber (Pub/Sub) class, similar to Node.js's `EventEmitter` or the DOM's Event Target interface. My initial instinct was to use a standard JavaScript object dictionary with arrays to hold the callbacks, and `Array.filter()` to handle unsubscribing. However, `filter()` is an $O(n)$ operation. To make this class production-ready for thousands of listeners, I refactored it to use a `Map` for the event dictionary and `Set`s for the callbacks. This brilliant optimization drops the time complexity of the `unsubscribe` method down to $O(1)$!
 
 **Link to work:** [Day 33 - Event Emitter](./Day33/day33-event-emitter.js)
+
+### Day 34: April 20, 2026
+
+**Today's Progress:** Solved problem #2726: Calculator with Method Chaining.
+
+**Thoughts:** This problem was a fantastic introduction to building a "Fluent Interface." By ensuring that every mathematical method returns `this`, we pass the current class instance forward, allowing the next method to be chained sequentially. To make this production-ready, I upgraded the architecture to use **Private Class Fields** (`#result`). In modern OOP JavaScript, encapsulating state is critical. By making the value private, I guarantee that no external code can directly mutate the calculator's running total without passing through the validated class methods!
+
+**Link to work:** [Day 34 - Calculator Chaining](./Day34/day34-calculator-chaining.js)
