@@ -307,3 +307,11 @@
 **Link to work:** \* [Calculator Chaining](./Day34/day34-calculator-chaining.js)
 
 - [Two Furthest Houses](./Day34/TwoFurthestHouses.java)
+
+### Day 35: April 22, 2026
+
+**Today's Progress:** Tackled graph theory and connected components! Solved problem #1722: Minimize Hamming Distance After Swap Operations.
+
+**Thoughts:** This Medium problem essentially asks you to find isolated groups of indices that can be freely swapped with one another. I recognized this as a classic use-case for the **Union-Find (Disjoint Set)** algorithm. After mapping out the connected components, I tallied the source values and matched them against the target values. To make my Java solution production-ready, I implemented **Union by Rank** alongside Path Compression in my Union-Find class, ensuring the tree never skews and graph operations remain $O(\alpha(N))$. I also made the `UnionFind` helper a `static class` to prevent implicit memory references to the outer class!
+
+**Link to work:** [Day 35 - Minimize Hamming Distance](./Day35/MinimizeHammingDistance.java)
