@@ -315,3 +315,12 @@
 **Thoughts:** This Medium problem essentially asks you to find isolated groups of indices that can be freely swapped with one another. I recognized this as a classic use-case for the **Union-Find (Disjoint Set)** algorithm. After mapping out the connected components, I tallied the source values and matched them against the target values. To make my Java solution production-ready, I implemented **Union by Rank** alongside Path Compression in my Union-Find class, ensuring the tree never skews and graph operations remain $O(\alpha(N))$. I also made the `UnionFind` helper a `static class` to prevent implicit memory references to the outer class!
 
 **Link to work:** [Day 35 - Minimize Hamming Distance](./Day35/MinimizeHammingDistance.java)
+
+
+### Day 36: April 23, 2026
+
+**Today's Progress:** Solved a string manipulation problem! #2452: Words Within Two Edits of Dictionary.
+
+**Thoughts:** This problem asked us to compare a list of query words against a dictionary to find which ones could match with a maximum of 2 character replacements. My core helper function utilized an early-exit loop, abandoning the comparison the second a 3rd mismatch was detected to save CPU cycles. However, the real focus today was upgrading the overall architecture. I replaced my nested imperative `for` loops with the **Java Streams API**. By using `Arrays.stream(queries).filter(...)` combined with an inner `.anyMatch(...)`, I was able to write highly declarative code that perfectly mirrors the functional programming patterns I mastered in JavaScript! 
+
+**Link to work:** [Day 36 - Words Within Two Edits](./Day36/WordsWithinTwoEdits.java)
