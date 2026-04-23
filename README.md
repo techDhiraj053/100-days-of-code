@@ -316,11 +316,18 @@
 
 **Link to work:** [Day 35 - Minimize Hamming Distance](./Day35/MinimizeHammingDistance.java)
 
-
 ### Day 36: April 23, 2026
 
 **Today's Progress:** Solved a string manipulation problem! #2452: Words Within Two Edits of Dictionary.
 
-**Thoughts:** This problem asked us to compare a list of query words against a dictionary to find which ones could match with a maximum of 2 character replacements. My core helper function utilized an early-exit loop, abandoning the comparison the second a 3rd mismatch was detected to save CPU cycles. However, the real focus today was upgrading the overall architecture. I replaced my nested imperative `for` loops with the **Java Streams API**. By using `Arrays.stream(queries).filter(...)` combined with an inner `.anyMatch(...)`, I was able to write highly declarative code that perfectly mirrors the functional programming patterns I mastered in JavaScript! 
+**Thoughts:** This problem asked us to compare a list of query words against a dictionary to find which ones could match with a maximum of 2 character replacements. My core helper function utilized an early-exit loop, abandoning the comparison the second a 3rd mismatch was detected to save CPU cycles. However, the real focus today was upgrading the overall architecture. I replaced my nested imperative `for` loops with the **Java Streams API**. By using `Arrays.stream(queries).filter(...)` combined with an inner `.anyMatch(...)`, I was able to write highly declarative code that perfectly mirrors the functional programming patterns I mastered in JavaScript!
 
 **Link to work:** [Day 36 - Words Within Two Edits](./Day36/WordsWithinTwoEdits.java)
+
+### Day 37: April 24, 2026
+
+**Today's Progress:** Solved a math-heavy Medium problem! #2615: Sum of Distances.
+
+**Thoughts:** To avoid an $O(N^2)$ Time Limit Exceeded error, I used a Hash Map to group the indices of identical elements together. From there, I utilized a mathematical prefix-sum trick. To make my solution production-ready, I implemented a **Running Sum Space Optimization**. Instead of allocating a brand new prefix array for every single group in memory, I kept track of the data using `leftSum` and `rightSum` pointer variables. As I iterated through the list, I dynamically shifted the values from right to left, allowing me to calculate the absolute distances mathematically without the extra garbage collection overhead!
+
+**Link to work:** [Day 37 - Sum of Distances](./Day37/SumOfDistances.java)
