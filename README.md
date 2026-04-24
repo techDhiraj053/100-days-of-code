@@ -331,3 +331,11 @@
 **Thoughts:** To avoid an $O(N^2)$ Time Limit Exceeded error, I used a Hash Map to group the indices of identical elements together. From there, I utilized a mathematical prefix-sum trick. To make my solution production-ready, I implemented a **Running Sum Space Optimization**. Instead of allocating a brand new prefix array for every single group in memory, I kept track of the data using `leftSum` and `rightSum` pointer variables. As I iterated through the list, I dynamically shifted the values from right to left, allowing me to calculate the absolute distances mathematically without the extra garbage collection overhead!
 
 **Link to work:** [Day 37 - Sum of Distances](./Day37/SumOfDistances.java)
+
+### Day 38: April 25, 2026
+
+**Today's Progress:** Solved a greedy math string problem! #2833: Furthest Point From Origin.
+
+**Thoughts:** This problem was a great exercise in algorithmic simplification. Instead of simulating actual movements, I used a greedy mathematical approach. I counted the occurrences of 'L', 'R', and `_`. By letting the L's and R's cancel each other out, I could just add the count of `_` blanks to the absolute difference of the forced moves. To make this code as performant as possible, I focused on memory optimization. I swapped out my original `moves.toCharArray()` loop for a standard `moves.charAt(i)` loop. This simple change prevents Java from allocating a brand new character array in memory, dropping the space complexity down to absolute $O(1)$!
+
+**Link to work:** [Day 38 - Furthest Point From Origin](./Day38/FurthestPointFromOrigin.java)
