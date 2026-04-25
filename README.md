@@ -141,7 +141,7 @@
 
 **Link to work:** [Day 14 - Execute Async Functions](./Day14/day14-execute-async-functions.js)
 
-### Day 15: April 1, 2026
+### Day 15:   April 1, 2026
 
 **Today's Progress:** It was an incredibly busy day, so I utilized "spaced repetition" to review a core concept! I re-solved problem #2666: Allow One Function Call, but this time, I upgraded my approach.
 
@@ -308,7 +308,7 @@
 
 - [Two Furthest Houses](./Day34/TwoFurthestHouses.java)
 
-### Day 35: April 22, 2026
+### Day 35: April 21, 2026
 
 **Today's Progress:** Tackled graph theory and connected components! Solved problem #1722: Minimize Hamming Distance After Swap Operations.
 
@@ -316,7 +316,7 @@
 
 **Link to work:** [Day 35 - Minimize Hamming Distance](./Day35/MinimizeHammingDistance.java)
 
-### Day 36: April 23, 2026
+### Day 36: April 22, 2026
 
 **Today's Progress:** Solved a string manipulation problem! #2452: Words Within Two Edits of Dictionary.
 
@@ -324,7 +324,7 @@
 
 **Link to work:** [Day 36 - Words Within Two Edits](./Day36/WordsWithinTwoEdits.java)
 
-### Day 37: April 24, 2026
+### Day 37: April 23, 2026
 
 **Today's Progress:** Solved a math-heavy Medium problem! #2615: Sum of Distances.
 
@@ -332,10 +332,18 @@
 
 **Link to work:** [Day 37 - Sum of Distances](./Day37/SumOfDistances.java)
 
-### Day 38: April 25, 2026
+### Day 38: April 24, 2026
 
 **Today's Progress:** Solved a greedy math string problem! #2833: Furthest Point From Origin.
 
 **Thoughts:** This problem was a great exercise in algorithmic simplification. Instead of simulating actual movements, I used a greedy mathematical approach. I counted the occurrences of 'L', 'R', and `_`. By letting the L's and R's cancel each other out, I could just add the count of `_` blanks to the absolute difference of the forced moves. To make this code as performant as possible, I focused on memory optimization. I swapped out my original `moves.toCharArray()` loop for a standard `moves.charAt(i)` loop. This simple change prevents Java from allocating a brand new character array in memory, dropping the space complexity down to absolute $O(1)$!
 
 **Link to work:** [Day 38 - Furthest Point From Origin](./Day38/FurthestPointFromOrigin.java)
+
+### Day 39: April 25, 2026
+
+**Today's Progress:** Solved a LEETCODE HARD! 🎉 #3464: Maximize the Distance Between Points on a Square.
+
+**Thoughts:** Solving a Hard problem this early in the 100-day challenge feels incredible. To solve this, I completely reimagined the geometry. Instead of dealing with 2D coordinates on a square, I "unfolded" the perimeter into a 1D line and duplicated the array to simulate circular wrap-around. From there, I utilized **Binary Search on Answer**. By guessing the maximum distance (`mid`), I ran a greedy algorithm (using a secondary binary search `lowerBound`) to verify if `k` points could be placed at that specific distance. Today's focus was heavily on enterprise-level documentation—adding detailed architectural comments so anyone reading the code instantly understands the three-phase logic!
+
+**Link to work:** [Day 39 - Maximize Distance on Square](./Day39/MaximizeDistanceOnSquare.java)
