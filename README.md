@@ -141,7 +141,7 @@
 
 **Link to work:** [Day 14 - Execute Async Functions](./Day14/day14-execute-async-functions.js)
 
-### Day 15:   April 1, 2026
+### Day 15: April 1, 2026
 
 **Today's Progress:** It was an incredibly busy day, so I utilized "spaced repetition" to review a core concept! I re-solved problem #2666: Allow One Function Call, but this time, I upgraded my approach.
 
@@ -347,3 +347,12 @@
 **Thoughts:** Solving a Hard problem this early in the 100-day challenge feels incredible. To solve this, I completely reimagined the geometry. Instead of dealing with 2D coordinates on a square, I "unfolded" the perimeter into a 1D line and duplicated the array to simulate circular wrap-around. From there, I utilized **Binary Search on Answer**. By guessing the maximum distance (`mid`), I ran a greedy algorithm (using a secondary binary search `lowerBound`) to verify if `k` points could be placed at that specific distance. Today's focus was heavily on enterprise-level documentation—adding detailed architectural comments so anyone reading the code instantly understands the three-phase logic!
 
 **Link to work:** [Day 39 - Maximize Distance on Square](./Day39/MaximizeDistanceOnSquare.java)
+
+
+### Day 40: April 26, 2026
+
+**Today's Progress:** Hit the Day 40 milestone! Solved problem #88: Merge Sorted Array.
+
+**Thoughts:** This is a classic array manipulation problem. The easiest approach is to dump the second array into the first and run a built-in sort function, but that is inefficient ($O(K \log K)$). Instead, I implemented an optimal **Reverse Three-Pointer** strategy. Because `nums1` has empty buffer space at the end, I started my pointers at the _back_ of both arrays and merged them in descending order. This guarantees we never overwrite un-processed elements, giving an optimal $O(m+n)$ time complexity and $O(1)$ space complexity. Today's focus was on "Clean Code"—ensuring my pointer variables (`p1`, `p2`, `pMerge`) were perfectly descriptive for code reviews!
+
+**Link to work:** [Day 40 - Merge Sorted Array](./Day40/MergeSortedArray.java)
