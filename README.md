@@ -348,7 +348,6 @@
 
 **Link to work:** [Day 39 - Maximize Distance on Square](./Day39/MaximizeDistanceOnSquare.java)
 
-
 ### Day 40: April 26, 2026
 
 **Today's Progress:** Hit the Day 40 milestone! Solved problem #88: Merge Sorted Array.
@@ -356,3 +355,11 @@
 **Thoughts:** This is a classic array manipulation problem. The easiest approach is to dump the second array into the first and run a built-in sort function, but that is inefficient ($O(K \log K)$). Instead, I implemented an optimal **Reverse Three-Pointer** strategy. Because `nums1` has empty buffer space at the end, I started my pointers at the _back_ of both arrays and merged them in descending order. This guarantees we never overwrite un-processed elements, giving an optimal $O(m+n)$ time complexity and $O(1)$ space complexity. Today's focus was on "Clean Code"—ensuring my pointer variables (`p1`, `p2`, `pMerge`) were perfectly descriptive for code reviews!
 
 **Link to work:** [Day 40 - Merge Sorted Array](./Day40/MergeSortedArray.java)
+
+### Day 41: April 27, 2026
+
+**Today's Progress:** Knocked out problem #27: Remove Element.
+
+**Thoughts:** Today I implemented a highly efficient in-place array modification using the Two-Pointer technique. The problem asks us to remove all occurrences of a specific value without allocating any extra memory for a new array. By using a standard `for` loop, I treated `i` as my "reader" pointer and `k` as my "writer" pointer. Every time the reader found a value that we wanted to keep, it overwrote the element at the writer's index and incremented `k`. This resulting code is mathematically optimal with $O(N)$ time and $O(1)$ space!
+
+**Link to work:** [Day 41 - Remove Element](./Day41/RemoveElement.java)
