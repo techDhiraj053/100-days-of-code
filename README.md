@@ -363,3 +363,11 @@
 **Thoughts:** Today I implemented a highly efficient in-place array modification using the Two-Pointer technique. The problem asks us to remove all occurrences of a specific value without allocating any extra memory for a new array. By using a standard `for` loop, I treated `i` as my "reader" pointer and `k` as my "writer" pointer. Every time the reader found a value that we wanted to keep, it overwrote the element at the writer's index and incremented `k`. This resulting code is mathematically optimal with $O(N)$ time and $O(1)$ space!
 
 **Link to work:** [Day 41 - Remove Element](./Day41/RemoveElement.java)
+
+### Day 42: April 28, 2026
+
+**Today's Progress:** Solved problem #26: Remove Duplicates from Sorted Array.
+
+**Thoughts:** Back-to-back Two-Pointer array problems! Since the input array was already sorted in non-decreasing order, I knew any duplicate values would be sitting right next to each other. I used a fast pointer to scan through the array and compare each element to the one immediately before it. If they were different, it meant I found a new unique number. I then used a slow pointer (`insertIndex`) to overwrite the array in-place. By refactoring my initial `while` loop into a sleek `for` loop, I was able to eliminate redundant counter variables, keeping the solution strictly at $O(N)$ time and $O(1)$ space!
+
+**Link to work:** [Day 42 - Remove Duplicates](./Day42/RemoveDuplicates.java)
