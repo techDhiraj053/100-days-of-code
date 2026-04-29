@@ -371,3 +371,11 @@
 **Thoughts:** Back-to-back Two-Pointer array problems! Since the input array was already sorted in non-decreasing order, I knew any duplicate values would be sitting right next to each other. I used a fast pointer to scan through the array and compare each element to the one immediately before it. If they were different, it meant I found a new unique number. I then used a slow pointer (`insertIndex`) to overwrite the array in-place. By refactoring my initial `while` loop into a sleek `for` loop, I was able to eliminate redundant counter variables, keeping the solution strictly at $O(N)$ time and $O(1)$ space!
 
 **Link to work:** [Day 42 - Remove Duplicates](./Day42/RemoveDuplicates.java)
+
+### Day 43: April 29, 2026
+
+**Today's Progress:** Solved a Medium array problem! #80: Remove Duplicates from Sorted Array II.
+
+**Thoughts:** A fantastic step up from yesterday's problem! This time, we were allowed to keep up to _two_ duplicates of each number. Instead of complicating the logic with tracking variables and hash maps, I stuck to the Two-Pointer technique. Because the array is sorted, I simply checked if my current reading pointer was pointing to a number different from the number sitting exactly two spaces behind my writing pointer (`nums[i] != nums[insertIndex - 2]`). This elegant comparison automatically handles the pair limit, allowing me to modify the array in-place with an optimal $O(N)$ time and $O(1)$ space complexity!
+
+**Link to work:** [Day 43 - Remove Duplicates II](./Day43/RemoveDuplicatesII.java)
