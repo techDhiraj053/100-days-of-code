@@ -379,3 +379,11 @@
 **Thoughts:** A fantastic step up from yesterday's problem! This time, we were allowed to keep up to _two_ duplicates of each number. Instead of complicating the logic with tracking variables and hash maps, I stuck to the Two-Pointer technique. Because the array is sorted, I simply checked if my current reading pointer was pointing to a number different from the number sitting exactly two spaces behind my writing pointer (`nums[i] != nums[insertIndex - 2]`). This elegant comparison automatically handles the pair limit, allowing me to modify the array in-place with an optimal $O(N)$ time and $O(1)$ space complexity!
 
 **Link to work:** [Day 43 - Remove Duplicates II](./Day43/RemoveDuplicatesII.java)
+
+### Day 44: April 30, 2026
+
+**Today's Progress:** Conquered a classic algorithmic problem! #169: Majority Element.
+
+**Thoughts:** This problem challenges you to find the element that appears more than `⌊n / 2⌋` times. While a HashMap ($O(N)$ space) or sorting the array ($O(N \log N)$ time) works, the prompt included a strict follow-up to solve it in $O(N)$ time and $O(1)$ space. To achieve this, I implemented the **Boyer-Moore Voting Algorithm**. I maintained a `candidate` variable and a `count`. By iterating through the array and adding a vote when encountering the candidate (and subtracting a vote when encountering a different number), the true majority element is mathematically guaranteed to survive. I refactored the logic using a `for-each` loop and a ternary operator for maximum readability!
+
+**Link to work:** [Day 44 - Majority Element](./Day44/MajorityElement.java)
