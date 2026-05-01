@@ -387,3 +387,11 @@
 **Thoughts:** This problem challenges you to find the element that appears more than `⌊n / 2⌋` times. While a HashMap ($O(N)$ space) or sorting the array ($O(N \log N)$ time) works, the prompt included a strict follow-up to solve it in $O(N)$ time and $O(1)$ space. To achieve this, I implemented the **Boyer-Moore Voting Algorithm**. I maintained a `candidate` variable and a `count`. By iterating through the array and adding a vote when encountering the candidate (and subtracting a vote when encountering a different number), the true majority element is mathematically guaranteed to survive. I refactored the logic using a `for-each` loop and a ternary operator for maximum readability!
 
 **Link to work:** [Day 44 - Majority Element](./Day44/MajorityElement.java)
+
+### Day 45: May 1, 2026
+
+**Today's Progress:** Conquered problem #189: Rotate Array.
+
+**Thoughts:** To satisfy the strict follow-up constraint of using $O(1)$ extra space, I implemented the classic "Triple Reverse" algorithm. Instead of trying to shift elements individually (which would take $O(N^2)$ time) or creating a secondary array (which would take $O(N)$ space), I used a mathematical trick. By reversing the entire array, then reversing the first `k` elements, and finally reversing the remaining elements, the array magically shifts into the perfect rotated position! I also added an enterprise-grade "Fail-Fast Guard Clause" at the beginning of the function to immediately return if `k % n == 0` or if the array length is 1, saving unnecessary CPU cycles.
+
+**Link to work:** [Day 45 - Rotate Array](./Day45/RotateArray.java)
