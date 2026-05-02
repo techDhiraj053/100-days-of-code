@@ -395,3 +395,11 @@
 **Thoughts:** To satisfy the strict follow-up constraint of using $O(1)$ extra space, I implemented the classic "Triple Reverse" algorithm. Instead of trying to shift elements individually (which would take $O(N^2)$ time) or creating a secondary array (which would take $O(N)$ space), I used a mathematical trick. By reversing the entire array, then reversing the first `k` elements, and finally reversing the remaining elements, the array magically shifts into the perfect rotated position! I also added an enterprise-grade "Fail-Fast Guard Clause" at the beginning of the function to immediately return if `k % n == 0` or if the array length is 1, saving unnecessary CPU cycles.
 
 **Link to work:** [Day 45 - Rotate Array](./Day45/RotateArray.java)
+
+### Day 46: May 2, 2026
+
+**Today's Progress:** Tackled a legendary interview problem! #121: Best Time to Buy and Sell Stock.
+
+**Thoughts:** This is a classic problem that tests whether you can optimize an O(N²) brute-force solution into a single O(N) pass. I used a greedy approach to solve it. By iterating through the timeline just once, I continuously updated the `minPrice` to reflect the absolute cheapest day to buy that I had seen so far. At every step, I calculated the potential profit if I were to sell on that current day (`price - minPrice`) and checked if it beat my running `maxProfit` record. To make my code production-ready, I swapped my standard `for` loop for an enhanced `for-each` loop, making the logic incredibly clean and completely avoiding unnecessary index lookups!
+
+**Link to work:** [Day 46 - Best Time to Buy and Sell Stock](./Day46/BestTimeToBuyAndSellStock.java)
