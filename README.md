@@ -403,3 +403,11 @@
 **Thoughts:** This is a classic problem that tests whether you can optimize an O(N²) brute-force solution into a single O(N) pass. I used a greedy approach to solve it. By iterating through the timeline just once, I continuously updated the `minPrice` to reflect the absolute cheapest day to buy that I had seen so far. At every step, I calculated the potential profit if I were to sell on that current day (`price - minPrice`) and checked if it beat my running `maxProfit` record. To make my code production-ready, I swapped my standard `for` loop for an enhanced `for-each` loop, making the logic incredibly clean and completely avoiding unnecessary index lookups!
 
 **Link to work:** [Day 46 - Best Time to Buy and Sell Stock](./Day46/BestTimeToBuyAndSellStock.java)
+
+### Day 47: May 3, 2026
+
+**Today's Progress:** Solved the sequel! #122: Best Time to Buy and Sell Stock II.
+
+**Thoughts:** Building on yesterday's stock problem, this variation allows us to buy and sell multiple times. The trap here is overcomplicating it with complex peak/valley tracking. Instead, I used a Greedy approach. By looking at every adjacent pair of days, I simply captured the profit of any upward movement. If the price tomorrow is higher than today, I "buy" today and "sell" tomorrow. By accumulating all these positive deltas, I naturally capture the maximum possible profit. To polish the code, I implemented **Branchless Programming**, replacing the `if` condition with `Math.max(0, prices[i] - prices[i-1])`. This keeps the Time Complexity at $O(N)$ and Space at $O(1)$ while reducing cyclomatic complexity!
+
+**Link to work:** [Day 47 - Best Time to Buy and Sell Stock II](./Day47/BestTimeToBuyAndSellStockII.java)
