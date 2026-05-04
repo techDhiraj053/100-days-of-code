@@ -411,3 +411,11 @@
 **Thoughts:** Building on yesterday's stock problem, this variation allows us to buy and sell multiple times. The trap here is overcomplicating it with complex peak/valley tracking. Instead, I used a Greedy approach. By looking at every adjacent pair of days, I simply captured the profit of any upward movement. If the price tomorrow is higher than today, I "buy" today and "sell" tomorrow. By accumulating all these positive deltas, I naturally capture the maximum possible profit. To polish the code, I implemented **Branchless Programming**, replacing the `if` condition with `Math.max(0, prices[i] - prices[i-1])`. This keeps the Time Complexity at $O(N)$ and Space at $O(1)$ while reducing cyclomatic complexity!
 
 **Link to work:** [Day 47 - Best Time to Buy and Sell Stock II](./Day47/BestTimeToBuyAndSellStockII.java)
+
+### Day 48: May 4, 2026
+
+**Today's Progress:** Conquered a classic Array problem! #55: Jump Game.
+
+**Thoughts:** This problem is famous for tricking people into using heavy Dynamic Programming solutions. Instead, I used a highly efficient Greedy Algorithm. By iterating through the array and continuously updating a `maxReach` variable, I could verify if every subsequent index was actually reachable. If my loop ever reached an index greater than `maxReach`, it meant I was trapped, returning `false`. To make this algorithm production-grade, I implemented an **Early Exit Optimization**. I added a check to verify if `maxReach >= nums.length - 1`. The second this condition becomes true, the function immediately terminates and returns `true`, completely bypassing any remaining loop iterations!
+
+**Link to work:** [Day 48 - Jump Game](./Day48/JumpGame.java)
