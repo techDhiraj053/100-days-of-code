@@ -419,3 +419,11 @@
 **Thoughts:** This problem is famous for tricking people into using heavy Dynamic Programming solutions. Instead, I used a highly efficient Greedy Algorithm. By iterating through the array and continuously updating a `maxReach` variable, I could verify if every subsequent index was actually reachable. If my loop ever reached an index greater than `maxReach`, it meant I was trapped, returning `false`. To make this algorithm production-grade, I implemented an **Early Exit Optimization**. I added a check to verify if `maxReach >= nums.length - 1`. The second this condition becomes true, the function immediately terminates and returns `true`, completely bypassing any remaining loop iterations!
 
 **Link to work:** [Day 48 - Jump Game](./Day48/JumpGame.java)
+
+### Day 49: May 5, 2026
+
+**Today's Progress:** Solved the sequel! #45: Jump Game II.
+
+**Thoughts:** Building on the logic from yesterday's Jump Game, this variation asks for the _minimum_ number of jumps to reach the end. I stuck with a Greedy algorithm. Instead of just tracking `maxReach`, I introduced a `currentJumpWindowEnd` variable. As I iterate through a "window" of reachable indices, I constantly update the farthest possible reach. The moment my loop reaches the end of the current window, I increment my jump counter and start a new window. To optimize the code for production, I added an **Aggressive Early Exit**. If the `farthestReach` ever meets or exceeds the last index of the array, I immediately return `jumps + 1`, completely short-circuiting the rest of the iterations!
+
+**Link to work:** [Day 49 - Jump Game II](./Day49/JumpGameII.java)
