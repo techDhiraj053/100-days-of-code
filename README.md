@@ -427,3 +427,11 @@
 **Thoughts:** Building on the logic from yesterday's Jump Game, this variation asks for the _minimum_ number of jumps to reach the end. I stuck with a Greedy algorithm. Instead of just tracking `maxReach`, I introduced a `currentJumpWindowEnd` variable. As I iterate through a "window" of reachable indices, I constantly update the farthest possible reach. The moment my loop reaches the end of the current window, I increment my jump counter and start a new window. To optimize the code for production, I added an **Aggressive Early Exit**. If the `farthestReach` ever meets or exceeds the last index of the array, I immediately return `jumps + 1`, completely short-circuiting the rest of the iterations!
 
 **Link to work:** [Day 49 - Jump Game II](./Day49/JumpGameII.java)
+
+### Day 50: May 6, 2026 🎉 HALFWAY MILESTONE! 🎉
+
+**Today's Progress:** Hit the official halfway point of the challenge! Solved #274: H-Index.
+
+**Thoughts:** I cannot believe I've made it to Day 50! For today's problem, my initial logic was to sort the array and iterate backwards to increment my H-Index, which gave a solid $O(N \log N)$ time. However, to celebrate Day 50, I pushed for the absolute optimal solution: **$O(N)$ Time Complexity using Bucket Sort**. I realized the H-Index can never exceed the total number of papers ($N$). Therefore, I created an array of buckets from $0$ to $N$. Any paper with massive citations got capped and tossed into the $N$ bucket. By scanning the buckets backwards and keeping a running total, I bypassed the heavy sorting algorithm entirely! Here is to the next 50 days! 🚀
+
+**Link to work:** [Day 50 - H-Index](./Day50/HIndex.java)
