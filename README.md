@@ -435,3 +435,11 @@
 **Thoughts:** I cannot believe I've made it to Day 50! For today's problem, my initial logic was to sort the array and iterate backwards to increment my H-Index, which gave a solid $O(N \log N)$ time. However, to celebrate Day 50, I pushed for the absolute optimal solution: **$O(N)$ Time Complexity using Bucket Sort**. I realized the H-Index can never exceed the total number of papers ($N$). Therefore, I created an array of buckets from $0$ to $N$. Any paper with massive citations got capped and tossed into the $N$ bucket. By scanning the buckets backwards and keeping a running total, I bypassed the heavy sorting algorithm entirely! Here is to the next 50 days! 🚀
 
 **Link to work:** [Day 50 - H-Index](./Day50/HIndex.java)
+
+### Day 51: May 7, 2026
+
+**Today's Progress:** Kicked off the second half of the challenge! Solved #380: Insert Delete GetRandom O(1).
+
+**Thoughts:** This was a fantastic system design problem. Achieving an average O(1) time complexity across all three operations requires combining two different data structures: a `HashMap` (for fast lookups and deletes) and an `ArrayList` (for fast random access). The major hurdle is that deleting from the middle of an `ArrayList` normally takes O(N) time because elements have to shift. I solved this using the **"Swap and Pop"** algorithm. By swapping the element I wanted to delete with the very last element in the array, I could simply pop the end of the array off in O(1) time! To make the class enterprise-ready, I utilized `private` and `final` access modifiers to strictly encapsulate the internal data structures.
+
+**Link to work:** [Day 51 - Randomized Set](./Day51/RandomizedSet.java)
