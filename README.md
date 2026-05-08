@@ -443,3 +443,11 @@
 **Thoughts:** This was a fantastic system design problem. Achieving an average O(1) time complexity across all three operations requires combining two different data structures: a `HashMap` (for fast lookups and deletes) and an `ArrayList` (for fast random access). The major hurdle is that deleting from the middle of an `ArrayList` normally takes O(N) time because elements have to shift. I solved this using the **"Swap and Pop"** algorithm. By swapping the element I wanted to delete with the very last element in the array, I could simply pop the end of the array off in O(1) time! To make the class enterprise-ready, I utilized `private` and `final` access modifiers to strictly encapsulate the internal data structures.
 
 **Link to work:** [Day 51 - Randomized Set](./Day51/RandomizedSet.java)
+
+### Day 52: May 8, 2026
+
+**Today's Progress:** Conquered a legendary array problem! #238: Product of Array Except Self.
+
+**Thoughts:** This problem has a clever trick: you must find the product of all elements except the current one, but you are _not_ allowed to use division! My initial logic was to create two separate arrays to store the prefix (left) products and suffix (right) products, and then multiply them together, giving me an $O(N)$ time solution. However, to conquer the strict follow-up challenge of using $O(1)$ extra space, I optimized the architecture. I stored the left products directly inside the final `answer` array. Then, instead of building a right array, I iterated backwards using a single `rightProduct` integer variable, calculating the suffix on the fly and multiplying it directly into the `answer` array!
+
+**Link to work:** [Day 52 - Product of Array Except Self](./Day52/ProductOfArrayExceptSelf.java)
