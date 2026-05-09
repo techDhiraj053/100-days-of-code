@@ -451,3 +451,11 @@
 **Thoughts:** This problem has a clever trick: you must find the product of all elements except the current one, but you are _not_ allowed to use division! My initial logic was to create two separate arrays to store the prefix (left) products and suffix (right) products, and then multiply them together, giving me an $O(N)$ time solution. However, to conquer the strict follow-up challenge of using $O(1)$ extra space, I optimized the architecture. I stored the left products directly inside the final `answer` array. Then, instead of building a right array, I iterated backwards using a single `rightProduct` integer variable, calculating the suffix on the fly and multiplying it directly into the `answer` array!
 
 **Link to work:** [Day 52 - Product of Array Except Self](./Day52/ProductOfArrayExceptSelf.java)
+
+### Day 53: May 9, 2026
+
+**Today's Progress:** Conquered a classic Greedy algorithm! #134: Gas Station.
+
+**Thoughts:** This problem is a brilliant test of algorithmic intuition. A brute-force approach trying to complete a circuit from every index would result in a Time Limit Exceeded $O(N^2)$ penalty. Instead, I used a Greedy $O(N)$ approach. I kept a running total of the `netGas` (`gas[i] - cost[i]`). If my local tank ever dropped below zero, it proved that my current starting station (and any station I had visited along the way) was invalid. I immediately reset my tank and shifted my starting candidate to the next station (`i + 1`). I also tracked the `totalSurplus` across the entire array; if the final total surplus is $\ge 0$, my current starting candidate is mathematically guaranteed to be the unique solution!
+
+**Link to work:** [Day 53 - Gas Station](./Day53/GasStation.java)
