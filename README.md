@@ -459,3 +459,11 @@
 **Thoughts:** This problem is a brilliant test of algorithmic intuition. A brute-force approach trying to complete a circuit from every index would result in a Time Limit Exceeded $O(N^2)$ penalty. Instead, I used a Greedy $O(N)$ approach. I kept a running total of the `netGas` (`gas[i] - cost[i]`). If my local tank ever dropped below zero, it proved that my current starting station (and any station I had visited along the way) was invalid. I immediately reset my tank and shifted my starting candidate to the next station (`i + 1`). I also tracked the `totalSurplus` across the entire array; if the final total surplus is $\ge 0$, my current starting candidate is mathematically guaranteed to be the unique solution!
 
 **Link to work:** [Day 53 - Gas Station](./Day53/GasStation.java)
+
+### Day 54: May 10, 2026
+
+**Today's Progress:** Solved a LeetCode HARD! 🍬 #135: Candy.
+
+**Thoughts:** This problem is a brilliant test of Greedy algorithms. The rules dictate that children with higher ratings than their neighbors must receive more candy. Trying to calculate this in a single pass usually leads to messy edge cases when dealing with descending ratings (valleys). I bypassed this completely by using the **Two-Pass Greedy Algorithm**. First, I swept left-to-right to satisfy the left-neighbor condition. Then, I swept right-to-left using `Math.max()` to satisfy the right-neighbor condition while preserving the previous logic. To optimize my solution for production, I used **Loop Fusion**. Instead of looping a third time to sum up the array, I accumulated the total directly during the right-to-left pass, eliminating an entire $O(N)$ operation!
+
+**Link to work:** [Day 54 - Candy](./Day54/Candy.java)
