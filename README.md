@@ -467,3 +467,11 @@
 **Thoughts:** This problem is a brilliant test of Greedy algorithms. The rules dictate that children with higher ratings than their neighbors must receive more candy. Trying to calculate this in a single pass usually leads to messy edge cases when dealing with descending ratings (valleys). I bypassed this completely by using the **Two-Pass Greedy Algorithm**. First, I swept left-to-right to satisfy the left-neighbor condition. Then, I swept right-to-left using `Math.max()` to satisfy the right-neighbor condition while preserving the previous logic. To optimize my solution for production, I used **Loop Fusion**. Instead of looping a third time to sum up the array, I accumulated the total directly during the right-to-left pass, eliminating an entire $O(N)$ operation!
 
 **Link to work:** [Day 54 - Candy](./Day54/Candy.java)
+
+### Day 55: May 11, 2026
+
+**Today's Progress:** Another LeetCode Hard secured! 🌧️ #42: Trapping Rain Water.
+
+**Thoughts:** This is one of the most famous array problems out there. My initial approach was Dynamic Programming: I created two arrays (`leftMax` and `rightMax`) to store the highest peaks to the left and right of every index. By finding the minimum of those two peaks and subtracting the ground height, I accurately calculated the trapped water in $O(N)$ time. However, to level up my code, I refactored it to use the **Two-Pointer Approach**, slashing the space complexity to absolute $O(1)$! By starting pointers at opposite ends of the array and selectively moving the shorter pointer inward, I was able to maintain running `leftMax` and `rightMax` variables, filling the valleys with water in a single, highly-optimized pass!
+
+**Link to work:** [Day 55 - Trapping Rain Water](./Day55/TrappingRainWater.java)
