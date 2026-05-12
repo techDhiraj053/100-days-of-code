@@ -475,3 +475,11 @@
 **Thoughts:** This is one of the most famous array problems out there. My initial approach was Dynamic Programming: I created two arrays (`leftMax` and `rightMax`) to store the highest peaks to the left and right of every index. By finding the minimum of those two peaks and subtracting the ground height, I accurately calculated the trapped water in $O(N)$ time. However, to level up my code, I refactored it to use the **Two-Pointer Approach**, slashing the space complexity to absolute $O(1)$! By starting pointers at opposite ends of the array and selectively moving the shorter pointer inward, I was able to maintain running `leftMax` and `rightMax` variables, filling the valleys with water in a single, highly-optimized pass!
 
 **Link to work:** [Day 55 - Trapping Rain Water](./Day55/TrappingRainWater.java)
+
+### Day 56: May 12, 2026
+
+**Today's Progress:** Solved a classic parsing problem! #13: Roman to Integer.
+
+**Thoughts:** This problem is a great test of algorithmic string parsing. The main trick is handling the subtraction instances (like IV for 4 or IX for 9). My initial intuition was to read left-to-right, looking ahead to the next character. If the current character was smaller than the next, I subtracted it; otherwise, I added it. While this worked perfectly, I had to stop the loop early to avoid out-of-bounds errors and manually process the last character. To level up my code, I refactored the logic to use a **Right-to-Left Traversal**. By starting at the end of the string and moving backwards, I only needed to compare my current value against a running `prevValue`. This allowed me to process the entire string inside a single, clean loop! I also swapped my `if` chain for a cleaner `switch` statement.
+
+**Link to work:** [Day 56 - Roman to Integer](./Day56/RomanToInteger.java)
