@@ -483,3 +483,11 @@
 **Thoughts:** This problem is a great test of algorithmic string parsing. The main trick is handling the subtraction instances (like IV for 4 or IX for 9). My initial intuition was to read left-to-right, looking ahead to the next character. If the current character was smaller than the next, I subtracted it; otherwise, I added it. While this worked perfectly, I had to stop the loop early to avoid out-of-bounds errors and manually process the last character. To level up my code, I refactored the logic to use a **Right-to-Left Traversal**. By starting at the end of the string and moving backwards, I only needed to compare my current value against a running `prevValue`. This allowed me to process the entire string inside a single, clean loop! I also swapped my `if` chain for a cleaner `switch` statement.
 
 **Link to work:** [Day 56 - Roman to Integer](./Day56/RomanToInteger.java)
+
+### Day 57: May 13, 2026
+
+**Today's Progress:** Solved the reverse of yesterday! #12: Integer to Roman.
+
+**Thoughts:** To convert an integer to a Roman numeral, I implemented a **Greedy Algorithm**. Because Roman numerals are written largest to smallest, I created two parallel arrays matching values to their corresponding symbols (including the subtraction edge cases like 900 for "CM"). I looped through these arrays, using a `while` loop to repeatedly subtract the largest possible value from my number and append the symbol to a `StringBuilder`. To make this code enterprise-grade, I pulled the arrays outside of the method and declared them as `private static final` constants. This memory optimization ensures the arrays are only allocated once, rather than every time the function is called!
+
+**Link to work:** [Day 57 - Integer to Roman](./Day57/IntegerToRoman.java)
