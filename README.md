@@ -491,3 +491,11 @@
 **Thoughts:** To convert an integer to a Roman numeral, I implemented a **Greedy Algorithm**. Because Roman numerals are written largest to smallest, I created two parallel arrays matching values to their corresponding symbols (including the subtraction edge cases like 900 for "CM"). I looped through these arrays, using a `while` loop to repeatedly subtract the largest possible value from my number and append the symbol to a `StringBuilder`. To make this code enterprise-grade, I pulled the arrays outside of the method and declared them as `private static final` constants. This memory optimization ensures the arrays are only allocated once, rather than every time the function is called!
 
 **Link to work:** [Day 57 - Integer to Roman](./Day57/IntegerToRoman.java)
+
+### Day 58: May 14, 2026
+
+**Today's Progress:** Conquered string parsing! #58: Length of Last Word.
+
+**Thoughts:** This problem is a great test of avoiding "built-in method" traps. Using `s.trim().split(" ")` is tempting, but it allocates unnecessary arrays and strings in memory, pushing the space complexity to $O(N)$. To keep my solution at an optimal $O(1)$ space, I wrote a manual pointer traversal. I started from the right side of the string and moved left. To make the code as clean as possible, I used **Loop Consolidation**. Inside a single `for` loop, I checked if the current character was a letter or a space. If it was a space and my word count was still 0, I ignored it (handling trailing spaces). If it was a space and my count was $> 0$, it meant I had finished reading the last word and could instantly `break` the loop!
+
+**Link to work:** [Day 58 - Length of Last Word](./Day58/LengthOfLastWord.java)
