@@ -499,3 +499,11 @@
 **Thoughts:** This problem is a great test of avoiding "built-in method" traps. Using `s.trim().split(" ")` is tempting, but it allocates unnecessary arrays and strings in memory, pushing the space complexity to $O(N)$. To keep my solution at an optimal $O(1)$ space, I wrote a manual pointer traversal. I started from the right side of the string and moved left. To make the code as clean as possible, I used **Loop Consolidation**. Inside a single `for` loop, I checked if the current character was a letter or a space. If it was a space and my word count was still 0, I ignored it (handling trailing spaces). If it was a space and my count was $> 0$, it meant I had finished reading the last word and could instantly `break` the loop!
 
 **Link to work:** [Day 58 - Length of Last Word](./Day58/LengthOfLastWord.java)
+
+### Day 59: May 15, 2026
+
+**Today's Progress:** Solved a classic string comparison problem! #14: Longest Common Prefix.
+
+**Thoughts:** This problem is a great exercise in string traversal. I used the **Horizontal Scanning** approach. I started by taking the entire first string and assuming it was the common prefix. Then, I iterated through the rest of the array. For each string, I used a `while` loop to check if it started with my current prefix. If it didn't, I chopped off the last character of my prefix using `.substring()` and checked again. This efficiently whittles down the prefix to the correct length! To make my code production-ready, I added a fail-fast guard clause for empty arrays and replaced the `.indexOf() != 0` check with Java's idiomatic `.startsWith()` method, which makes the logic incredibly easy to read.
+
+**Link to work:** [Day 59 - Longest Common Prefix](./Day59/LongestCommonPrefix.java)
