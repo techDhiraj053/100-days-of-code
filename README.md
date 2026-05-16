@@ -507,3 +507,11 @@
 **Thoughts:** This problem is a great exercise in string traversal. I used the **Horizontal Scanning** approach. I started by taking the entire first string and assuming it was the common prefix. Then, I iterated through the rest of the array. For each string, I used a `while` loop to check if it started with my current prefix. If it didn't, I chopped off the last character of my prefix using `.substring()` and checked again. This efficiently whittles down the prefix to the correct length! To make my code production-ready, I added a fail-fast guard clause for empty arrays and replaced the `.indexOf() != 0` check with Java's idiomatic `.startsWith()` method, which makes the logic incredibly easy to read.
 
 **Link to work:** [Day 59 - Longest Common Prefix](./Day59/LongestCommonPrefix.java)
+
+### Day 60: May 16, 2026
+
+**Today's Progress:** Hit Day 60! Conquered #151: Reverse Words in a String.
+
+**Thoughts:** My initial approach for this was highly readable: I used `s.trim()` to clean the edges and `s.split("\\s+")` to break the string into an array of words, filtering out multiple spaces using regex. Then, I just iterated backward and appended them to a `StringBuilder`. While it worked perfectly, I wanted to optimize it further. Calling `.split()` invokes Java's Regex engine and allocates a secondary array in memory. To make the code leaner, I eliminated the regex entirely. Building on the string traversal logic I used a few days ago, I implemented a manual **Right-to-Left Two-Pointer** approach. By skipping spaces manually and tracking the start and end indices of each word, I could extract and append the words directly to my `StringBuilder`, saving CPU cycles and memory!
+
+**Link to work:** [Day 60 - Reverse Words in a String](./Day60/ReverseWordsInAString.java)
