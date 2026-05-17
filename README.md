@@ -515,3 +515,11 @@
 **Thoughts:** My initial approach for this was highly readable: I used `s.trim()` to clean the edges and `s.split("\\s+")` to break the string into an array of words, filtering out multiple spaces using regex. Then, I just iterated backward and appended them to a `StringBuilder`. While it worked perfectly, I wanted to optimize it further. Calling `.split()` invokes Java's Regex engine and allocates a secondary array in memory. To make the code leaner, I eliminated the regex entirely. Building on the string traversal logic I used a few days ago, I implemented a manual **Right-to-Left Two-Pointer** approach. By skipping spaces manually and tracking the start and end indices of each word, I could extract and append the words directly to my `StringBuilder`, saving CPU cycles and memory!
 
 **Link to work:** [Day 60 - Reverse Words in a String](./Day60/ReverseWordsInAString.java)
+
+### Day 61: May 17, 2026
+
+**Today's Progress:** Kicked off a new phase of the challenge with #6: Zigzag Conversion.
+
+**Thoughts:** This problem challenges you to route a string's characters across multiple rows in a zigzag pattern. Instead of mapping a complex 2D array, I used a **Boolean State Machine**. I instantiated an array of `StringBuilder` objects—one for each row. As I looped through the characters, I simply dropped each one into the `currentRow` and checked my `goingDown` boolean to decide whether to increment or decrement my row pointer. If I hit the top or bottom boundary, I flipped the boolean! To make this code enterprise-grade, I focused on **Memory Pre-allocation**. I gave my row `StringBuilder`s an estimated initial capacity and gave my final `ans` StringBuilder the exact capacity of `s.length()`, completely preventing Java from having to re-allocate arrays internally during runtime!
+
+**Link to work:** [Day 61 - Zigzag Conversion](./Day61/ZigzagConversion.java)
