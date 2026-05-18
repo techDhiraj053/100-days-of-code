@@ -523,3 +523,11 @@
 **Thoughts:** This problem challenges you to route a string's characters across multiple rows in a zigzag pattern. Instead of mapping a complex 2D array, I used a **Boolean State Machine**. I instantiated an array of `StringBuilder` objects—one for each row. As I looped through the characters, I simply dropped each one into the `currentRow` and checked my `goingDown` boolean to decide whether to increment or decrement my row pointer. If I hit the top or bottom boundary, I flipped the boolean! To make this code enterprise-grade, I focused on **Memory Pre-allocation**. I gave my row `StringBuilder`s an estimated initial capacity and gave my final `ans` StringBuilder the exact capacity of `s.length()`, completely preventing Java from having to re-allocate arrays internally during runtime!
 
 **Link to work:** [Day 61 - Zigzag Conversion](./Day61/ZigzagConversion.java)
+
+### Day 62: May 18, 2026
+
+**Today's Progress:** Conquered #28: Find the Index of the First Occurrence in a String.
+
+**Thoughts:** This is the classic "Haystack and Needle" substring search problem. My first instinct was to write a manual **Sliding Window** algorithm: using an outer `for` loop to anchor my position in the haystack, and an inner `for` loop to check if the needle's characters matched one by one. While this $O(N \times M)$ approach works perfectly and proves I understand the underlying mechanics, I took a step back for my final solution. I learned that in Enterprise Java, the built-in `.indexOf()` method uses **JVM Intrinsics**—meaning it executes highly optimized, hardware-level instructions that are vastly faster than manual Java loops, all while maintaining strict $O(1)$ space complexity. Part of being a senior developer is knowing when to write the algorithm yourself, and when to let the framework do the heavy lifting!
+
+**Link to work:** [Day 62 - Find Index of First Occurrence](./Day62/FindIndexFirstOccurrence.java)
