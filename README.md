@@ -531,3 +531,11 @@
 **Thoughts:** This is the classic "Haystack and Needle" substring search problem. My first instinct was to write a manual **Sliding Window** algorithm: using an outer `for` loop to anchor my position in the haystack, and an inner `for` loop to check if the needle's characters matched one by one. While this $O(N \times M)$ approach works perfectly and proves I understand the underlying mechanics, I took a step back for my final solution. I learned that in Enterprise Java, the built-in `.indexOf()` method uses **JVM Intrinsics**—meaning it executes highly optimized, hardware-level instructions that are vastly faster than manual Java loops, all while maintaining strict $O(1)$ space complexity. Part of being a senior developer is knowing when to write the algorithm yourself, and when to let the framework do the heavy lifting!
 
 **Link to work:** [Day 62 - Find Index of First Occurrence](./Day62/FindIndexFirstOccurrence.java)
+
+### Day 63: May 19, 2026
+
+**Today's Progress:** Conquered an infamous LeetCode Hard! #68: Text Justification.
+
+**Thoughts:** This problem is notorious for its tedious edge cases. You have to pack strings into lines of exactly `maxWidth`, distribute spaces evenly, give leftover spaces to the leftmost gaps, and handle the final line completely differently! I tackled this using a **Greedy Algorithm**. First, I used a `while` loop to pack as many words into the current line as mathematically possible. Then, I split my logic into two cases: normal lines and the final line. For normal lines, I used division (`totalSpaces / gaps`) to apply the base spaces and modulo arithmetic (`totalSpaces % gaps`) to perfectly distribute the remainder to the left gaps. To make my solution enterprise-ready, I applied **Memory Pre-allocation**. Because every line must strictly equal `maxWidth`, I initialized my `StringBuilder` with `new StringBuilder(maxWidth)`, completely bypassing any internal array resizing operations!
+
+**Link to work:** [Day 63 - Text Justification](./Day63/TextJustification.java)
