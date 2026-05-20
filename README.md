@@ -539,3 +539,11 @@
 **Thoughts:** This problem is notorious for its tedious edge cases. You have to pack strings into lines of exactly `maxWidth`, distribute spaces evenly, give leftover spaces to the leftmost gaps, and handle the final line completely differently! I tackled this using a **Greedy Algorithm**. First, I used a `while` loop to pack as many words into the current line as mathematically possible. Then, I split my logic into two cases: normal lines and the final line. For normal lines, I used division (`totalSpaces / gaps`) to apply the base spaces and modulo arithmetic (`totalSpaces % gaps`) to perfectly distribute the remainder to the left gaps. To make my solution enterprise-ready, I applied **Memory Pre-allocation**. Because every line must strictly equal `maxWidth`, I initialized my `StringBuilder` with `new StringBuilder(maxWidth)`, completely bypassing any internal array resizing operations!
 
 **Link to work:** [Day 63 - Text Justification](./Day63/TextJustification.java)
+
+### Day 64: May 20, 2026
+
+**Today's Progress:** Conquered a classic string problem! #125: Valid Palindrome.
+
+**Thoughts:** The trap with this problem is using Regex (like `s.replaceAll("[^a-zA-Z0-9]", "")`) or `StringBuilder.reverse()`. While those built-in methods are easy to write, they allocate new objects in memory, resulting in an $O(N)$ space complexity penalty. To keep it strictly at $O(1)$ space, I implemented a **Two-Pointer** approach. By placing pointers at both ends of the string and walking them inward, I used `Character.isLetterOrDigit()` to simply step over any spaces or punctuation. If the pointers landed on characters that didn't match (using `.toLowerCase()` to ensure case-insensitivity), I immediately returned false. To polish the code, I used descriptive variable names (`left` and `right`) and added a fast-failing guard clause!
+
+**Link to work:** [Day 64 - Valid Palindrome](./Day64/ValidPalindrome.java)
