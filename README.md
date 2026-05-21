@@ -547,3 +547,11 @@
 **Thoughts:** The trap with this problem is using Regex (like `s.replaceAll("[^a-zA-Z0-9]", "")`) or `StringBuilder.reverse()`. While those built-in methods are easy to write, they allocate new objects in memory, resulting in an $O(N)$ space complexity penalty. To keep it strictly at $O(1)$ space, I implemented a **Two-Pointer** approach. By placing pointers at both ends of the string and walking them inward, I used `Character.isLetterOrDigit()` to simply step over any spaces or punctuation. If the pointers landed on characters that didn't match (using `.toLowerCase()` to ensure case-insensitivity), I immediately returned false. To polish the code, I used descriptive variable names (`left` and `right`) and added a fast-failing guard clause!
 
 **Link to work:** [Day 64 - Valid Palindrome](./Day64/ValidPalindrome.java)
+
+### Day 65: May 21, 2026
+
+**Today's Progress:** Conquered #392: Is Subsequence.
+
+**Thoughts:** This problem is a brilliant test of the **Two-Pointer** technique. By setting up one pointer to track the required characters in `s` and a second pointer to scan through `t`, I was able to verify the subsequence in a single $O(N)$ pass using $O(1)$ space. However, the real meat of this problem is the Follow-Up question: how do you handle a billion incoming `s` strings? I documented the enterprise system design answer: **Precomputation and Binary Search**. By mapping every character in `t` to a list of its index positions, you can process incoming `s` strings in $O(|s| \log |t|)$ time by binary searching for the next valid index! For the actual code, I added a micro-optimization by converting the strings to `char[]` arrays, avoiding the slight overhead of bounds-checking inherent to Java's `.charAt()` method inside loops.
+
+**Link to work:** [Day 65 - Is Subsequence](./Day65/IsSubsequence.java)
