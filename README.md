@@ -555,3 +555,12 @@
 **Thoughts:** This problem is a brilliant test of the **Two-Pointer** technique. By setting up one pointer to track the required characters in `s` and a second pointer to scan through `t`, I was able to verify the subsequence in a single $O(N)$ pass using $O(1)$ space. However, the real meat of this problem is the Follow-Up question: how do you handle a billion incoming `s` strings? I documented the enterprise system design answer: **Precomputation and Binary Search**. By mapping every character in `t` to a list of its index positions, you can process incoming `s` strings in $O(|s| \log |t|)$ time by binary searching for the next valid index! For the actual code, I added a micro-optimization by converting the strings to `char[]` arrays, avoiding the slight overhead of bounds-checking inherent to Java's `.charAt()` method inside loops.
 
 **Link to work:** [Day 65 - Is Subsequence](./Day65/IsSubsequence.java)
+
+
+### Day 66: May 22, 2026
+
+**Today's Progress:** Solved a classic variation! #167: Two Sum II - Input Array Is Sorted.
+
+**Thoughts:** Standard "Two Sum" usually requires a HashMap to get an $O(N)$ time complexity, which costs $O(N)$ space. Because this variation guarantees the input array is already sorted, I was able to optimize the space complexity down to $O(1)$ by using the **Two-Pointer** technique! I placed pointers at both ends of the array. Since it's sorted, if my current sum was greater than the target, I decremented the right pointer to get a smaller value. If the sum was less than the target, I incremented the left pointer to get a larger value. To make this code production-ready, I focused on **Defensive Programming**. Because the problem constraints guarantee exactly one solution, I replaced the default return statement with an `IllegalArgumentException` to instantly alert the system if invalid data ever breached the function!
+
+**Link to work:** [Day 66 - Two Sum II](./Day66/TwoSumII.java)
