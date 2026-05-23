@@ -556,7 +556,6 @@
 
 **Link to work:** [Day 65 - Is Subsequence](./Day65/IsSubsequence.java)
 
-
 ### Day 66: May 22, 2026
 
 **Today's Progress:** Solved a classic variation! #167: Two Sum II - Input Array Is Sorted.
@@ -564,3 +563,12 @@
 **Thoughts:** Standard "Two Sum" usually requires a HashMap to get an $O(N)$ time complexity, which costs $O(N)$ space. Because this variation guarantees the input array is already sorted, I was able to optimize the space complexity down to $O(1)$ by using the **Two-Pointer** technique! I placed pointers at both ends of the array. Since it's sorted, if my current sum was greater than the target, I decremented the right pointer to get a smaller value. If the sum was less than the target, I incremented the left pointer to get a larger value. To make this code production-ready, I focused on **Defensive Programming**. Because the problem constraints guarantee exactly one solution, I replaced the default return statement with an `IllegalArgumentException` to instantly alert the system if invalid data ever breached the function!
 
 **Link to work:** [Day 66 - Two Sum II](./Day66/TwoSumII.java)
+
+
+### Day 67: May 23, 2026
+
+**Today's Progress:** Conquered a legendary Two-Pointer problem! #11: Container With Most Water.
+
+**Thoughts:** The brute-force trap here is checking every possible pair of lines, which yields an `O(N²)` Time Limit Exceeded error. Instead, I used a **Two-Pointer** approach. By placing pointers at the far left and right, I started with the maximum possible width. Since the water level is bottlenecked by the shorter line, I calculated the area, then moved the pointer with the shorter line inward, hoping to find a taller boundary. To supercharge this algorithm, I implemented **Bypass Pruning**. Because moving inward reduces the width, any new line that isn't taller than my previous line is mathematically useless. I added inner `while` loops to rapidly skip past these shorter lines, bypassing redundant `Math.max()` calculations and resulting in a blazing-fast `O(N)` time complexity!
+
+**Link to work:** [Day 67 - Container With Most Water](./Day67/ContainerWithMostWater.java)
