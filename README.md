@@ -564,7 +564,6 @@
 
 **Link to work:** [Day 66 - Two Sum II](./Day66/TwoSumII.java)
 
-
 ### Day 67: May 23, 2026
 
 **Today's Progress:** Conquered a legendary Two-Pointer problem! #11: Container With Most Water.
@@ -572,3 +571,11 @@
 **Thoughts:** The brute-force trap here is checking every possible pair of lines, which yields an `O(N²)` Time Limit Exceeded error. Instead, I used a **Two-Pointer** approach. By placing pointers at the far left and right, I started with the maximum possible width. Since the water level is bottlenecked by the shorter line, I calculated the area, then moved the pointer with the shorter line inward, hoping to find a taller boundary. To supercharge this algorithm, I implemented **Bypass Pruning**. Because moving inward reduces the width, any new line that isn't taller than my previous line is mathematically useless. I added inner `while` loops to rapidly skip past these shorter lines, bypassing redundant `Math.max()` calculations and resulting in a blazing-fast `O(N)` time complexity!
 
 **Link to work:** [Day 67 - Container With Most Water](./Day67/ContainerWithMostWater.java)
+
+### Day 68: May 24, 2026
+
+**Today's Progress:** Solved a legendary interview problem! #15: 3Sum.
+
+**Thoughts:** To avoid the disastrous $O(N^3)$ brute-force approach, I scaled up the logic I used for "Two Sum II". By sorting the array first ($O(N \log N)$), I could iterate through the array, anchor one number (`i`), and then use a standard **Two-Pointer** search (`left` and `right`) to find the remaining two numbers that sum to 0. This brings the time complexity down to a highly optimal $O(N^2)$. To ensure I didn't return duplicate triplets, I manually skipped duplicate values for all three pointers, which avoids the memory overhead of relying on a `HashSet`. To further optimize the code, I implemented **Early Exit Pruning**. Since the array is sorted, the moment my anchor number `nums[i]` becomes greater than `0`, it is mathematically impossible to reach a sum of `0` with the remaining positive numbers, allowing me to instantly break the loop!
+
+**Link to work:** [Day 68 - 3Sum](./Day68/ThreeSum.java)
