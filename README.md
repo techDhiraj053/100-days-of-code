@@ -579,3 +579,11 @@
 **Thoughts:** To avoid the disastrous $O(N^3)$ brute-force approach, I scaled up the logic I used for "Two Sum II". By sorting the array first ($O(N \log N)$), I could iterate through the array, anchor one number (`i`), and then use a standard **Two-Pointer** search (`left` and `right`) to find the remaining two numbers that sum to 0. This brings the time complexity down to a highly optimal $O(N^2)$. To ensure I didn't return duplicate triplets, I manually skipped duplicate values for all three pointers, which avoids the memory overhead of relying on a `HashSet`. To further optimize the code, I implemented **Early Exit Pruning**. Since the array is sorted, the moment my anchor number `nums[i]` becomes greater than `0`, it is mathematically impossible to reach a sum of `0` with the remaining positive numbers, allowing me to instantly break the loop!
 
 **Link to work:** [Day 68 - 3Sum](./Day68/ThreeSum.java)
+
+### Day 69: May 25, 2026
+
+**Today's Progress:** Mastered dynamic sub-arrays! #209: Minimum Size Subarray Sum.
+
+**Thoughts:** I initially solved this using the highly optimal **Sliding Window** technique. By expanding the `right` pointer to find a valid sum, and then shrinking the `left` pointer to find the minimal length, I achieved an $O(N)$ time complexity. However, to truly master the problem, I tackled the explicit LeetCode Follow-up question: designing an $O(N \log N)$ algorithm. Because the array only contains positive numbers, a **Prefix Sum** array will be strictly increasing (sorted). This allowed me to iterate through the array and use **Binary Search** (`Arrays.binarySearch`) to instantly look up the exact ending index required to meet the target sum. Being able to pivot from Sliding Window to Binary Search proves a deep understanding of algorithmic bounds!
+
+**Link to work:** [Day 69 - Minimum Size Subarray Sum](./Day69/MinimumSizeSubarraySum.java)
