@@ -587,3 +587,13 @@
 **Thoughts:** I initially solved this using the highly optimal **Sliding Window** technique. By expanding the `right` pointer to find a valid sum, and then shrinking the `left` pointer to find the minimal length, I achieved an $O(N)$ time complexity. However, to truly master the problem, I tackled the explicit LeetCode Follow-up question: designing an $O(N \log N)$ algorithm. Because the array only contains positive numbers, a **Prefix Sum** array will be strictly increasing (sorted). This allowed me to iterate through the array and use **Binary Search** (`Arrays.binarySearch`) to instantly look up the exact ending index required to meet the target sum. Being able to pivot from Sliding Window to Binary Search proves a deep understanding of algorithmic bounds!
 
 **Link to work:** [Day 69 - Minimum Size Subarray Sum](./Day69/MinimumSizeSubarraySum.java)
+
+
+
+### Day 70: May 26, 2026
+
+**Today's Progress:** Hit Day 70 with a classic! #3: Longest Substring Without Repeating Characters.
+
+**Thoughts:** This problem is the ultimate test of the **Sliding Window** pattern. My initial approach used a `HashSet` to track the characters inside my window. When my `right` pointer hit a duplicate, I used a `while` loop to slowly increment my `left` pointer and remove characters from the set until the duplicate was gone. While this worked well, I wanted absolute maximum efficiency. I swapped the `HashSet` for an **ASCII Direct-Access Array** (`int[128]`). Instead of storing booleans, I stored the _index_ where each character was last seen. By doing this, when I encountered a duplicate, I didn't need a `while` loop at all! I could instantly "jump" my `left` pointer to the index right after the duplicate (`left = charIndexMap[currentChar] + 1`). This optimization guarantees every single character is processed exactly once, yielding a strict single-pass $O(N)$ algorithm!
+
+**Link to work:** [Day 70 - Longest Substring](./Day70/LongestSubstring.java)
