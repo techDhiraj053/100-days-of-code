@@ -588,8 +588,6 @@
 
 **Link to work:** [Day 69 - Minimum Size Subarray Sum](./Day69/MinimumSizeSubarraySum.java)
 
-
-
 ### Day 70: May 26, 2026
 
 **Today's Progress:** Hit Day 70 with a classic! #3: Longest Substring Without Repeating Characters.
@@ -597,3 +595,11 @@
 **Thoughts:** This problem is the ultimate test of the **Sliding Window** pattern. My initial approach used a `HashSet` to track the characters inside my window. When my `right` pointer hit a duplicate, I used a `while` loop to slowly increment my `left` pointer and remove characters from the set until the duplicate was gone. While this worked well, I wanted absolute maximum efficiency. I swapped the `HashSet` for an **ASCII Direct-Access Array** (`int[128]`). Instead of storing booleans, I stored the _index_ where each character was last seen. By doing this, when I encountered a duplicate, I didn't need a `while` loop at all! I could instantly "jump" my `left` pointer to the index right after the duplicate (`left = charIndexMap[currentChar] + 1`). This optimization guarantees every single character is processed exactly once, yielding a strict single-pass $O(N)$ algorithm!
 
 **Link to work:** [Day 70 - Longest Substring](./Day70/LongestSubstring.java)
+
+### Day 71: May 27, 2026
+
+**Today's Progress:** Took down a LeetCode Hard! #30: Substring with Concatenation of All Words.
+
+**Thoughts:** This problem is a massive test of combining data structures and algorithms. You have to find substrings composed of a specific set of words. The core trick is that every target word is the _exact same length_. This means you don't need a sliding window that moves by 1 character checking every index. You just need a **Multi-Offset Sliding Window**. I ran a loop from $0$ to `wordLen - 1`. Inside that loop, my sliding window pointers jumped by `wordLen` chunks! I used two HashMaps: one to track the target word frequencies, and one to track the words `seen` in the current window. If I saw too many of a word, I shrunk the `left` pointer. If I saw a completely invalid word, I cleared the `seen` map and reset the window. To make this enterprise-ready, I allocated the `seen` HashMap exactly once outside of all the loops, relying on `.clear()` instead of `new HashMap<>()` to prevent massive Garbage Collection overhead!
+
+**Link to work:** [Day 71 - Substring with Concatenation](./Day71/SubstringConcatenationAllWords.java)
