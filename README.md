@@ -603,3 +603,11 @@
 **Thoughts:** This problem is a massive test of combining data structures and algorithms. You have to find substrings composed of a specific set of words. The core trick is that every target word is the _exact same length_. This means you don't need a sliding window that moves by 1 character checking every index. You just need a **Multi-Offset Sliding Window**. I ran a loop from $0$ to `wordLen - 1`. Inside that loop, my sliding window pointers jumped by `wordLen` chunks! I used two HashMaps: one to track the target word frequencies, and one to track the words `seen` in the current window. If I saw too many of a word, I shrunk the `left` pointer. If I saw a completely invalid word, I cleared the `seen` map and reset the window. To make this enterprise-ready, I allocated the `seen` HashMap exactly once outside of all the loops, relying on `.clear()` instead of `new HashMap<>()` to prevent massive Garbage Collection overhead!
 
 **Link to work:** [Day 71 - Substring with Concatenation](./Day71/SubstringConcatenationAllWords.java)
+
+### Day 72: May 28, 2026
+
+**Today's Progress:** Solved the quintessential Sliding Window problem! #76: Minimum Window Substring.
+
+**Thoughts:** This LeetCode Hard forces you to dynamically track state as a window expands and contracts. My initial approach used two HashMaps: one for the target string frequencies, and one for the current window. To make the validation step $O(1)$, I used a clever `have` and `required` variable pair to track when unique character conditions were met. To push this into enterprise-grade performance, I refactored the data structures. Because we are dealing with standard characters, I swapped the HashMaps for a direct-access ASCII array (`int[128]`). Then, instead of tracking unique character matches, I tracked the _raw total_ of required characters. As the right pointer expanded, if I found a needed character, I decremented `required`. When `required == 0`, the window was valid, and I could pull my left pointer in to shrink it! This easily satisfied the $O(m + n)$ time follow-up.
+
+**Link to work:** [Day 72 - Minimum Window Substring](./Day72/MinimumWindowSubstring.java)
