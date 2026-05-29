@@ -611,3 +611,11 @@
 **Thoughts:** This LeetCode Hard forces you to dynamically track state as a window expands and contracts. My initial approach used two HashMaps: one for the target string frequencies, and one for the current window. To make the validation step $O(1)$, I used a clever `have` and `required` variable pair to track when unique character conditions were met. To push this into enterprise-grade performance, I refactored the data structures. Because we are dealing with standard characters, I swapped the HashMaps for a direct-access ASCII array (`int[128]`). Then, instead of tracking unique character matches, I tracked the _raw total_ of required characters. As the right pointer expanded, if I found a needed character, I decremented `required`. When `required == 0`, the window was valid, and I could pull my left pointer in to shrink it! This easily satisfied the $O(m + n)$ time follow-up.
 
 **Link to work:** [Day 72 - Minimum Window Substring](./Day72/MinimumWindowSubstring.java)
+
+### Day 73: May 29, 2026
+
+**Today's Progress:** Validated matrix structures! #36: Valid Sudoku.
+
+**Thoughts:** Validating the rows and columns of a Sudoku board is easy, but mapping the 3x3 sub-boxes is the real challenge. I bypassed messy nested loops by using the mathematical formula `(r / 3) * 3 + (c / 3)`. This perfectly flattened the 2D grid coordinates into a 1D array index (0-8), allowing me to validate the entire board in a single $O(1)$ pass! To level up my code for an enterprise environment, I implemented **Bit Manipulation (Bitmasking)**. Instead of using `boolean[][]` arrays to track seen numbers, I used a `1D` array of integers. Because a standard integer has 32 bits, I used the first 9 bits to represent the digits 1-9. Using the bitwise AND operator (`&`) to check for duplicates and the bitwise OR operator (`|`) to log seen digits reduced my memory footprint significantly and leveraged ultra-fast hardware-level calculations!
+
+**Link to work:** [Day 73 - Valid Sudoku](./Day73/ValidSudoku.java)
