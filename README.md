@@ -619,3 +619,11 @@
 **Thoughts:** Validating the rows and columns of a Sudoku board is easy, but mapping the 3x3 sub-boxes is the real challenge. I bypassed messy nested loops by using the mathematical formula `(r / 3) * 3 + (c / 3)`. This perfectly flattened the 2D grid coordinates into a 1D array index (0-8), allowing me to validate the entire board in a single $O(1)$ pass! To level up my code for an enterprise environment, I implemented **Bit Manipulation (Bitmasking)**. Instead of using `boolean[][]` arrays to track seen numbers, I used a `1D` array of integers. Because a standard integer has 32 bits, I used the first 9 bits to represent the digits 1-9. Using the bitwise AND operator (`&`) to check for duplicates and the bitwise OR operator (`|`) to log seen digits reduced my memory footprint significantly and leveraged ultra-fast hardware-level calculations!
 
 **Link to work:** [Day 73 - Valid Sudoku](./Day73/ValidSudoku.java)
+
+### Day 74: May 30, 2026
+
+**Today's Progress:** Mastered the 2D grid! #54: Spiral Matrix.
+
+**Thoughts:** Matrix traversals can easily turn into spaghetti code if you aren't careful with bounds checking. To solve this cleanly, I used the **4-Pointer Boundary** method. I established `top`, `bottom`, `left`, and `right` variables to act as "walls". I used `for` loops to walk along the walls in a spiral pattern, pushing the boundaries inward after every edge was completed. Crucially, I added inner `if` checks for the bottom and left traversals to ensure I didn't double-count cells when dealing with non-square rectangles! To make this enterprise-ready, I brought back **Memory Pre-allocation**. Because the exact size of a matrix is strictly `rows * cols`, I passed that value directly into my `ArrayList` constructor to ensure the underlying array never had to dynamically resize itself, achieving optimal $O(M \times N)$ execution!
+
+**Link to work:** [Day 74 - Spiral Matrix](./Day74/SpiralMatrix.java)
