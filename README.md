@@ -627,3 +627,11 @@
 **Thoughts:** Matrix traversals can easily turn into spaghetti code if you aren't careful with bounds checking. To solve this cleanly, I used the **4-Pointer Boundary** method. I established `top`, `bottom`, `left`, and `right` variables to act as "walls". I used `for` loops to walk along the walls in a spiral pattern, pushing the boundaries inward after every edge was completed. Crucially, I added inner `if` checks for the bottom and left traversals to ensure I didn't double-count cells when dealing with non-square rectangles! To make this enterprise-ready, I brought back **Memory Pre-allocation**. Because the exact size of a matrix is strictly `rows * cols`, I passed that value directly into my `ArrayList` constructor to ensure the underlying array never had to dynamically resize itself, achieving optimal $O(M \times N)$ execution!
 
 **Link to work:** [Day 74 - Spiral Matrix](./Day74/SpiralMatrix.java)
+
+### Day 75: May 31, 2026 🎉 75% MILESTONE! 🎉
+
+**Today's Progress:** Hit the 3/4 mark of the challenge! Solved #48: Rotate Image.
+
+**Thoughts:** I initially solved this using standard Linear Algebra operations: a Transpose followed by a Reverse. It's incredibly readable and satisfies the $O(1)$ space requirement. However, it requires traversing the matrix twice. To push my algorithmic limits, I implemented a **Single-Pass 4-Way Swap**. Building on the boundary logic from yesterday's "Spiral Matrix", I processed the grid layer by layer. Within each layer, I used a single temporary variable to simultaneously swap 4 coordinating cells (the four corners/edges) 90 degrees clockwise. This cut the runtime operations completely in half, showing a deep understanding of pointer math and in-place memory manipulation!
+
+**Link to work:** [Day 75 - Rotate Image](./Day75/RotateImage.java)
