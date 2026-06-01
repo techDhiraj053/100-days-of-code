@@ -635,3 +635,11 @@
 **Thoughts:** I initially solved this using standard Linear Algebra operations: a Transpose followed by a Reverse. It's incredibly readable and satisfies the $O(1)$ space requirement. However, it requires traversing the matrix twice. To push my algorithmic limits, I implemented a **Single-Pass 4-Way Swap**. Building on the boundary logic from yesterday's "Spiral Matrix", I processed the grid layer by layer. Within each layer, I used a single temporary variable to simultaneously swap 4 coordinating cells (the four corners/edges) 90 degrees clockwise. This cut the runtime operations completely in half, showing a deep understanding of pointer math and in-place memory manipulation!
 
 **Link to work:** [Day 75 - Rotate Image](./Day75/RotateImage.java)
+
+### Day 76: June 1, 2026
+
+**Today's Progress:** Kicked off the final quarter of the challenge! Solved #73: Set Matrix Zeroes.
+
+**Thoughts:** This problem has a great follow-up: can you solve it in $O(1)$ constant space? I avoided allocating extra memory arrays by using the matrix's own first row and first column as "memory markers" to track which rows and columns needed to be zeroed out. To level up my code, I applied **State Variable Reduction**. Instead of using two separate boolean flags for the first row and column, I used `matrix[0][0]` to track the row and a single `col0` boolean to track the column. Furthermore, by traversing the matrix **backwards** (from bottom-right to top-left) during the update phase, I was able to safely consolidate my loops. Going backwards ensures that the marker zones are read _before_ they are accidentally overwritten by the zeroes propagating upward!
+
+**Link to work:** [Day 76 - Set Matrix Zeroes](./Day76/SetMatrixZeroes.java)
