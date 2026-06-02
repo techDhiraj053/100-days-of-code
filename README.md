@@ -643,3 +643,11 @@
 **Thoughts:** This problem has a great follow-up: can you solve it in $O(1)$ constant space? I avoided allocating extra memory arrays by using the matrix's own first row and first column as "memory markers" to track which rows and columns needed to be zeroed out. To level up my code, I applied **State Variable Reduction**. Instead of using two separate boolean flags for the first row and column, I used `matrix[0][0]` to track the row and a single `col0` boolean to track the column. Furthermore, by traversing the matrix **backwards** (from bottom-right to top-left) during the update phase, I was able to safely consolidate my loops. Going backwards ensures that the marker zones are read _before_ they are accidentally overwritten by the zeroes propagating upward!
 
 **Link to work:** [Day 76 - Set Matrix Zeroes](./Day76/SetMatrixZeroes.java)
+
+### Day 77: June 2, 2026
+
+**Today's Progress:** Built a classic cellular automaton! #289: Game of Life.
+
+**Thoughts:** This problem is famous for a reason. The challenge is that births and deaths must happen _simultaneously_. If you update a cell immediately, it corrupts the neighbor count for adjacent cells. Creating a second matrix solves this but costs $O(M \times N)$ space. My initial $O(1)$ space solution used `-1` and `2` as temporary placeholders to represent state changes. To optimize this into an enterprise-grade solution, I implemented **Bitwise State Encoding**. Because the grid only uses `0`s and `1`s, only the 1st bit of the integer is occupied. I calculated the neighbor counts by reading only the 1st bit (`board[r][c] & 1`), and then I stored the _future_ state in the 2nd bit using the bitwise OR operator (`board[i][j] |= 2`). Finally, to advance to the next generation, I simply shifted every integer right by one (`>>= 1`), which instantly replaced the old state with the new one!
+
+**Link to work:** [Day 77 - Game of Life](./Day77/GameOfLife.java)
