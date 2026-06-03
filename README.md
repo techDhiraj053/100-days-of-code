@@ -651,3 +651,12 @@
 **Thoughts:** This problem is famous for a reason. The challenge is that births and deaths must happen _simultaneously_. If you update a cell immediately, it corrupts the neighbor count for adjacent cells. Creating a second matrix solves this but costs $O(M \times N)$ space. My initial $O(1)$ space solution used `-1` and `2` as temporary placeholders to represent state changes. To optimize this into an enterprise-grade solution, I implemented **Bitwise State Encoding**. Because the grid only uses `0`s and `1`s, only the 1st bit of the integer is occupied. I calculated the neighbor counts by reading only the 1st bit (`board[r][c] & 1`), and then I stored the _future_ state in the 2nd bit using the bitwise OR operator (`board[i][j] |= 2`). Finally, to advance to the next generation, I simply shifted every integer right by one (`>>= 1`), which instantly replaced the old state with the new one!
 
 **Link to work:** [Day 77 - Game of Life](./Day77/GameOfLife.java)
+
+
+### Day 78: June 3, 2026
+
+**Today's Progress:** Solved a classic frequency counting problem! #383: Ransom Note.
+
+**Thoughts:** The standard logical approach for this problem is to build a frequency map of the `magazine` characters and then iterate through the `ransomNote` to see if you have enough letters in your "bank". While a `HashMap` works perfectly for this and gives an $O(M + N)$ time complexity, it isn't the most optimal choice for this specific problem. The constraints specify that the inputs will *only* consist of lowercase English letters. As a senior optimization, I replaced the heavy `HashMap` with a simple **Alphabet Array** (`int[26]`). By doing `c - 'a'`, I dynamically mapped every character to an index from 0 to 25. This eliminated all autoboxing and hashing overhead, making the algorithm lightning fast while maintaining strict $O(1)$ space! I also added a fast-failing guard clause to immediately return `false` if the ransom note is longer than the magazine itself.
+
+**Link to work:** [Day 78 - Ransom Note](./Day78/RansomNote.java)
