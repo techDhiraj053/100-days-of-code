@@ -652,11 +652,18 @@
 
 **Link to work:** [Day 77 - Game of Life](./Day77/GameOfLife.java)
 
+### Day 78: June 3, 2026
+
+**Today's Progress:** Solved a classic frequency counting problem! #383: Ransom Note.
+
+**Thoughts:** The standard logical approach for this problem is to build a frequency map of the `magazine` characters and then iterate through the `ransomNote` to see if you have enough letters in your "bank". While a `HashMap` works perfectly for this and gives an $O(M + N)$ time complexity, it isn't the most optimal choice for this specific problem. The constraints specify that the inputs will _only_ consist of lowercase English letters. As a senior optimization, I replaced the heavy `HashMap` with a simple **Alphabet Array** (`int[26]`). By doing `c - 'a'`, I dynamically mapped every character to an index from 0 to 25. This eliminated all autoboxing and hashing overhead, making the algorithm lightning fast while maintaining strict $O(1)$ space! I also added a fast-failing guard clause to immediately return `false` if the ransom note is longer than the magazine itself.
+
+**Link to work:** [Day 78 - Ransom Note](./Day78/RansomNote.java)
 
 ### Day 78: June 3, 2026
 
 **Today's Progress:** Solved a classic frequency counting problem! #383: Ransom Note.
 
-**Thoughts:** The standard logical approach for this problem is to build a frequency map of the `magazine` characters and then iterate through the `ransomNote` to see if you have enough letters in your "bank". While a `HashMap` works perfectly for this and gives an $O(M + N)$ time complexity, it isn't the most optimal choice for this specific problem. The constraints specify that the inputs will *only* consist of lowercase English letters. As a senior optimization, I replaced the heavy `HashMap` with a simple **Alphabet Array** (`int[26]`). By doing `c - 'a'`, I dynamically mapped every character to an index from 0 to 25. This eliminated all autoboxing and hashing overhead, making the algorithm lightning fast while maintaining strict $O(1)$ space! I also added a fast-failing guard clause to immediately return `false` if the ransom note is longer than the magazine itself.
+**Thoughts:** The standard logical approach for this problem is to build a frequency map of the `magazine` characters and then iterate through the `ransomNote` to see if you have enough letters in your "bank". While a `HashMap` works perfectly for this and gives an $O(M + N)$ time complexity, it isn't the most optimal choice for this specific problem. The constraints specify that the inputs will _only_ consist of lowercase English letters. As a senior optimization, I replaced the heavy `HashMap` with a simple **Alphabet Array** (`int[26]`). By doing `c - 'a'`, I dynamically mapped every character to an index from 0 to 25. This eliminated all autoboxing and hashing overhead, making the algorithm lightning fast while maintaining strict $O(1)$ space! I also added a fast-failing guard clause to immediately return `false` if the ransom note is longer than the magazine itself.
 
 **Link to work:** [Day 78 - Ransom Note](./Day78/RansomNote.java)
