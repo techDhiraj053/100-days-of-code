@@ -660,10 +660,10 @@
 
 **Link to work:** [Day 78 - Ransom Note](./Day78/RansomNote.java)
 
-### Day 78: June 3, 2026
+### Day 79: June 4, 2026
 
-**Today's Progress:** Solved a classic frequency counting problem! #383: Ransom Note.
+**Today's Progress:** Verified string structures! #205: Isomorphic Strings.
 
-**Thoughts:** The standard logical approach for this problem is to build a frequency map of the `magazine` characters and then iterate through the `ransomNote` to see if you have enough letters in your "bank". While a `HashMap` works perfectly for this and gives an $O(M + N)$ time complexity, it isn't the most optimal choice for this specific problem. The constraints specify that the inputs will _only_ consist of lowercase English letters. As a senior optimization, I replaced the heavy `HashMap` with a simple **Alphabet Array** (`int[26]`). By doing `c - 'a'`, I dynamically mapped every character to an index from 0 to 25. This eliminated all autoboxing and hashing overhead, making the algorithm lightning fast while maintaining strict $O(1)$ space! I also added a fast-failing guard clause to immediately return `false` if the ransom note is longer than the magazine itself.
+**Thoughts:** To prove two strings are isomorphic, you have to guarantee a strict 1-to-1 mapping (bijection). If 'a' maps to 'b', 'b' cannot map to 'a'. My first implementation used two `HashMap`s to check the mappings in both directions (`S -> T` and `T -> S`). This safely handles all edge cases. However, as an optimization exercise, I leveraged the problem's ASCII constraint to replace the `HashMap`s with two `int[256]` arrays. Instead of mapping characters to other characters, I mapped each character to its **last seen index**. If the two characters in a given pair don't share the exact same last-seen index signature, I know the isomorphic pattern has been broken! This removes all autoboxing overhead and drops the space complexity to a microscopic, strict $O(1)$.
 
-**Link to work:** [Day 78 - Ransom Note](./Day78/RansomNote.java)
+**Link to work:** [Day 79 - Isomorphic Strings](./Day79/IsomorphicStrings.java)
