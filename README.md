@@ -667,3 +667,11 @@
 **Thoughts:** To prove two strings are isomorphic, you have to guarantee a strict 1-to-1 mapping (bijection). If 'a' maps to 'b', 'b' cannot map to 'a'. My first implementation used two `HashMap`s to check the mappings in both directions (`S -> T` and `T -> S`). This safely handles all edge cases. However, as an optimization exercise, I leveraged the problem's ASCII constraint to replace the `HashMap`s with two `int[256]` arrays. Instead of mapping characters to other characters, I mapped each character to its **last seen index**. If the two characters in a given pair don't share the exact same last-seen index signature, I know the isomorphic pattern has been broken! This removes all autoboxing overhead and drops the space complexity to a microscopic, strict $O(1)$.
 
 **Link to work:** [Day 79 - Isomorphic Strings](./Day79/IsomorphicStrings.java)
+
+### Day 80: June 5, 2026
+
+**Today's Progress:** Hit 80 Days! Solved #290: Word Pattern.
+
+**Thoughts:** This problem is the exact same underlying logic as yesterday's "Isomorphic Strings", just mapping Characters to Strings instead of Characters to Characters. My initial approach was standard: `s.split(" ")` followed by two HashMaps to enforce a strict two-way bijection. To push my Java knowledge, I refactored the solution to use a **Single Heterogeneous Map** (`Map<Object, Integer>`). Since `Character` and `String` are distinct object types, they can share the same map without key collisions. I utilized the fact that `Map.put()` returns the _previous_ value associated with a key. By putting both the current character and the current word into the map on each iteration, I could simply check if they returned the same previous index using `Objects.equals()`. If the returned histories didn't match, the bijection was broken!
+
+**Link to work:** [Day 80 - Word Pattern](./Day80/WordPattern.java)
