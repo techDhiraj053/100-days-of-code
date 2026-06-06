@@ -675,3 +675,11 @@
 **Thoughts:** This problem is the exact same underlying logic as yesterday's "Isomorphic Strings", just mapping Characters to Strings instead of Characters to Characters. My initial approach was standard: `s.split(" ")` followed by two HashMaps to enforce a strict two-way bijection. To push my Java knowledge, I refactored the solution to use a **Single Heterogeneous Map** (`Map<Object, Integer>`). Since `Character` and `String` are distinct object types, they can share the same map without key collisions. I utilized the fact that `Map.put()` returns the _previous_ value associated with a key. By putting both the current character and the current word into the map on each iteration, I could simply check if they returned the same previous index using `Objects.equals()`. If the returned histories didn't match, the bijection was broken!
 
 **Link to work:** [Day 80 - Word Pattern](./Day80/WordPattern.java)
+
+### Day 81: June 7, 2026
+
+**Today's Progress:** Solved a foundational string problem! #242: Valid Anagram.
+
+**Thoughts:** I started by writing a frequency map implementation using a `HashMap`. I iterated through string `s` to count the letters, and then iterated through string `t` to deplete them. Interestingly, this is actually the exact answer to the problem's Follow-up question regarding Unicode characters, because a `HashMap` dynamically handles massive, sparse character sets without wasting memory! However, for the base constraints (strictly lowercase English letters), I refactored the solution to use a direct-access **Alphabet Array** (`int[26]`). Because both strings are guaranteed to be the same length, I processed them in a single loop—incrementing the array for characters in `s` and decrementing for characters in `t`. This acts as a zero-sum game; if they are true anagrams, every single bucket perfectly balances back out to `0` at the end!
+
+**Link to work:** [Day 81 - Valid Anagram](./Day81/ValidAnagram.java)
