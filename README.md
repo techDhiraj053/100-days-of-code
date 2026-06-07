@@ -676,10 +676,18 @@
 
 **Link to work:** [Day 80 - Word Pattern](./Day80/WordPattern.java)
 
-### Day 81: June 7, 2026
+### Day 81: June 6, 2026
 
 **Today's Progress:** Solved a foundational string problem! #242: Valid Anagram.
 
 **Thoughts:** I started by writing a frequency map implementation using a `HashMap`. I iterated through string `s` to count the letters, and then iterated through string `t` to deplete them. Interestingly, this is actually the exact answer to the problem's Follow-up question regarding Unicode characters, because a `HashMap` dynamically handles massive, sparse character sets without wasting memory! However, for the base constraints (strictly lowercase English letters), I refactored the solution to use a direct-access **Alphabet Array** (`int[26]`). Because both strings are guaranteed to be the same length, I processed them in a single loop—incrementing the array for characters in `s` and decrementing for characters in `t`. This acts as a zero-sum game; if they are true anagrams, every single bucket perfectly balances back out to `0` at the end!
 
 **Link to work:** [Day 81 - Valid Anagram](./Day81/ValidAnagram.java)
+
+### Day 82: June 8, 2026
+
+**Today's Progress:** Mastered data grouping! #49: Group Anagrams.
+
+**Thoughts:** My initial solution relied on string sorting. By converting every string to a character array and sorting it, I created a universal "key" that allowed me to group anagrams together in a `HashMap`. While highly readable, sorting takes $O(K \log K)$ time per string. To optimize this for an enterprise environment, I utilized a **Frequency Array Signature**. Because the characters are limited to `a-z`, I built an `int[26]` frequency array for each string and used `Arrays.toString()` to serialize it into my HashMap key. This drops the sorting entirely, resulting in an optimal $O(N \times K)$ algorithm! I also cleaned up my map initialization by using Java's idiomatic `.computeIfAbsent()`, which automatically handles the `null` checks and lists instantiations in a single line.
+
+**Link to work:** [Day 82 - Group Anagrams](./Day82/GroupAnagrams.java)
