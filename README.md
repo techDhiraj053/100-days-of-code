@@ -691,3 +691,11 @@
 **Thoughts:** My initial solution relied on string sorting. By converting every string to a character array and sorting it, I created a universal "key" that allowed me to group anagrams together in a `HashMap`. While highly readable, sorting takes $O(K \log K)$ time per string. To optimize this for an enterprise environment, I utilized a **Frequency Array Signature**. Because the characters are limited to `a-z`, I built an `int[26]` frequency array for each string and used `Arrays.toString()` to serialize it into my HashMap key. This drops the sorting entirely, resulting in an optimal $O(N \times K)$ algorithm! I also cleaned up my map initialization by using Java's idiomatic `.computeIfAbsent()`, which automatically handles the `null` checks and lists instantiations in a single line.
 
 **Link to work:** [Day 82 - Group Anagrams](./Day82/GroupAnagrams.java)
+
+### Day 83: June 8, 2026
+
+**Today's Progress:** Conquered the algorithm that started it all! #1: Two Sum.
+
+**Thoughts:** It's fitting to tackle LeetCode #1 this late in the challenge because I can truly appreciate the optimal solution. The brute-force double `for` loop approach takes $O(N^2)$ time. To solve the explicit follow-up question ("less than $O(N^2)$ time"), I implemented a single-pass `HashMap`. As I iterate through the array, I calculate the `complement` needed to reach the target. If the complement is in the map, I return the indices. If not, I store the current number and index in the map for future checks. This drops the time complexity to a blisteringly fast $O(N)$. To elevate the code to enterprise standards, I initialized the `HashMap` with `nums.length` to prevent internal resizing/rehashing overhead, and I replaced the empty return statement with an `IllegalArgumentException` to strictly enforce the "exactly one solution" data contract!
+
+**Link to work:** [Day 83 - Two Sum](./Day83/TwoSum.java)
