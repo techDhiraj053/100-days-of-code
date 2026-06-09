@@ -699,3 +699,11 @@
 **Thoughts:** It's fitting to tackle LeetCode #1 this late in the challenge because I can truly appreciate the optimal solution. The brute-force double `for` loop approach takes $O(N^2)$ time. To solve the explicit follow-up question ("less than $O(N^2)$ time"), I implemented a single-pass `HashMap`. As I iterate through the array, I calculate the `complement` needed to reach the target. If the complement is in the map, I return the indices. If not, I store the current number and index in the map for future checks. This drops the time complexity to a blisteringly fast $O(N)$. To elevate the code to enterprise standards, I initialized the `HashMap` with `nums.length` to prevent internal resizing/rehashing overhead, and I replaced the empty return statement with an `IllegalArgumentException` to strictly enforce the "exactly one solution" data contract!
 
 **Link to work:** [Day 83 - Two Sum](./Day83/TwoSum.java)
+
+### Day 84: June 9, 2026
+
+**Today's Progress:** Solved a classic cycle detection puzzle! #202: Happy Number.
+
+**Thoughts:** The challenge with testing for a "Happy Number" isn't the math, it's preventing an infinite loop if the number is unhappy. My initial approach used a `HashSet`. By adding every generated number to the set, I could safely break the loop if I encountered a duplicate. To optimize the space complexity from `O(log N)` to `O(1)`, I treated the mathematical sequence like a Linked List! I implemented **Floyd’s Cycle-Finding Algorithm** using a `slow` and `fast` pointer. The slow pointer calculates the next number once, while the fast pointer calculates it twice. If a cycle exists, the fast pointer will mathematically "lap" the slow pointer and they will collide. If the number is happy, the fast pointer will effortlessly hit `1` and break the loop. No history storage required!
+
+**Link to work:** [Day 84 - Happy Number](./Day84/HappyNumber.java)
