@@ -707,3 +707,11 @@
 **Thoughts:** The challenge with testing for a "Happy Number" isn't the math, it's preventing an infinite loop if the number is unhappy. My initial approach used a `HashSet`. By adding every generated number to the set, I could safely break the loop if I encountered a duplicate. To optimize the space complexity from `O(log N)` to `O(1)`, I treated the mathematical sequence like a Linked List! I implemented **Floyd’s Cycle-Finding Algorithm** using a `slow` and `fast` pointer. The slow pointer calculates the next number once, while the fast pointer calculates it twice. If a cycle exists, the fast pointer will mathematically "lap" the slow pointer and they will collide. If the number is happy, the fast pointer will effortlessly hit `1` and break the loop. No history storage required!
 
 **Link to work:** [Day 84 - Happy Number](./Day84/HappyNumber.java)
+
+### Day 85: June 10, 2026
+
+**Today's Progress:** Mastered bounded memory constraints! #219: Contains Duplicate II.
+
+**Thoughts:** The challenge here is finding duplicate numbers that are no more than `k` indices apart. My initial solution used a `HashMap` to store every number and its last seen index, giving me an optimal $O(N)$ time complexity. However, it required $O(N)$ space. To optimize this for enterprise-scale data, I implemented a **Fixed-Size Sliding Window**. Instead of a Map, I used a `HashSet`. I bounded the set's size so it never exceeded `k` elements by actively removing the oldest element (`nums[i - k]`) as the loop moved forward. This dropped the memory footprint down to $O(\min(N, K))$! I also applied a great idiomatic Java trick: `Set.add()` returns a boolean. By wrapping it in an `if (!window.add(nums[i]))` statement, I completely eliminated the need for a separate `.contains()` check, saving CPU cycles!
+
+**Link to work:** [Day 85 - Contains Duplicate II](./Day85/ContainsDuplicateII.java)
