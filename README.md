@@ -715,3 +715,11 @@
 **Thoughts:** The challenge here is finding duplicate numbers that are no more than `k` indices apart. My initial solution used a `HashMap` to store every number and its last seen index, giving me an optimal $O(N)$ time complexity. However, it required $O(N)$ space. To optimize this for enterprise-scale data, I implemented a **Fixed-Size Sliding Window**. Instead of a Map, I used a `HashSet`. I bounded the set's size so it never exceeded `k` elements by actively removing the oldest element (`nums[i - k]`) as the loop moved forward. This dropped the memory footprint down to $O(\min(N, K))$! I also applied a great idiomatic Java trick: `Set.add()` returns a boolean. By wrapping it in an `if (!window.add(nums[i]))` statement, I completely eliminated the need for a separate `.contains()` check, saving CPU cycles!
 
 **Link to work:** [Day 85 - Contains Duplicate II](./Day85/ContainsDuplicateII.java)
+
+### Day 86: June 11, 2026
+
+**Today's Progress:** Solved an Amortized $O(N)$ classic! #128: Longest Consecutive Sequence.
+
+**Thoughts:** The trick to solving this problem in strictly $O(N)$ time without sorting is to use a `HashSet` and a highly specific start-condition check. By only allowing the inner sequence-building `while` loop to run if the current number is the absolute _start_ of a sequence (`!set.contains(num - 1)`), I ensure that no number is processed more than twice, keeping the time complexity perfectly linear! To make this code enterprise-ready, I pre-allocated the `HashSet` capacity to `nums.length` to avoid dynamic resizing overhead. More importantly, I introduced **Mathematical Pruning**. I added an `if (longest > n / 2)` break condition. If the length of the sequence I just found is larger than half the array's total length, it is mathematically impossible for any remaining sequence to be larger, allowing the algorithm to instantly terminate and save massive amounts of processing time!
+
+**Link to work:** [Day 86 - Longest Consecutive Sequence](./Day86/LongestConsecutiveSequence.java)
