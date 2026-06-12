@@ -723,3 +723,11 @@
 **Thoughts:** The trick to solving this problem in strictly $O(N)$ time without sorting is to use a `HashSet` and a highly specific start-condition check. By only allowing the inner sequence-building `while` loop to run if the current number is the absolute _start_ of a sequence (`!set.contains(num - 1)`), I ensure that no number is processed more than twice, keeping the time complexity perfectly linear! To make this code enterprise-ready, I pre-allocated the `HashSet` capacity to `nums.length` to avoid dynamic resizing overhead. More importantly, I introduced **Mathematical Pruning**. I added an `if (longest > n / 2)` break condition. If the length of the sequence I just found is larger than half the array's total length, it is mathematically impossible for any remaining sequence to be larger, allowing the algorithm to instantly terminate and save massive amounts of processing time!
 
 **Link to work:** [Day 86 - Longest Consecutive Sequence](./Day86/LongestConsecutiveSequence.java)
+
+### Day 87: June 12, 2026
+
+**Today's Progress:** Mastered array intervals and edge cases! #228: Summary Ranges.
+
+**Thoughts:** The logic to find consecutive ranges is a straightforward $O(N)$ two-pointer/while-loop approach. However, this problem contains a very sneaky trap in its constraints: the numbers can reach up to `2^31 - 1`. If you check for consecutive numbers using `nums[i + 1] == nums[i] + 1`, the addition will cause an integer overflow at the maximum limit and break the loop! I sidestepped this by mathematically checking the difference using a long cast: `(long) nums[i + 1] - nums[i] == 1`. This bulletproofs the algorithm. To push the code to enterprise standards, I analyzed the worst-case space complexity. If no numbers are consecutive, the output list will be exactly the same size as the input array. By passing `nums.length` into the `ArrayList` constructor, I pre-allocated the exact maximum memory needed, preventing any underlying array resizing overhead!
+
+**Link to work:** [Day 87 - Summary Ranges](./Day87/SummaryRanges.java)
