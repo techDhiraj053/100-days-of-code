@@ -731,3 +731,11 @@
 **Thoughts:** The logic to find consecutive ranges is a straightforward $O(N)$ two-pointer/while-loop approach. However, this problem contains a very sneaky trap in its constraints: the numbers can reach up to `2^31 - 1`. If you check for consecutive numbers using `nums[i + 1] == nums[i] + 1`, the addition will cause an integer overflow at the maximum limit and break the loop! I sidestepped this by mathematically checking the difference using a long cast: `(long) nums[i + 1] - nums[i] == 1`. This bulletproofs the algorithm. To push the code to enterprise standards, I analyzed the worst-case space complexity. If no numbers are consecutive, the output list will be exactly the same size as the input array. By passing `nums.length` into the `ArrayList` constructor, I pre-allocated the exact maximum memory needed, preventing any underlying array resizing overhead!
 
 **Link to work:** [Day 87 - Summary Ranges](./Day87/SummaryRanges.java)
+
+### Day 88: June 23, 2026
+
+**Today's Progress:** I'm back! Solved a FAANG classic! #56: Merge Intervals.
+
+**Thoughts:** I took a short hiatus over the last week and a half to recharge. Consistency is key, but preventing burnout is just as important. I am back and ready to crush the final leg of this 100-day journey! I tackled "Merge Intervals", which requires sorting a 2D array by the start times to effectively merge overlapping blocks. While `(a, b) -> a[0] - b[0]` works for this specific LeetCode problem, I learned that in a real enterprise environment, this can cause a catastrophic Integer Overflow if the numbers are negative and positive extremes. I updated my comparator to use `Integer.compare(a[0], b[0])` for bulletproof sorting. Furthermore, instead of using separate variables to track my running bounds, I pushed intervals directly into my `result` list and used `result.get(result.size() - 1)` to fetch and dynamically update the intervals in-place!
+
+**Link to work:** [Day 88 - Merge Intervals](./Day88/MergeIntervals.java)
