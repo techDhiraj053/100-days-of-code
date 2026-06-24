@@ -739,3 +739,11 @@
 **Thoughts:** I took a short hiatus over the last week and a half to recharge. Consistency is key, but preventing burnout is just as important. I am back and ready to crush the final leg of this 100-day journey! I tackled "Merge Intervals", which requires sorting a 2D array by the start times to effectively merge overlapping blocks. While `(a, b) -> a[0] - b[0]` works for this specific LeetCode problem, I learned that in a real enterprise environment, this can cause a catastrophic Integer Overflow if the numbers are negative and positive extremes. I updated my comparator to use `Integer.compare(a[0], b[0])` for bulletproof sorting. Furthermore, instead of using separate variables to track my running bounds, I pushed intervals directly into my `result` list and used `result.get(result.size() - 1)` to fetch and dynamically update the intervals in-place!
 
 **Link to work:** [Day 88 - Merge Intervals](./Day88/MergeIntervals.java)
+
+### Day 89: June 24, 2026
+
+**Today's Progress:** Mastered the snowplow algorithm! #57: Insert Interval.
+
+**Thoughts:** Following up "Merge Intervals" with "Insert Interval" was the perfect sequence. Because the input array in this problem is _already sorted_, I knew I didn't have to run an $O(N \log N)$ sort. Instead, I used a **Three-Phase Sweep** to achieve an optimal $O(N)$ execution. I traversed the array linearly: 1. Pushing all intervals strictly to the left of the new interval into my result list. 2. Continuously updating the `newInterval`'s bounds using `Math.min` and `Math.max` to absorb any overlapping blocks like a snowplow. 3. Pushing the remaining intervals to the right into the result list. To make this enterprise-ready, I implemented **JVM Optimization**. I pre-allocated my `ArrayList` to `intervals.length + 1`. Then, when converting the list back to an array, I used `result.toArray(new int[0][])`. Modern JVMs handle internal memory allocation significantly faster when passed a 0-length array rather than manually computing the size!
+
+**Link to work:** [Day 89 - Insert Interval](./Day89/InsertInterval.java)
