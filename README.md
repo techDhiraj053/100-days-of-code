@@ -747,3 +747,11 @@
 **Thoughts:** Following up "Merge Intervals" with "Insert Interval" was the perfect sequence. Because the input array in this problem is _already sorted_, I knew I didn't have to run an $O(N \log N)$ sort. Instead, I used a **Three-Phase Sweep** to achieve an optimal $O(N)$ execution. I traversed the array linearly: 1. Pushing all intervals strictly to the left of the new interval into my result list. 2. Continuously updating the `newInterval`'s bounds using `Math.min` and `Math.max` to absorb any overlapping blocks like a snowplow. 3. Pushing the remaining intervals to the right into the result list. To make this enterprise-ready, I implemented **JVM Optimization**. I pre-allocated my `ArrayList` to `intervals.length + 1`. Then, when converting the list back to an array, I used `result.toArray(new int[0][])`. Modern JVMs handle internal memory allocation significantly faster when passed a 0-length array rather than manually computing the size!
 
 **Link to work:** [Day 89 - Insert Interval](./Day89/InsertInterval.java)
+
+### Day 90: June 25, 2026 🎉 90% MILESTONE! 🎉
+
+**Today's Progress:** Hit 90 Days! Mastered the Greedy Interval pattern. Solved #452: Minimum Number of Arrows to Burst Balloons.
+
+**Thoughts:** I am officially in the single-digit countdown to Day 100! Today’s problem is a famous variation of the **Interval Scheduling Maximization Problem**. The core trick to this Greedy Algorithm is sorting the intervals by their _end_ coordinates, rather than their start coordinates. This guarantees that if you place an arrow at the absolute right-most edge of a balloon, you maximize your chances of hitting the balloons coming after it. Most importantly, I remembered a critical lesson from Day 88: using `a[1] - b[1]` in a comparator can cause a catastrophic Integer Overflow if the problem constraints include large negative and positive numbers! I proactively used `Integer.compare(a[1], b[1])` to guarantee mathematical safety. Adding an enterprise fast-fail guard clause at the top made this a perfectly optimized $O(N \log N)$ solution!
+
+**Link to work:** [Day 90 - Minimum Arrows](./Day90/MinimumArrows.java)
