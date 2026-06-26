@@ -755,3 +755,11 @@
 **Thoughts:** I am officially in the single-digit countdown to Day 100! Today’s problem is a famous variation of the **Interval Scheduling Maximization Problem**. The core trick to this Greedy Algorithm is sorting the intervals by their _end_ coordinates, rather than their start coordinates. This guarantees that if you place an arrow at the absolute right-most edge of a balloon, you maximize your chances of hitting the balloons coming after it. Most importantly, I remembered a critical lesson from Day 88: using `a[1] - b[1]` in a comparator can cause a catastrophic Integer Overflow if the problem constraints include large negative and positive numbers! I proactively used `Integer.compare(a[1], b[1])` to guarantee mathematical safety. Adding an enterprise fast-fail guard clause at the top made this a perfectly optimized $O(N \log N)$ solution!
 
 **Link to work:** [Day 90 - Minimum Arrows](./Day90/MinimumArrows.java)
+
+### Day 91: June 26, 2026
+
+**Today's Progress:** Mastered the LIFO pattern! #20: Valid Parentheses.
+
+**Thoughts:** This is the quintessential Stack problem. Because brackets must be closed in the reverse order they were opened, a Last-In-First-Out data structure is required. While `java.util.Stack` gets the job done, I learned it is actually a legacy, synchronized class that adds locking overhead. Furthermore, `Stack<Character>` causes heavy autoboxing memory bloat. I refactored the solution to use a raw primitive array (`char[] stack`) and an integer pointer (`top`), achieving hardware-level speed! To streamline the logic, I used the **Expected Bracket Trick**: instead of pushing the opening bracket, I pushed the closing bracket I _expected_ to see. When I encountered a closing bracket in the string, I simply popped my custom stack and checked if they matched. I also added a fast-fail guard clause for odd-length strings!
+
+**Link to work:** [Day 91 - Valid Parentheses](./Day91/ValidParentheses.java)
