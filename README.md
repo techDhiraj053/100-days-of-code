@@ -763,3 +763,11 @@
 **Thoughts:** This is the quintessential Stack problem. Because brackets must be closed in the reverse order they were opened, a Last-In-First-Out data structure is required. While `java.util.Stack` gets the job done, I learned it is actually a legacy, synchronized class that adds locking overhead. Furthermore, `Stack<Character>` causes heavy autoboxing memory bloat. I refactored the solution to use a raw primitive array (`char[] stack`) and an integer pointer (`top`), achieving hardware-level speed! To streamline the logic, I used the **Expected Bracket Trick**: instead of pushing the opening bracket, I pushed the closing bracket I _expected_ to see. When I encountered a closing bracket in the string, I simply popped my custom stack and checked if they matched. I also added a fast-fail guard clause for odd-length strings!
 
 **Link to work:** [Day 91 - Valid Parentheses](./Day91/ValidParentheses.java)
+
+### Day 92: June 27, 2026
+
+**Today's Progress:** Cleaned up Unix file directories! #71: Simplify Path.
+
+**Thoughts:** Parsing file paths is a classic use case for a Stack. You push when you enter a directory, and you pop when you encounter a `..` (go up a directory). I used `path.split("/")` to break the string into easily digestible tokens and ignore consecutive slashes. While my logic was perfectly $O(N)$, I took the opportunity to modernize the code for enterprise environments. First, I completely retired `java.util.Stack` in favor of `ArrayDeque`. The standard `Stack` is a synchronized legacy class from Java 1.0, whereas `ArrayDeque` is the modern, high-performance, non-synchronized alternative. Secondly, instead of manually looping through the stack with a `StringBuilder` to reconstruct the path, I used `String.join("/", deque)`. This natively builds the path and perfectly handles the root `/` edge case without needing an `isEmpty()` check!
+
+**Link to work:** [Day 92 - Simplify Path](./Day92/SimplifyPath.java)
