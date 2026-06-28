@@ -771,3 +771,11 @@
 **Thoughts:** Parsing file paths is a classic use case for a Stack. You push when you enter a directory, and you pop when you encounter a `..` (go up a directory). I used `path.split("/")` to break the string into easily digestible tokens and ignore consecutive slashes. While my logic was perfectly $O(N)$, I took the opportunity to modernize the code for enterprise environments. First, I completely retired `java.util.Stack` in favor of `ArrayDeque`. The standard `Stack` is a synchronized legacy class from Java 1.0, whereas `ArrayDeque` is the modern, high-performance, non-synchronized alternative. Secondly, instead of manually looping through the stack with a `StringBuilder` to reconstruct the path, I used `String.join("/", deque)`. This natively builds the path and perfectly handles the root `/` edge case without needing an `isEmpty()` check!
 
 **Link to work:** [Day 92 - Simplify Path](./Day92/SimplifyPath.java)
+
+### Day 93: June 28, 2026
+
+**Today's Progress:** Designed a custom data structure! #155: Min Stack.
+
+**Thoughts:** The challenge of this problem is retrieving the minimum element in $O(1)$ time without searching the stack. My initial approach was mathematically sound: I used two `java.util.Stack` objects. One held the actual values, and the other held the running minimum. Whenever I pushed a value, I pushed `Math.min(value, minStack.peek())` to the secondary stack, ensuring they stayed perfectly synced. To optimize this for a true enterprise system design interview, I discarded the standard Java Collections entirely. Because `java.util.Stack` is a synchronized legacy class that forces memory-heavy autoboxing (`int` to `Integer`), I built a **Custom Linked List**. I created a private `Node` class containing `{val, min, next}`. By just updating the `head` pointer on push and pop, I eliminated all array-resizing overhead, prevented autoboxing, and achieved absolute maximum performance!
+
+**Link to work:** [Day 93 - Min Stack](./Day93/MinStack.java)
