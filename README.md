@@ -779,3 +779,11 @@
 **Thoughts:** The challenge of this problem is retrieving the minimum element in $O(1)$ time without searching the stack. My initial approach was mathematically sound: I used two `java.util.Stack` objects. One held the actual values, and the other held the running minimum. Whenever I pushed a value, I pushed `Math.min(value, minStack.peek())` to the secondary stack, ensuring they stayed perfectly synced. To optimize this for a true enterprise system design interview, I discarded the standard Java Collections entirely. Because `java.util.Stack` is a synchronized legacy class that forces memory-heavy autoboxing (`int` to `Integer`), I built a **Custom Linked List**. I created a private `Node` class containing `{val, min, next}`. By just updating the `head` pointer on push and pop, I eliminated all array-resizing overhead, prevented autoboxing, and achieved absolute maximum performance!
 
 **Link to work:** [Day 93 - Min Stack](./Day93/MinStack.java)
+
+### Day 94: June 29, 2026
+
+**Today's Progress:** Built an optimized mathematical parser! #150: Evaluate Reverse Polish Notation.
+
+**Thoughts:** RPN is inherently designed to be parsed by a Stack. Because the operators always apply to the two most recently seen numbers, the LIFO nature of a Stack handles the order of operations flawlessly. My initial solution used Java's standard `Stack<Integer>`, popping two variables, doing the math, and pushing the result. To elevate this to true enterprise-grade performance, I replaced the legacy Stack with a raw primitive array (`int[] stack = new int[tokens.length]`). This entirely eliminated the heavy memory overhead of autoboxing `int` values into `Integer` objects. Furthermore, I optimized the calculation step by utilizing **In-Place Pointer Arithmetic**. Instead of extracting variables, I applied the operators directly to `stack[top - 1]` and `stack[top]`, stored the result in `stack[top - 1]`, and decremented the pointer. This yielded a perfectly clean, 0ms execution!
+
+**Link to work:** [Day 94 - Evaluate RPN](./Day94/EvaluateRPN.java)
