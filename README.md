@@ -787,3 +787,11 @@
 **Thoughts:** RPN is inherently designed to be parsed by a Stack. Because the operators always apply to the two most recently seen numbers, the LIFO nature of a Stack handles the order of operations flawlessly. My initial solution used Java's standard `Stack<Integer>`, popping two variables, doing the math, and pushing the result. To elevate this to true enterprise-grade performance, I replaced the legacy Stack with a raw primitive array (`int[] stack = new int[tokens.length]`). This entirely eliminated the heavy memory overhead of autoboxing `int` values into `Integer` objects. Furthermore, I optimized the calculation step by utilizing **In-Place Pointer Arithmetic**. Instead of extracting variables, I applied the operators directly to `stack[top - 1]` and `stack[top]`, stored the result in `stack[top - 1]`, and decremented the pointer. This yielded a perfectly clean, 0ms execution!
 
 **Link to work:** [Day 94 - Evaluate RPN](./Day94/EvaluateRPN.java)
+
+### Day 95: June 30, 2026
+
+**Today's Progress:** Conquered a LeetCode Hard! #224: Basic Calculator.
+
+**Thoughts:** Just 5 days left, and I took down a Hard! To evaluate mathematical expressions with nested parentheses without converting to Reverse Polish Notation first, I used a **State-Saving Stack**. As I iterate through the string, I keep track of the `running result` and the `current sign`. When I encounter an opening parenthesis `(`, I push both of those values onto the stack to "save" my state, and reset them to 0 and 1 to evaluate the sub-expression. When I encounter a closing parenthesis `)`, I pop the saved sign and saved result, applying them to the sub-expression to merge it all back together! To optimize this for the massive `3 * 10^5` character constraint, I implemented the lessons from the past few days: I replaced `java.util.Stack` with a custom `int[]` primitive array to eliminate autoboxing memory bloat, and I swapped `Character.isDigit()` for a raw ASCII check (`ch >= '0' && ch <= '9'`) to bypass heavy Unicode validations.
+
+**Link to work:** [Day 95 - Basic Calculator](./Day95/BasicCalculator.java)
