@@ -795,3 +795,11 @@
 **Thoughts:** Just 5 days left, and I took down a Hard! To evaluate mathematical expressions with nested parentheses without converting to Reverse Polish Notation first, I used a **State-Saving Stack**. As I iterate through the string, I keep track of the `running result` and the `current sign`. When I encounter an opening parenthesis `(`, I push both of those values onto the stack to "save" my state, and reset them to 0 and 1 to evaluate the sub-expression. When I encounter a closing parenthesis `)`, I pop the saved sign and saved result, applying them to the sub-expression to merge it all back together! To optimize this for the massive `3 * 10^5` character constraint, I implemented the lessons from the past few days: I replaced `java.util.Stack` with a custom `int[]` primitive array to eliminate autoboxing memory bloat, and I swapped `Character.isDigit()` for a raw ASCII check (`ch >= '0' && ch <= '9'`) to bypass heavy Unicode validations.
 
 **Link to work:** [Day 95 - Basic Calculator](./Day95/BasicCalculator.java)
+
+### Day 96: July 1, 2026
+
+**Today's Progress:** Brought Floyd's Algorithm home! #141: Linked List Cycle.
+
+**Thoughts:** Just 4 days left! I encountered this logic back on Day 84 when detecting loops in math sequences, but today I applied it to its native data structure. Using Floyd’s Tortoise and Hare algorithm, I dispatched a `slow` pointer (1 step) and a `fast` pointer (2 steps). If a cycle exists, the fast pointer is guaranteed to lap the slow pointer and collide with it, answering the $O(1)$ memory follow-up perfectly. For a Senior Twist, I implemented the logic for LeetCode #142 directly into my collision check! In a real system, just knowing a cycle exists doesn't help you fix it. By moving a pointer to the `head` of the list after the collision, and stepping it forward alongside the `slow` pointer at a speed of 1, their next meeting point mathematically isolates the exact node where the cycle begins!
+
+**Link to work:** [Day 96 - Linked List Cycle](./Day96/LinkedListCycle.java)
