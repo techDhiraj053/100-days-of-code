@@ -803,3 +803,11 @@
 **Thoughts:** Just 4 days left! I encountered this logic back on Day 84 when detecting loops in math sequences, but today I applied it to its native data structure. Using Floyd’s Tortoise and Hare algorithm, I dispatched a `slow` pointer (1 step) and a `fast` pointer (2 steps). If a cycle exists, the fast pointer is guaranteed to lap the slow pointer and collide with it, answering the $O(1)$ memory follow-up perfectly. For a Senior Twist, I implemented the logic for LeetCode #142 directly into my collision check! In a real system, just knowing a cycle exists doesn't help you fix it. By moving a pointer to the `head` of the list after the collision, and stepping it forward alongside the `slow` pointer at a speed of 1, their next meeting point mathematically isolates the exact node where the cycle begins!
 
 **Link to work:** [Day 96 - Linked List Cycle](./Day96/LinkedListCycle.java)
+
+### Day 97: July 2, 2026
+
+**Today's Progress:** Built the foundation for BigInteger! #2: Add Two Numbers.
+
+**Thoughts:** Only 3 days left! Today I tackled a quintessential Linked List problem. The challenge is adding two numbers digit-by-digit while managing a carry, with the caveat that the numbers are represented as reverse-ordered Linked Lists. My logic consolidated the entire process into a single `while` loop with the condition `l1 != null || l2 != null || carry != 0`. This brilliantly handles lists of asymmetrical lengths and ensures any final trailing carry is appended as a new node without needing extra post-loop `if` statements. I learned that this specific algorithm is actually the foundational logic behind arbitrary-precision arithmetic, such as Java's `BigInteger` class, which uses arrays to store massive numbers and adds them chunk by chunk! To make the code production-ready, I refactored the shorthand variables into semantic, self-documenting names (`sentinelHead`, `val1`, `val2`).
+
+**Link to work:** [Day 97 - Add Two Numbers](./Day97/AddTwoNumbers.java)
