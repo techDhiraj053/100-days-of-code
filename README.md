@@ -811,3 +811,11 @@
 **Thoughts:** Only 3 days left! Today I tackled a quintessential Linked List problem. The challenge is adding two numbers digit-by-digit while managing a carry, with the caveat that the numbers are represented as reverse-ordered Linked Lists. My logic consolidated the entire process into a single `while` loop with the condition `l1 != null || l2 != null || carry != 0`. This brilliantly handles lists of asymmetrical lengths and ensures any final trailing carry is appended as a new node without needing extra post-loop `if` statements. I learned that this specific algorithm is actually the foundational logic behind arbitrary-precision arithmetic, such as Java's `BigInteger` class, which uses arrays to store massive numbers and adds them chunk by chunk! To make the code production-ready, I refactored the shorthand variables into semantic, self-documenting names (`sentinelHead`, `val1`, `val2`).
 
 **Link to work:** [Day 97 - Add Two Numbers](./Day97/AddTwoNumbers.java)
+
+### Day 98: July 3, 2026
+
+**Today's Progress:** Mastered in-place pointer manipulation! #21: Merge Two Sorted Lists.
+
+**Thoughts:** Only 2 days left! Today's problem is a foundational Linked List algorithm. The goal is to merge two already-sorted lists into a single sorted list. I solved this iteratively using a `while` loop that compares the current nodes of both lists and attaches the smaller one to a running `current` pointer. The most crucial part of this solution is the Space Complexity: I achieved strictly $O(1)$ memory by rewiring the existing `.next` pointers rather than instantiating new `ListNode` objects. I also learned a valuable Senior concept: while a recursive solution to this problem is very popular and requires fewer lines of code, it is dangerous in production. Recursion requires $O(N+M)$ Call Stack space, which can easily trigger a `StackOverflowError` on massive datasets. My $O(1)$ iterative approach is the true enterprise standard! I finished the code by applying semantic naming conventions, replacing my `dummy` node with `sentinelHead`.
+
+**Link to work:** [Day 98 - Merge Two Sorted Lists](./Day98/MergeTwoSortedLists.java)
