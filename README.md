@@ -819,3 +819,5 @@
 **Thoughts:** Only 2 days left! Today's problem is a foundational Linked List algorithm. The goal is to merge two already-sorted lists into a single sorted list. I solved this iteratively using a `while` loop that compares the current nodes of both lists and attaches the smaller one to a running `current` pointer. The most crucial part of this solution is the Space Complexity: I achieved strictly $O(1)$ memory by rewiring the existing `.next` pointers rather than instantiating new `ListNode` objects. I also learned a valuable Senior concept: while a recursive solution to this problem is very popular and requires fewer lines of code, it is dangerous in production. Recursion requires $O(N+M)$ Call Stack space, which can easily trigger a `StackOverflowError` on massive datasets. My $O(1)$ iterative approach is the true enterprise standard! I finished the code by applying semantic naming conventions, replacing my `dummy` node with `sentinelHead`.
 
 **Link to work:** [Day 98 - Merge Two Sorted Lists](./Day98/MergeTwoSortedLists.java)
+
+
