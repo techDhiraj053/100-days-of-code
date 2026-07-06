@@ -837,3 +837,11 @@
 This journey has fundamentally changed how I approach problem-solving, data structures, and memory optimization. I am stepping away from Day 100 as a profoundly better Software Engineer!
 
 **Link to work:** [Day 100 - Reverse Linked List II](./Day100/ReverseLinkedListII.java)
+
+### Day 101: July 6, 2026 🚀 THE MOMENTUM CONTINUES 🚀
+
+**Today's Progress:** Kicked off the next phase with a LeetCode Hard! Mastered pointer boundaries and sub-list management. Solved #25: Reverse Nodes in k-Group.
+
+**Thoughts:** I am officially past the 100-day mark and keeping the streak alive! I tackled a notoriously complex linked list problem and successfully fulfilled the Follow-Up challenge by executing the `k`-group reversal with strictly `O(1)` memory. By utilizing a sentinel/dummy node and writing a clean helper function to identify group boundaries, I completely bypassed the messy edge cases that usually plague linked list logic. Continuing with the enterprise optimization from yesterday, I focused heavily on Code Readability. I completely refactored the generic pointer variables into self-documenting semantic names (`groupAnchor`, `previousNode`, `currentExtractionNode`). The complex pointer rewiring is now a highly readable, self-documenting blueprint!
+
+**Link to work:** [Day 101 - Reverse Nodes in k-Group](./Day101/ReverseNodesInKGroup.java)
