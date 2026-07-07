@@ -845,3 +845,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** I am officially past the 100-day mark and keeping the streak alive! I tackled a notoriously complex linked list problem and successfully fulfilled the Follow-Up challenge by executing the `k`-group reversal with strictly `O(1)` memory. By utilizing a sentinel/dummy node and writing a clean helper function to identify group boundaries, I completely bypassed the messy edge cases that usually plague linked list logic. Continuing with the enterprise optimization from yesterday, I focused heavily on Code Readability. I completely refactored the generic pointer variables into self-documenting semantic names (`groupAnchor`, `previousNode`, `currentExtractionNode`). The complex pointer rewiring is now a highly readable, self-documenting blueprint!
 
 **Link to work:** [Day 101 - Reverse Nodes in k-Group](./Day101/ReverseNodesInKGroup.java)
+
+### Day 102: July 7, 2026 🚄 SLIDING WINDOW MASTERY 🚄
+
+**Today's Progress:** Conquered a classic Medium problem using the two-pointer technique. Solved #19: Remove Nth Node From End of List.
+
+**Thoughts:** Day 102 is in the books! I tackled this problem and successfully completed the Follow-Up challenge by executing the removal in a **Single Pass** with strictly `O(1)` memory. By utilizing a sentinel node and creating a gap of `n + 1` between a fast and slow pointer, I was able to find the exact node to remove without needing to calculate the length of the list first. Continuing with my enterprise optimization, I focused on Code Readability. I refactored the generic `fast` and `slow` pointers into self-documenting semantic names (`leadPointer` and `targetPredecessor`). This perfectly describes the sliding window architecture!
+
+**Link to work:** [Day 102 - Remove Nth Node From End of List](./Day102/RemoveNthNodeFromEndOfList.java)
