@@ -869,3 +869,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 104 is complete! I solved a Medium-level rotation problem in strictly `O(1)` memory and `O(N)` time. The trick to this problem isn't actually shifting nodes—it's math and topology. By utilizing modulo arithmetic (`k % length`), I eliminated all redundant full-circle rotations. I then temporarily linked the tail to the head to form a closed ring, traversed to the calculated `breakPoint`, and snapped the ring open. Continuing my focus on Code Readability, I refactored the variables to describe the architectural state of the ring (`originalTail`, `breakPoint`, `rotatedHead`). The code reads like a blueprint!
 
 **Link to work:** [Day 104 - Rotate List](./Day104/RotateList.java)
+
+### Day 105: July 10, 2026 🔀 DATA STREAM BIFURCATION 🔀
+
+**Today's Progress:** Mastered multi-pointer state management on a Linked List. Solved #86: Partition List.
+
+**Thoughts:** Day 105 is locked in! I solved a Medium-level architectural problem in strictly `O(1)` memory and `O(N)` time. This problem requires splitting a list into two separate pipelines based on a pivot value, then stitching them back together. The key here was ensuring I terminated the final node of the "greater" list with `null` to prevent cyclic loops. Continuing my focus on Code Readability, I refactored the variables to describe the architectural state of the pipelines (`lessThanAnchor`, `greaterOrEqualTail`). The data flow is now explicitly documented by the variable names, making the final assembly phase read like plain English!
+
+**Link to work:** [Day 105 - Partition List](./Day105/PartitionList.java)
