@@ -877,3 +877,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 105 is locked in! I solved a Medium-level architectural problem in strictly `O(1)` memory and `O(N)` time. This problem requires splitting a list into two separate pipelines based on a pivot value, then stitching them back together. The key here was ensuring I terminated the final node of the "greater" list with `null` to prevent cyclic loops. Continuing my focus on Code Readability, I refactored the variables to describe the architectural state of the pipelines (`lessThanAnchor`, `greaterOrEqualTail`). The data flow is now explicitly documented by the variable names, making the final assembly phase read like plain English!
 
 **Link to work:** [Day 105 - Partition List](./Day105/PartitionList.java)
+
+### Day 106: July 11, 2026 🧠 SYSTEM ARCHITECTURE MASTERY 🧠
+
+**Today's Progress:** Built the most famous FAANG interview data structure from scratch. Solved #146: LRU Cache.
+
+**Thoughts:** Day 106 locked in! I tackled a complex Medium/Hard problem that requires marrying two distinct data structures: a HashMap for $O(1)$ lookups and a Doubly Linked List for $O(1)$ structural reordering. By utilizing sentinel anchors for the head and tail, I avoided the messy null-pointer checks that usually plague list removals. Continuing my focus on Code Readability, I refactored the generic list variables into explicit Cache Policy terms (`mruAnchor`, `lruAnchor`) and transformed the helper methods to narrate the eviction state (`markAsMostRecentlyUsed`). It reads like a production-grade cache controller!
+
+**Link to work:** [Day 106 - LRU Cache](./Day106/LRUCache.java)
