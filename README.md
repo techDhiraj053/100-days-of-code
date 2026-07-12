@@ -885,3 +885,12 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 106 locked in! I tackled a complex Medium/Hard problem that requires marrying two distinct data structures: a HashMap for $O(1)$ lookups and a Doubly Linked List for $O(1)$ structural reordering. By utilizing sentinel anchors for the head and tail, I avoided the messy null-pointer checks that usually plague list removals. Continuing my focus on Code Readability, I refactored the generic list variables into explicit Cache Policy terms (`mruAnchor`, `lruAnchor`) and transformed the helper methods to narrate the eviction state (`markAsMostRecentlyUsed`). It reads like a production-grade cache controller!
 
 **Link to work:** [Day 106 - LRU Cache](./Day106/LRUCache.java)
+
+
+### Day 107: July 12, 2026 🌲 ENTERING THE FOREST 🌲
+
+**Today's Progress:** Transitioned from linear structures to non-linear trees! Mastered recursive DFS. Solved #104: Maximum Depth of Binary Tree.
+
+**Thoughts:** Day 107 locked in! Today marked a major shift in the curriculum as I moved from Linked Lists into Binary Trees. I solved the foundational tree depth problem using a recursive Depth-First Search approach, achieving optimal `O(N)` time complexity. This was a great exercise in trusting the recursive leap of faith and letting the call stack handle the heavy lifting. Continuing my focus on Code Readability, I updated the variables to `leftSubtreeHeight` and `rightSubtreeHeight` to explicitly document what the recursive calls are actually returning. The algorithm now perfectly narrates its own tree traversal!
+
+**Link to work:** [Day 107 - Maximum Depth of Binary Tree](./Day107/MaxDepthOfBinaryTree.java)
