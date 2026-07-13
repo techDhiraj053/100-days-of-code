@@ -886,7 +886,6 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 106 - LRU Cache](./Day106/LRUCache.java)
 
-
 ### Day 107: July 12, 2026 🌲 ENTERING THE FOREST 🌲
 
 **Today's Progress:** Transitioned from linear structures to non-linear trees! Mastered recursive DFS. Solved #104: Maximum Depth of Binary Tree.
@@ -894,3 +893,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 107 locked in! Today marked a major shift in the curriculum as I moved from Linked Lists into Binary Trees. I solved the foundational tree depth problem using a recursive Depth-First Search approach, achieving optimal `O(N)` time complexity. This was a great exercise in trusting the recursive leap of faith and letting the call stack handle the heavy lifting. Continuing my focus on Code Readability, I updated the variables to `leftSubtreeHeight` and `rightSubtreeHeight` to explicitly document what the recursive calls are actually returning. The algorithm now perfectly narrates its own tree traversal!
 
 **Link to work:** [Day 107 - Maximum Depth of Binary Tree](./Day107/MaxDepthOfBinaryTree.java)
+
+### Day 108: July 13, 2026 🪞 SYNCHRONIZED TRAVERSAL 🪞
+
+**Today's Progress:** Mastered parallel recursive call stacks. Solved #100: Same Tree.
+
+**Thoughts:** Day 108 locked in! Today I tackled structural architecture by writing an algorithm that evaluates two separate binary trees in absolute lockstep. I solved this using a synchronized Depth-First Search approach, achieving optimal `O(N)` time complexity. The key to this problem was relying on highly defensive, fast-failing guard clauses to check for structural divergences (`null` mismatches) before checking data equality. Continuing my enterprise focus, I ditched the generic `p` and `q` arguments for `referenceNode` and `comparisonNode`. I also extracted the recursive calls into explicit boolean variables (`isLeftIdentical`), making the final return statement a highly readable, self-documenting audit.
+
+**Link to work:** [Day 108 - Same Tree](./Day108/SameTree.java)
