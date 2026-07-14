@@ -901,3 +901,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 108 locked in! Today I tackled structural architecture by writing an algorithm that evaluates two separate binary trees in absolute lockstep. I solved this using a synchronized Depth-First Search approach, achieving optimal `O(N)` time complexity. The key to this problem was relying on highly defensive, fast-failing guard clauses to check for structural divergences (`null` mismatches) before checking data equality. Continuing my enterprise focus, I ditched the generic `p` and `q` arguments for `referenceNode` and `comparisonNode`. I also extracted the recursive calls into explicit boolean variables (`isLeftIdentical`), making the final return statement a highly readable, self-documenting audit.
 
 **Link to work:** [Day 108 - Same Tree](./Day108/SameTree.java)
+
+### Day 109: July 14, 2026 🔄 THE GOOGLE LEGEND 🔄
+
+**Today's Progress:** Conquered the most famous interview question in tech history. Solved #226: Invert Binary Tree.
+
+**Thoughts:** Day 109 is in the books! Today I tackled the algorithm that famously tripped up the creator of Homebrew at Google. I solved it using a clean Post-Order recursive traversal with optimal `O(N)` time and `O(H)` space complexity. By diving all the way down to the leaf nodes first, I ensured that every subtree was fully inverted before bubbling back up to swap them at the parent level. Continuing my focus on Code Readability, I updated the temporary variables from `left/right` to `invertedLeftSubtree` and `invertedRightSubtree`. This makes the post-order state mutation instantly obvious—documenting exactly what the variables hold at the moment the swap occurs!
+
+**Link to work:** [Day 109 - Invert Binary Tree](./Day109/InvertBinaryTree.java)
