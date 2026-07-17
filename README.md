@@ -926,13 +926,6 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 111 - Symmetric Tree](./Day110/SymmetricTree.java)
 
-### Day 111: July 16, 2026 🏗️ TREE CONSTRUCTION ARCHITECTURE 🏗️
-
-**Today's Progress:** Mastered array-based tree construction. Solved #106: Construct Binary Tree from Inorder and Postorder Traversal.
-
-**Thoughts:** Day 111 locked in! Today I tackled a complex structural problem that required reverse-engineering a binary tree from two separate traversal arrays. I optimized the solution to `O(N)` time complexity by caching the `inorder` array into a HashMap for `O(1)` index lookups. The crucial realization was that processing a `postorder` array backward yields a `Root -> Right -> Left` sequence, meaning the right subtree _must_ be constructed before the left! Continuing my enterprise focus, I refactored the variables to explicitly document the geometric array slicing (`inorderBoundaryLeft` and `inorderBoundaryRight`). The recursive calls now perfectly narrate how the tree boundaries shrink!
-
-**Link to work:** [Day 111 - Construct Binary Tree](./Day111/ConstructTreeInorderPostorder.java)
 
 ### Day 112: July 17, 2026 🏗️ TREE CONSTRUCTION ARCHITECTURE 🏗️
 
