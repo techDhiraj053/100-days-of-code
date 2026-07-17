@@ -918,10 +918,26 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 110 - Symmetric Tree](./Day110/SymmetricTree.java)
 
-### Day 110: July 15, 2026 🪞 SYMMETRIC ARCHITECTURE 🪞
+### Day 111: July 15, 2026 🪞 SYMMETRIC ARCHITECTURE 🪞
 
 **Today's Progress:** Hybridized the concepts of tree inversion and synchronized traversal. Solved #101: Symmetric Tree.
 
-**Thoughts:** Day 110 locked in! Today I solved a problem that required checking if a tree is a mirror image of itself. This is effectively a combination of the logic from Day 108 (Same Tree) and Day 109 (Invert Tree). I used a synchronized Depth-First Search approach to evaluate the subtrees in absolute lockstep, achieving optimal `O(N)` time complexity. Continuing my focus on Code Readability, I updated the recursive return statements into descriptive boolean variables. By extracting the checks into `isOuterSymmetric` and `isInnerSymmetric`, the code explicitly documents the geometric cross-checking happening inside the recursive call stack!
+**Thoughts:** Day 111 locked in! Today I solved a problem that required checking if a tree is a mirror image of itself. This is effectively a combination of the logic from Day 108 (Same Tree) and Day 109 (Invert Tree). I used a synchronized Depth-First Search approach to evaluate the subtrees in absolute lockstep, achieving optimal `O(N)` time complexity. Continuing my focus on Code Readability, I updated the recursive return statements into descriptive boolean variables. By extracting the checks into `isOuterSymmetric` and `isInnerSymmetric`, the code explicitly documents the geometric cross-checking happening inside the recursive call stack!
 
-**Link to work:** [Day 110 - Symmetric Tree](./Day110/SymmetricTree.java)
+**Link to work:** [Day 111 - Symmetric Tree](./Day110/SymmetricTree.java)
+
+### Day 111: July 16, 2026 🏗️ TREE CONSTRUCTION ARCHITECTURE 🏗️
+
+**Today's Progress:** Mastered array-based tree construction. Solved #106: Construct Binary Tree from Inorder and Postorder Traversal.
+
+**Thoughts:** Day 111 locked in! Today I tackled a complex structural problem that required reverse-engineering a binary tree from two separate traversal arrays. I optimized the solution to `O(N)` time complexity by caching the `inorder` array into a HashMap for `O(1)` index lookups. The crucial realization was that processing a `postorder` array backward yields a `Root -> Right -> Left` sequence, meaning the right subtree _must_ be constructed before the left! Continuing my enterprise focus, I refactored the variables to explicitly document the geometric array slicing (`inorderBoundaryLeft` and `inorderBoundaryRight`). The recursive calls now perfectly narrate how the tree boundaries shrink!
+
+**Link to work:** [Day 111 - Construct Binary Tree](./Day111/ConstructTreeInorderPostorder.java)
+
+### Day 112: July 17, 2026 🏗️ TREE CONSTRUCTION ARCHITECTURE 🏗️
+
+**Today's Progress:** Mastered array-based tree construction. Solved #106: Construct Binary Tree from Inorder and Postorder Traversal.
+
+**Thoughts:** Day 112 locked in! Today I tackled a complex structural problem that required reverse-engineering a binary tree from two separate traversal arrays. I optimized the solution to `O(N)` time complexity by caching the `inorder` array into a HashMap for `O(1)` index lookups. The crucial realization was that processing a `postorder` array backward yields a `Root -> Right -> Left` sequence, meaning the right subtree _must_ be constructed before the left! Continuing my enterprise focus, I refactored the variables to explicitly document the geometric array slicing (`inorderBoundaryLeft` and `inorderBoundaryRight`). The recursive calls now perfectly narrate how the tree boundaries shrink!
+
+**Link to work:** [Day 112 - Construct Binary Tree](./Day112/ConstructTreeInorderPostorder.java)
