@@ -926,7 +926,6 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 111 - Symmetric Tree](./Day110/SymmetricTree.java)
 
-
 ### Day 112: July 17, 2026 🏗️ TREE CONSTRUCTION ARCHITECTURE 🏗️
 
 **Today's Progress:** Mastered array-based tree construction. Solved #106: Construct Binary Tree from Inorder and Postorder Traversal.
@@ -934,3 +933,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 112 locked in! Today I tackled a complex structural problem that required reverse-engineering a binary tree from two separate traversal arrays. I optimized the solution to `O(N)` time complexity by caching the `inorder` array into a HashMap for `O(1)` index lookups. The crucial realization was that processing a `postorder` array backward yields a `Root -> Right -> Left` sequence, meaning the right subtree _must_ be constructed before the left! Continuing my enterprise focus, I refactored the variables to explicitly document the geometric array slicing (`inorderBoundaryLeft` and `inorderBoundaryRight`). The recursive calls now perfectly narrate how the tree boundaries shrink!
 
 **Link to work:** [Day 112 - Construct Binary Tree](./Day112/ConstructTreeInorderPostorder.java)
+
+### Day 113: July 18, 2026 🔗 LEVEL-ORDER LINKING 🔗
+
+**Today's Progress:** Mastered O(1) space complexity tree manipulation. Solved #117: Populating Next Right Pointers in Each Node II.
+
+**Thoughts:** Day 113 in the books! Today was an excellent lesson in using a tree’s structure to perform its own traversal. By utilizing the `next` pointers to navigate levels, I eliminated the need for a Queue, bringing space complexity down to `O(1)`. This is a classic pattern for tree manipulation where the tree acts as a linked list at every depth. I focused on making the variable names (`currentLevelNode`, `nextLevelTail`) explicitly describe their structural role in constructing the level below, ensuring the code is readable and maintainable!
+
+**Link to work:** [Day 113 - Populating Next Pointers](./Day113/PopulateNextRightPointers.java)
