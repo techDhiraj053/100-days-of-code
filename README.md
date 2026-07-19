@@ -941,3 +941,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 113 in the books! Today was an excellent lesson in using a tree’s structure to perform its own traversal. By utilizing the `next` pointers to navigate levels, I eliminated the need for a Queue, bringing space complexity down to `O(1)`. This is a classic pattern for tree manipulation where the tree acts as a linked list at every depth. I focused on making the variable names (`currentLevelNode`, `nextLevelTail`) explicitly describe their structural role in constructing the level below, ensuring the code is readable and maintainable!
 
 **Link to work:** [Day 113 - Populating Next Pointers](./Day113/PopulateNextRightPointers.java)
+
+### Day 114: July 19, 2026 🎗️ TREE FLATTENING ARCHITECTURE 🎗️
+
+**Today's Progress:** Solved #114: Flatten Binary Tree to Linked List. Optimized to O(1) space.
+
+**Thoughts:** Day 114 locked in! Today I converted a binary tree into a right-leaning linked list using an in-place transformation. While my initial logic used an `ArrayList` to preserve the preorder traversal sequence, I refactored it to use an in-place strategy that achieves `O(1)` space complexity. By locating the predecessor (rightmost node of the left subtree) and re-stitching the pointers, I effectively bypassed the need for extra memory. This is a powerful pattern for tree manipulation where the tree's own structure can be used to hold state!
+
+**Link to work:** [Day 114 - Flatten Binary Tree](./Day114/FlattenBinaryTree.java)
