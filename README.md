@@ -949,3 +949,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 114 locked in! Today I converted a binary tree into a right-leaning linked list using an in-place transformation. While my initial logic used an `ArrayList` to preserve the preorder traversal sequence, I refactored it to use an in-place strategy that achieves `O(1)` space complexity. By locating the predecessor (rightmost node of the left subtree) and re-stitching the pointers, I effectively bypassed the need for extra memory. This is a powerful pattern for tree manipulation where the tree's own structure can be used to hold state!
 
 **Link to work:** [Day 114 - Flatten Binary Tree](./Day114/FlattenBinaryTree.java)
+
+### Day 115: July 20, 2026 🛤️ PATH SUM ARCHITECTURE 🛤️
+
+**Today's Progress:** Mastered tree path validation using recursive target reduction. Solved #112: Path Sum.
+
+**Thoughts:** Day 115 locked in! Today I solved the Path Sum problem using an elegant recursive approach. By subtracting node values from the `targetSum` as I traversed downward, I transformed the problem into a simple balance check at each leaf node. This method provides `O(N)` time complexity and relies on implicit stack space (`O(H)`), making it very efficient. The use of clear structural guards for null and leaf nodes makes the logic incredibly resilient to edge cases!
+
+**Link to work:** [Day 115 - Path Sum](./Day115/PathSum.java)
