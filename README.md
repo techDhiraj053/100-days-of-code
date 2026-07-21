@@ -957,3 +957,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 115 locked in! Today I solved the Path Sum problem using an elegant recursive approach. By subtracting node values from the `targetSum` as I traversed downward, I transformed the problem into a simple balance check at each leaf node. This method provides `O(N)` time complexity and relies on implicit stack space (`O(H)`), making it very efficient. The use of clear structural guards for null and leaf nodes makes the logic incredibly resilient to edge cases!
 
 **Link to work:** [Day 115 - Path Sum](./Day115/PathSum.java)
+
+### Day 116: July 21, 2026 🧮 DIGIT ACCUMULATION ARCHITECTURE 🧮
+
+**Today's Progress:** Solved #129: Sum Root to Leaf Numbers using a top-down DFS approach.
+
+**Thoughts:** Day 116 locked in! Today's challenge required aggregating numbers formed by root-to-leaf paths. By utilizing the classic `num * 10 + node.val` formula, I was able to pass the running sum down the recursive call stack efficiently. When hitting a leaf node, the complete number is returned and aggregated. This achieves optimal `O(N)` time complexity and relies cleanly on the call stack memory `O(H)`. Refactoring with expressive variable names ensures the digit-shifting logic remains crystal clear!
+
+**Link to work:** [Day 116 - Sum Root to Leaf Numbers](./Day116/SumRootToLeafNumbers.java)
