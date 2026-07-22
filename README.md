@@ -965,3 +965,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 116 locked in! Today's challenge required aggregating numbers formed by root-to-leaf paths. By utilizing the classic `num * 10 + node.val` formula, I was able to pass the running sum down the recursive call stack efficiently. When hitting a leaf node, the complete number is returned and aggregated. This achieves optimal `O(N)` time complexity and relies cleanly on the call stack memory `O(H)`. Refactoring with expressive variable names ensures the digit-shifting logic remains crystal clear!
 
 **Link to work:** [Day 116 - Sum Root to Leaf Numbers](./Day116/SumRootToLeafNumbers.java)
+
+### Day 117: July 22, 2026 ⚡ HARD-TIER PATH MAXIMIZATION ⚡
+
+**Today's Progress:** Conquered a classic Hard problem. Solved #124: Binary Tree Maximum Path Sum.
+
+**Thoughts:** Day 117 locked in! Today I tackled Binary Tree Maximum Path Sum, a brilliant test of post-order tree recursion. By utilizing `Math.max(0, ...)` to prune negative subtrees, I ensured that unprofitable branches never drag down valid path sums. The core architectural realization is distinguishing between a node acting as a path's turning point (`left + root + right`) versus passing a single optimal branch upward (`root + max(left, right)`). Achieving optimal `O(N)` time complexity with clean state-tracking cements this core tree pattern!
+
+**Link to work:** [Day 117 - Binary Tree Maximum Path Sum](./Day117/BinaryTreeMaximumPathSum.java)
