@@ -973,3 +973,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 117 locked in! Today I tackled Binary Tree Maximum Path Sum, a brilliant test of post-order tree recursion. By utilizing `Math.max(0, ...)` to prune negative subtrees, I ensured that unprofitable branches never drag down valid path sums. The core architectural realization is distinguishing between a node acting as a path's turning point (`left + root + right`) versus passing a single optimal branch upward (`root + max(left, right)`). Achieving optimal `O(N)` time complexity with clean state-tracking cements this core tree pattern!
 
 **Link to work:** [Day 117 - Binary Tree Maximum Path Sum](./Day117/BinaryTreeMaximumPathSum.java)
+
+### Day 118: July 23, 2026 🔄 CONTROLLED BST ITERATOR 🔄
+
+**Today's Progress:** Built an efficient state-managed iterator for Binary Search Trees. Solved #173: Binary Search Tree Iterator.
+
+**Thoughts:** Day 118 locked in! Today I implemented a controlled in-order iterator using an explicit stack. Instead of flattening the entire tree into an array ahead of time (which would cost `O(N)` memory), this design caches only the left spine, achieving optimal `O(H)` space complexity. The `next()` and `hasNext()` operations run in amortized `O(1)` time, making it exceptionally scalable for large trees. Encapsulating the stack initialization into a helper method keeps the class clean and professional!
+
+**Link to work:** [Day 118 - BST Iterator](./Day118/BSTIterator.java)
