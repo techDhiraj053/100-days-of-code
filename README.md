@@ -981,3 +981,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 118 locked in! Today I implemented a controlled in-order iterator using an explicit stack. Instead of flattening the entire tree into an array ahead of time (which would cost `O(N)` memory), this design caches only the left spine, achieving optimal `O(H)` space complexity. The `next()` and `hasNext()` operations run in amortized `O(1)` time, making it exceptionally scalable for large trees. Encapsulating the stack initialization into a helper method keeps the class clean and professional!
 
 **Link to work:** [Day 118 - BST Iterator](./Day118/BSTIterator.java)
+
+### Day 119: July 24, 2026 🌲 LOGARITHMIC TREE COUNTING 🌲
+
+**Today's Progress:** Mastered complete binary tree geometry. Solved #222: Count Complete Tree Nodes.
+
+**Thoughts:** Day 119 locked in! Today I optimized node counting from a standard `O(N)` traversal down to an ultra-fast `O(log^2 N)` algorithm. By checking the extreme left and right heights of subtrees, I can instantly identify "perfect binary subtrees" and calculate their size using bitwise shifting (`(1 << height) - 1`) without visiting individual nodes. This architectural trick bypasses full-tree exploration by exploiting the structural constraints of complete binary trees!
+
+**Link to work:** [Day 119 - Count Complete Tree Nodes](./Day119/CountCompleteTreeNodes.java)
