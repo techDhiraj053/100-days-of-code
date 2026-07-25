@@ -989,3 +989,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 119 locked in! Today I optimized node counting from a standard `O(N)` traversal down to an ultra-fast `O(log^2 N)` algorithm. By checking the extreme left and right heights of subtrees, I can instantly identify "perfect binary subtrees" and calculate their size using bitwise shifting (`(1 << height) - 1`) without visiting individual nodes. This architectural trick bypasses full-tree exploration by exploiting the structural constraints of complete binary trees!
 
 **Link to work:** [Day 119 - Count Complete Tree Nodes](./Day119/CountCompleteTreeNodes.java)
+
+### Day 120: July 25, 2026 🌳 LOWEST COMMON ANCESTOR CONVERGENCE 🌳
+
+**Today's Progress:** Celebrated 120 consecutive days of coding by mastering a foundational tree classic. Solved #236: Lowest Common Ancestor of a Binary Tree.
+
+**Thoughts:** Day 120 locked in! Today I solved the Lowest Common Ancestor problem using an elegant bottom-up DFS recursive pattern. By letting subtrees report back whether they found `p` or `q`, the current node acts as a convergence checkpoint. If both children return valid nodes, the current node is mathematically proven to be the split point (LCA). This avoids explicit path-tracking arrays, achieving optimal `O(N)` time complexity and `O(H)` stack space. Reaching 120 days of disciplined, consistent architectural execution is an incredible milestone!
+
+**Link to work:** [Day 120 - Lowest Common Ancestor](./Day120/LowestCommonAncestor.java)
