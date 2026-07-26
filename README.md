@@ -997,3 +997,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 120 locked in! Today I solved the Lowest Common Ancestor problem using an elegant bottom-up DFS recursive pattern. By letting subtrees report back whether they found `p` or `q`, the current node acts as a convergence checkpoint. If both children return valid nodes, the current node is mathematically proven to be the split point (LCA). This avoids explicit path-tracking arrays, achieving optimal `O(N)` time complexity and `O(H)` stack space. Reaching 120 days of disciplined, consistent architectural execution is an incredible milestone!
 
 **Link to work:** [Day 120 - Lowest Common Ancestor](./Day120/LowestCommonAncestor.java)
+
+### Day 121: July 26, 2026 👀 RIGHT SIDE VIEW ARCHITECTURE 👀
+
+**Today's Progress:** Kicked off Day 121 with level-order traversal optimization. Solved #199: Binary Tree Right Side View.
+
+**Thoughts:** Day 121 locked in! Today I tackled the Right Side View problem using a level-order queue approach. By tracking the exact size of each row during traversal, I can isolate the final node (`size - 1`), which represents the rightmost visible point of that tree level. This guarantees an optimal `O(N)` time complexity and clear queue memory management. Moving smoothly into post-120 territory with clean, maintainable patterns!
+
+**Link to work:** [Day 121 - Binary Tree Right Side View](./Day121/BinaryTreeRightSideView.java)
