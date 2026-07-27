@@ -1005,3 +1005,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 121 locked in! Today I tackled the Right Side View problem using a level-order queue approach. By tracking the exact size of each row during traversal, I can isolate the final node (`size - 1`), which represents the rightmost visible point of that tree level. This guarantees an optimal `O(N)` time complexity and clear queue memory management. Moving smoothly into post-120 territory with clean, maintainable patterns!
 
 **Link to work:** [Day 121 - Binary Tree Right Side View](./Day121/BinaryTreeRightSideView.java)
+
+### Day 122: July 27, 2026 📊 LEVEL-ORDER AVERAGING 📊
+
+**Today's Progress:** Mastered level-by-level mathematical aggregation. Solved #637: Average of Levels in Binary Tree.
+
+**Thoughts:** Day 122 locked in! Today I implemented an efficient level-order traversal to compute the average node value at each depth of a binary tree. By using a `long` accumulator for level sums, the code is fully protected against potential integer overflow from large node values. This design achieves optimal `O(N)` time complexity with clean queue management. Another rock-solid addition to the tree mastery block!
+
+**Link to work:** [Day 122 - Average of Levels in Binary Tree](./Day122/AverageOfLevelsInBinaryTree.java)
