@@ -1021,3 +1021,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 123 locked in! Today I implemented the classic level order traversal using a Queue. By tracking the exact `size` of the queue at the start of each level iteration, I successfully isolated row boundaries, ensuring nodes are cleanly grouped into nested lists from left to right. This is the blueprint for all breadth-first search algorithms, combining optimal `O(N)` time complexity with precise queue-based space management.
 
 **Link to work:** [Day 123 - Binary Tree Level Order Traversal](./Day123/BinaryTreeLevelOrderTraversal.java)
+
+### Day 124: July 29, 2026 ⚡ ZIGZAG LEVEL-ORDER ARCHITECTURE ⚡
+
+**Today's Progress:** Mastered directional queue alternation. Solved #103: Binary Tree Zigzag Level Order Traversal.
+
+**Thoughts:** Day 124 locked in! Today I solved the Zigzag Level Order Traversal problem by building on top of standard breadth-first search. By introducing a boolean direction flag (`isLeftToRight`) and utilizing front-index insertion (`list.add(0, val)`), I was able to construct reversed rows on the fly without an extra post-processing step. This preserves optimal `O(N)` time complexity while delivering clean, readable state alternation. 124 days strong!
+
+**Link to work:** [Day 124 - Binary Tree Zigzag Level Order Traversal](./Day124/BinaryTreeZigzagLevelOrderTraversal.java)
