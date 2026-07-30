@@ -1029,3 +1029,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 124 locked in! Today I solved the Zigzag Level Order Traversal problem by building on top of standard breadth-first search. By introducing a boolean direction flag (`isLeftToRight`) and utilizing front-index insertion (`list.add(0, val)`), I was able to construct reversed rows on the fly without an extra post-processing step. This preserves optimal `O(N)` time complexity while delivering clean, readable state alternation. 124 days strong!
 
 **Link to work:** [Day 124 - Binary Tree Zigzag Level Order Traversal](./Day124/BinaryTreeZigzagLevelOrderTraversal.java)
+
+### Day 125: July 30, 2026 🎯 125 DAYS: BST IN-ORDER OPTIMIZATION 🎯
+
+**Today's Progress:** Celebrated 125 consecutive days of coding by mastering BST property exploitation. Solved #530: Minimum Absolute Difference in BST.
+
+**Thoughts:** Day 125 locked in! Today I tackled Minimum Absolute Difference in BST using an optimized in-order traversal. Because a BST's in-order sequence is always sorted in ascending order, the minimum absolute difference is guaranteed to exist between adjacent elements in that sequence. By maintaining a `previousNode` pointer during recursion, I calculated differences on the fly without storing nodes in an array, achieving optimal `O(N)` time and `O(H)` space complexity. Reaching 125 days of unbroken dedication is an incredible milestone!
+
+**Link to work:** [Day 125 - Minimum Absolute Difference in BST](./Day125/MinimumAbsoluteDifferenceInBST.java)
