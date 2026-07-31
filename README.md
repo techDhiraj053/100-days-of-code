@@ -1037,3 +1037,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 125 locked in! Today I tackled Minimum Absolute Difference in BST using an optimized in-order traversal. Because a BST's in-order sequence is always sorted in ascending order, the minimum absolute difference is guaranteed to exist between adjacent elements in that sequence. By maintaining a `previousNode` pointer during recursion, I calculated differences on the fly without storing nodes in an array, achieving optimal `O(N)` time and `O(H)` space complexity. Reaching 125 days of unbroken dedication is an incredible milestone!
 
 **Link to work:** [Day 125 - Minimum Absolute Difference in BST](./Day125/MinimumAbsoluteDifferenceInBST.java)
+
+### Day 126: July 31, 2026 🏆 BST RANK OPTIMIZATION 🏆
+
+**Today's Progress:** Concluded July with advanced BST property exploration. Solved #230: Kth Smallest Element in a BST.
+
+**Thoughts:** Day 126 locked in! Today I solved the Kth Smallest Element in a BST problem using an optimized in-order traversal. Because in-order traversal processes nodes in sorted ascending order, we can track our position with a counter and short-circuit the recursion the exact moment we hit rank `k`. This achieves optimal `O(H + K)` time complexity and prevents unnecessary traversal of larger subtrees. Finishing July with such clean, efficient architecture feels fantastic!
+
+**Link to work:** [Day 126 - Kth Smallest Element in a BST](./Day126/KthSmallestElementInABST.java)
