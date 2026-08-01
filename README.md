@@ -1045,3 +1045,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 126 locked in! Today I solved the Kth Smallest Element in a BST problem using an optimized in-order traversal. Because in-order traversal processes nodes in sorted ascending order, we can track our position with a counter and short-circuit the recursion the exact moment we hit rank `k`. This achieves optimal `O(H + K)` time complexity and prevents unnecessary traversal of larger subtrees. Finishing July with such clean, efficient architecture feels fantastic!
 
 **Link to work:** [Day 126 - Kth Smallest Element in a BST](./Day126/KthSmallestElementInABST.java)
+
+### Day 127: August 1, 2026 🚀 KICKING OFF AUGUST: BST VALIDATION 🚀
+
+**Today's Progress:** Opened August with rigorous tree validation architecture. Solved #98: Validate Binary Search Tree.
+
+**Thoughts:** Day 127 locked in! Today I tackled Validate Binary Search Tree using a boundary-passing recursive strategy. Ensuring a valid BST requires checking global constraints across ancestors rather than local parent-child links. By enforcing strict lower and upper limits (`min` and `max`) and utilizing `long` types to prevent edge-case overflows, this solution achieves optimal `O(N)` time complexity with absolute accuracy. Starting August with strong momentum!
+
+**Link to work:** [Day 127 - Validate Binary Search Tree](./Day127/ValidateBinarySearchTree.java)
