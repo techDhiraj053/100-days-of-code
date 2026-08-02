@@ -1053,3 +1053,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 127 locked in! Today I tackled Validate Binary Search Tree using a boundary-passing recursive strategy. Ensuring a valid BST requires checking global constraints across ancestors rather than local parent-child links. By enforcing strict lower and upper limits (`min` and `max`) and utilizing `long` types to prevent edge-case overflows, this solution achieves optimal `O(N)` time complexity with absolute accuracy. Starting August with strong momentum!
 
 **Link to work:** [Day 127 - Validate Binary Search Tree](./Day127/ValidateBinarySearchTree.java)
+
+### Day 128: August 2, 2026 🏝️ GRAPH MATRIX FLOOD FILL 🏝️
+
+**Today's Progress:** Entered Graph/Grid Traversal domain. Solved #200: Number of Islands.
+
+**Thoughts:** Day 128 locked in! Today I transitioned into graph algorithms by tackling Number of Islands using Depth-First Search (DFS). By mutating visited land cells to `'0'` directly inside the grid, the algorithm sinks entire island components in-place without requiring extra memory for a visited matrix. Using direction vectors (`DIRECTIONS = {{1,0}, {-1,0}, {0,1}, {0,-1}}`) keeps orthogonal traversal scalable and error-free. Achieved optimal `O(M * N)` time complexity!
+
+**Link to work:** [Day 128 - Number of Islands](./Day128/NumberOfIslands.java)
