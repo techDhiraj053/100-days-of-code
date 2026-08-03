@@ -1061,3 +1061,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 128 locked in! Today I transitioned into graph algorithms by tackling Number of Islands using Depth-First Search (DFS). By mutating visited land cells to `'0'` directly inside the grid, the algorithm sinks entire island components in-place without requiring extra memory for a visited matrix. Using direction vectors (`DIRECTIONS = {{1,0}, {-1,0}, {0,1}, {0,-1}}`) keeps orthogonal traversal scalable and error-free. Achieved optimal `O(M * N)` time complexity!
 
 **Link to work:** [Day 128 - Number of Islands](./Day128/NumberOfIslands.java)
+
+### Day 129: August 3, 2026 🛡️ BOUNDARY-DRIVEN SURROUNDED REGIONS 🛡️
+
+**Today's Progress:** Mastered reverse-boundary graph traversal. Solved #130: Surrounded Regions.
+
+**Thoughts:** Day 129 locked in! Today I tackled Surrounded Regions by inverting the problem logic: instead of searching inward for trapped components, I started from the matrix borders and marked all edge-connected `'O'` cells as safe (`'T'`). A final linear scan then captures all remaining trapped `'O'` cells into `'X'` while restoring the safe zones. This elegant flood-fill approach guarantees optimal `O(M * N)` performance without complex edge-case checking!
+
+**Link to work:** [Day 129 - Surrounded Regions](./Day129/SurroundedRegions.java)
