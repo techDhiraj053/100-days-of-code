@@ -1077,3 +1077,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 130 locked in! Today I tackled Clone Graph using a memoized DFS approach. Because graphs can contain complex cycles (unlike trees), duplicating them requires a hash map to track already-cloned nodes. By caching the clone in the map _before_ recursing into neighbors, the algorithm safely intercepts back-edges and prevents infinite loops. Achieving optimal `O(V + E)` time complexity while celebrating 130 days of unyielding daily consistency is a monumental achievement!
 
 **Link to work:** [Day 130 - Clone Graph](./Day130/CloneGraph.java)
+
+### Day 131: August 5, 2026 ⚖️ WEIGHTED GRAPH DIVISION EVALUATION ⚖️
+
+**Today's Progress:** Solved #399: Evaluate Division using weighted directed graph DFS traversal.
+
+**Thoughts:** Day 131 locked in! Today I tackled Evaluate Division by modeling algebraic equations as weighted directed edges. By storing forward ratios and their reverse reciprocals in an adjacency map, queries translate directly into path-finding problems. As DFS traverses the graph, edge weights are multiplied together to compute the final ratio. This achieves optimal performance while elegantly handling undefined variables and cycles!
+
+**Link to work:** [Day 131 - Evaluate Division](./Day131/EvaluateDivision.java)
