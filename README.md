@@ -1085,3 +1085,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 131 locked in! Today I tackled Evaluate Division by modeling algebraic equations as weighted directed edges. By storing forward ratios and their reverse reciprocals in an adjacency map, queries translate directly into path-finding problems. As DFS traverses the graph, edge weights are multiplied together to compute the final ratio. This achieves optimal performance while elegantly handling undefined variables and cycles!
 
 **Link to work:** [Day 131 - Evaluate Division](./Day131/EvaluateDivision.java)
+
+### Day 132: August 6, 2026 📚 DIRECTED GRAPH CYCLE DETECTION 📚
+
+**Today's Progress:** Mastered topological cycle detection. Solved #207: Course Schedule.
+
+**Thoughts:** Day 132 locked in! Today I tackled Course Schedule using a 3-state Depth-First Search (Graph Coloring) approach. In directed graphs, detecting cycles requires distinguishing between nodes currently on the active recursion path (`VISITING`) versus nodes that have already been fully cleared (`VISITED`). This elegant state machine achieves optimal `O(V + E)` time complexity while preventing false positives. Unstoppable momentum into August!
+
+**Link to work:** [Day 132 - Course Schedule](./Day132/CourseSchedule.java)
