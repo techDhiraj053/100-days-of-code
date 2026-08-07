@@ -1093,3 +1093,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 132 locked in! Today I tackled Course Schedule using a 3-state Depth-First Search (Graph Coloring) approach. In directed graphs, detecting cycles requires distinguishing between nodes currently on the active recursion path (`VISITING`) versus nodes that have already been fully cleared (`VISITED`). This elegant state machine achieves optimal `O(V + E)` time complexity while preventing false positives. Unstoppable momentum into August!
 
 **Link to work:** [Day 132 - Course Schedule](./Day132/CourseSchedule.java)
+
+### Day 133: August 7, 2026 🎲 BFS SNAKES AND LADDERS 🎲
+
+**Today's Progress:** Mastered matrix graph shortest path and Boustrophedon mapping. Solved #909: Snakes and Ladders.
+
+**Thoughts:** Day 133 locked in! Today I tackled Snakes and Ladders using Breadth-First Search to find the minimum dice rolls to reach the target. The core challenge lies in mapping 1D linear square numbers to 2D Boustrophedon (zigzag) matrix coordinates, which I handled cleanly with a dedicated coordinate decoding helper. BFS guarantees shortest path optimality with `O(N^2)` time complexity. Another brilliant graph problem conquered!
+
+**Link to work:** [Day 133 - Snakes and Ladders](./Day133/SnakesAndLadders.java)
