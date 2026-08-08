@@ -1101,3 +1101,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 133 locked in! Today I tackled Snakes and Ladders using Breadth-First Search to find the minimum dice rolls to reach the target. The core challenge lies in mapping 1D linear square numbers to 2D Boustrophedon (zigzag) matrix coordinates, which I handled cleanly with a dedicated coordinate decoding helper. BFS guarantees shortest path optimality with `O(N^2)` time complexity. Another brilliant graph problem conquered!
 
 **Link to work:** [Day 133 - Snakes and Ladders](./Day133/SnakesAndLadders.java)
+
+### Day 134: August 8, 2026 🧬 BFS STATE-SPACE EXPLORATION 🧬
+
+**Today's Progress:** Solved #433: Minimum Genetic Mutation using on-the-fly state expansion BFS.
+
+**Thoughts:** Day 134 locked in! Today I solved Minimum Genetic Mutation by modeling the problem as a shortest-path traversal on a state-space graph. Instead of pre-calculating every possible mutation link, I generated neighbors dynamically and validated them against the gene bank. This approach is memory-efficient and keeps the BFS logic clean. Successfully navigated the state-space!
+
+**Link to work:** [Day 134 - Minimum Genetic Mutation](./Day134/MinimumGeneticMutation.java)
