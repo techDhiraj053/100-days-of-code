@@ -1109,3 +1109,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 134 locked in! Today I solved Minimum Genetic Mutation by modeling the problem as a shortest-path traversal on a state-space graph. Instead of pre-calculating every possible mutation link, I generated neighbors dynamically and validated them against the gene bank. This approach is memory-efficient and keeps the BFS logic clean. Successfully navigated the state-space!
 
 **Link to work:** [Day 134 - Minimum Genetic Mutation](./Day134/MinimumGeneticMutation.java)
+
+### Day 135: August 9, 2026 🪜 WORD LADDER SHORTEST PATH 🪜
+
+**Today's Progress:** Conquered Hard-tier Word Ladder using BFS state expansion.
+
+**Thoughts:** Day 135 locked in! Today I solved Word Ladder by treating the word mutation space as an unweighted graph and performing a Breadth-First Search. The most elegant optimization I implemented was removing words from the set the moment they are queued—this implicit 'visited' tracking makes the algorithm incredibly clean and avoids the extra memory of a separate visited set. Maintaining 135 days of daily problem solving is a massive achievement!
+
+**Link to work:** [Day 135 - Word Ladder](./Day135/WordLadder.java)
