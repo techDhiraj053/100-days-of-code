@@ -1117,3 +1117,13 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 135 locked in! Today I solved Word Ladder by treating the word mutation space as an unweighted graph and performing a Breadth-First Search. The most elegant optimization I implemented was removing words from the set the moment they are queued—this implicit 'visited' tracking makes the algorithm incredibly clean and avoids the extra memory of a separate visited set. Maintaining 135 days of daily problem solving is a massive achievement!
 
 **Link to work:** [Day 135 - Word Ladder](./Day135/WordLadder.java)
+
+
+
+### Day 136: August 10, 2026 🎓 TOPOLOGICAL DEPENDENCY SORTING 🎓
+
+**Today's Progress:** Mastered dependency linearization. Solved #210: Course Schedule II using Kahn's Algorithm.
+
+**Thoughts:** Day 136 locked in! Today I implemented topological sorting to find a valid ordering for course completion. By modeling the courses as a directed graph and tracking the `indegree` of each node, I efficiently extracted courses as their prerequisites were satisfied. This is a foundational pattern for any task-scheduling problem with dependencies, and achieving optimal `O(V + E)` complexity ensures it scales perfectly for large systems. 136 days of consistency—let's keep the graph mastery going!
+
+**Link to work:** [Day 136 - Course Schedule II](./Day136/CourseScheduleII.java)
