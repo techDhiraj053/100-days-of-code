@@ -1133,3 +1133,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 137 locked in! Today I implemented a Trie, a core data structure for efficient string retrieval and prefix matching. By using a fixed-size node array (size 26), I achieved O(1) character transitions, making the overall complexity strictly proportional to the length of the input string (`O(L)`). This is a foundational structure for autocompletes and spellcheckers. Adding another robust tool to the architectural toolkit!
 
 **Link to work:** [Day 137 - Implement Trie](./Day137/Trie.java)
+
+### Day 138: August 12, 2026 🔍 WILDCARD TRIE SEARCH 🔍
+
+**Today's Progress:** Mastered recursive search patterns in Tries. Solved #211: Design Add and Search Words Data Structure.
+
+**Thoughts:** Day 138 locked in! Today I implemented a Word Dictionary that supports both exact word matching and wildcard (`.`) searches. The core challenge was handling the wildcard by branching the search across all valid child nodes of the current Trie level. This is a perfect example of using recursion to handle search space branching, turning a standard O(L) Trie traversal into a robust, flexible search engine. 138 days of steady progress—closing in on the 5-month mark!
+
+**Link to work:** [Day 138 - Word Dictionary](./Day138/WordDictionary.java)
