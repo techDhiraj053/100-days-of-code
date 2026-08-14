@@ -1149,3 +1149,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 139 locked in! Today I tackled Word Search II by combining a Trie with matrix backtracking. Searching for words individually via standard DFS would be extremely slow, but structuring the dictionary into a prefix tree allows the algorithm to check thousands of words simultaneously as it navigates the board. Storing the word directly at the Trie terminal node makes collection instantaneous. 139 days of elite consistency—just one day away from the 140-day milestone!
 
 **Link to work:** [Day 139 - Word Search II](./Day139/WordSearchII.java)
+
+### Day 140: August 14, 2026 ☎️ 140 DAYS: ENTERING BACKTRACKING ☎️
+
+**Today's Progress:** Hit 140 consecutive days of coding! Transitioned into the Backtracking domain. Solved #17: Letter Combinations of a Phone Number.
+
+**Thoughts:** Day 140 locked in! Today I tackled a classic permutation generation problem using DFS Backtracking. The biggest takeaway was upgrading from immutable `String` concatenation to a mutable `StringBuilder`. By explicitly appending a character, recursing, and then deleting the character (`deleteCharAt`), the true "choose, explore, un-choose" pattern of backtracking is revealed, drastically reducing memory overhead. 140 days of continuous growth!
+
+**Link to work:** [Day 140 - Letter Combinations of a Phone Number](./Day140/LetterCombinationsOfAPhoneNumber.java)
