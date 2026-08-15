@@ -1157,3 +1157,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 140 locked in! Today I tackled a classic permutation generation problem using DFS Backtracking. The biggest takeaway was upgrading from immutable `String` concatenation to a mutable `StringBuilder`. By explicitly appending a character, recursing, and then deleting the character (`deleteCharAt`), the true "choose, explore, un-choose" pattern of backtracking is revealed, drastically reducing memory overhead. 140 days of continuous growth!
 
 **Link to work:** [Day 140 - Letter Combinations of a Phone Number](./Day140/LetterCombinationsOfAPhoneNumber.java)
+
+### Day 141: August 15, 2026 🔢 COMBINATORIAL PRUNING 🔢
+
+**Today's Progress:** Mastered search space optimization in Backtracking. Solved #77: Combinations.
+
+**Thoughts:** Day 141 locked in! Today I implemented a classic backtracking algorithm to generate combinations. The core `choose -> explore -> undo` pattern feels very natural now. I leveled up the standard approach by adding mathematical branch pruning: by calculating the exact number of elements still needed, I restricted the `for` loop's upper bound so it never wastes time exploring branches that don't have enough numbers left to form a complete combination of size `k`.
+
+**Link to work:** [Day 141 - Combinations](./Day141/Combinations.java)
