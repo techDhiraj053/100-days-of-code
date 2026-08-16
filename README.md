@@ -1165,3 +1165,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 141 locked in! Today I implemented a classic backtracking algorithm to generate combinations. The core `choose -> explore -> undo` pattern feels very natural now. I leveled up the standard approach by adding mathematical branch pruning: by calculating the exact number of elements still needed, I restricted the `for` loop's upper bound so it never wastes time exploring branches that don't have enough numbers left to form a complete combination of size `k`.
 
 **Link to work:** [Day 141 - Combinations](./Day141/Combinations.java)
+
+### Day 142: August 16, 2026 🔄 IN-PLACE PERMUTATIONS 🔄
+
+**Today's Progress:** Upgraded permutation generation to an in-place architecture. Solved #46: Permutations.
+
+**Thoughts:** Day 142 locked in! Today I optimized the classic permutation backtracking algorithm. Instead of relying on a `boolean[] visited` array and a dynamic state list, I switched to an in-place array swapping technique. By swapping elements to lock them into the current index and then swapping them back during the backtrack phase, the algorithm runs significantly leaner and completely eliminates auxiliary space overhead. Closing out the weekend strong!
+
+**Link to work:** [Day 142 - Permutations](./Day142/Permutations.java)
