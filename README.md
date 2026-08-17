@@ -1173,3 +1173,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 142 locked in! Today I optimized the classic permutation backtracking algorithm. Instead of relying on a `boolean[] visited` array and a dynamic state list, I switched to an in-place array swapping technique. By swapping elements to lock them into the current index and then swapping them back during the backtrack phase, the algorithm runs significantly leaner and completely eliminates auxiliary space overhead. Closing out the weekend strong!
 
 **Link to work:** [Day 142 - Permutations](./Day142/Permutations.java)
+
+### Day 143: August 17, 2026 ✂️ AGGRESSIVE BRANCH PRUNING ✂️
+
+**Today's Progress:** Kicked off a new week by optimizing state-space exploration. Solved #39: Combination Sum.
+
+**Thoughts:** Day 143 locked in! Today I tackled Combination Sum using DFS backtracking. The key mechanic here was passing `i` instead of `i + 1` to allow for unlimited reuse of the same element. To optimize it to senior-level performance, I added an upfront `Arrays.sort(candidates)`. This allowed me to upgrade my `continue` statement to a `break` statement: the moment a candidate exceeds the target, the algorithm instantly prunes the entire rest of the loop, skipping thousands of useless recursive calls.
+
+**Link to work:** [Day 143 - Combination Sum](./Day143/CombinationSum.java)
