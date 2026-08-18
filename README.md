@@ -1181,3 +1181,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 143 locked in! Today I tackled Combination Sum using DFS backtracking. The key mechanic here was passing `i` instead of `i + 1` to allow for unlimited reuse of the same element. To optimize it to senior-level performance, I added an upfront `Arrays.sort(candidates)`. This allowed me to upgrade my `continue` statement to a `break` statement: the moment a candidate exceeds the target, the algorithm instantly prunes the entire rest of the loop, skipping thousands of useless recursive calls.
 
 **Link to work:** [Day 143 - Combination Sum](./Day143/CombinationSum.java)
+
+### Day 144: August 18, 2026 👑 N-QUEENS GEOMETRIC BACKTRACKING 👑
+
+**Today's Progress:** Conquered the legendary N-Queens problem. Solved #52: N-Queens II (Hard).
+
+**Thoughts:** Day 144 locked in! Today I solved the famous N-Queens puzzle using DFS backtracking. The most brilliant optimization here is bypassing the need for a 2D matrix scan by using 1D boolean arrays to track columns, main diagonals, and anti-diagonals. Because anti-diagonals share a constant `row + col` sum, and main diagonals share a constant `row - col` difference, I achieved `O(1)` constant-time lookups for checking if a square is under attack. Writing clean, efficient, Hard-tier algorithms is becoming second nature!
+
+**Link to work:** [Day 144 - N-Queens II](./Day144/NQueensII.java)
