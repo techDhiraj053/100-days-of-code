@@ -1189,3 +1189,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 144 locked in! Today I solved the famous N-Queens puzzle using DFS backtracking. The most brilliant optimization here is bypassing the need for a 2D matrix scan by using 1D boolean arrays to track columns, main diagonals, and anti-diagonals. Because anti-diagonals share a constant `row + col` sum, and main diagonals share a constant `row - col` difference, I achieved `O(1)` constant-time lookups for checking if a square is under attack. Writing clean, efficient, Hard-tier algorithms is becoming second nature!
 
 **Link to work:** [Day 144 - N-Queens II](./Day144/NQueensII.java)
+
+### Day 145: August 19, 2026 🪢 CATALAN NUMBER BACKTRACKING 🪢
+
+**Today's Progress:** Mastered early branch pruning in string combinations. Solved #22: Generate Parentheses.
+
+**Thoughts:** Day 145 locked in! Today I implemented a highly efficient backtracking algorithm to generate well-formed parentheses. Instead of generating brute-force combinations and validating them later, I tracked `openCount` and `closeCount` to aggressively prune invalid branches on the fly. Adding a closing parenthesis is only permitted when `closeCount < openCount`, ensuring every sequence stays mathematically valid at every step. Time complexity matches the Catalan numbers—a brilliant optimization!
+
+**Link to work:** [Day 145 - Generate Parentheses](./Day145/GenerateParentheses.java)
