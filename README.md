@@ -1197,3 +1197,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 145 locked in! Today I implemented a highly efficient backtracking algorithm to generate well-formed parentheses. Instead of generating brute-force combinations and validating them later, I tracked `openCount` and `closeCount` to aggressively prune invalid branches on the fly. Adding a closing parenthesis is only permitted when `closeCount < openCount`, ensuring every sequence stays mathematically valid at every step. Time complexity matches the Catalan numbers—a brilliant optimization!
 
 **Link to work:** [Day 145 - Generate Parentheses](./Day145/GenerateParentheses.java)
+
+### Day 146: August 20, 2026 🕵️‍♂️ PRUNED MATRIX BACKTRACKING 🕵️‍♂️
+
+**Today's Progress:** Mastered matrix backtracking and search space reduction. Solved #79: Word Search.
+
+**Thoughts:** Day 146 locked in! Today I implemented a grid-based DFS backtracking solution. The basic in-place board modification was elegant, but I completely leveled up the solution by adding the LeetCode follow-up optimizations. By tracking board character frequencies, I can instantly fail impossible boards before starting the DFS. Even better, by checking if the first letter of the word is more common on the board than the last letter, I can reverse the search string to minimize the recursive branching factor. Algorithmic efficiency at its finest!
+
+**Link to work:** [Day 146 - Word Search](./Day146/WordSearch.java)
