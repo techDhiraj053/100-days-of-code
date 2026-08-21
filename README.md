@@ -1205,3 +1205,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 146 locked in! Today I implemented a grid-based DFS backtracking solution. The basic in-place board modification was elegant, but I completely leveled up the solution by adding the LeetCode follow-up optimizations. By tracking board character frequencies, I can instantly fail impossible boards before starting the DFS. Even better, by checking if the first letter of the word is more common on the board than the last letter, I can reverse the search string to minimize the recursive branching factor. Algorithmic efficiency at its finest!
 
 **Link to work:** [Day 146 - Word Search](./Day146/WordSearch.java)
+
+### Day 147: August 21, 2026 🌳 DIVIDE AND CONQUER TREES 🌳
+
+**Today's Progress:** Transitioned into Tree construction algorithms. Solved #108: Convert Sorted Array to Binary Search Tree.
+
+**Thoughts:** Day 147 locked in! Wrapping up the work week by diving into Divide and Conquer. The process of converting a sorted array into a height-balanced BST is beautifully symmetrical to the Binary Search algorithm. By constantly picking the `midIndex` as the root node and recursively slicing the array into left and right bounds, the tree naturally balances itself. I made sure to use `left + (right - left) / 2` to avoid any sneaky integer overflow bugs. A phenomenal end to the week!
+
+**Link to work:** [Day 147 - Convert Sorted Array to BST](./Day147/ConvertSortedArrayToBST.java)
