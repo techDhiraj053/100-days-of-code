@@ -1213,3 +1213,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 147 locked in! Wrapping up the work week by diving into Divide and Conquer. The process of converting a sorted array into a height-balanced BST is beautifully symmetrical to the Binary Search algorithm. By constantly picking the `midIndex` as the root node and recursively slicing the array into left and right bounds, the tree naturally balances itself. I made sure to use `left + (right - left) / 2` to avoid any sneaky integer overflow bugs. A phenomenal end to the week!
 
 **Link to work:** [Day 147 - Convert Sorted Array to BST](./Day147/ConvertSortedArrayToBST.java)
+
+### Day 148: August 22, 2026 🔗 LINKED LIST MERGE SORT 🔗
+
+**Today's Progress:** Applied Divide and Conquer to Linked Lists. Solved #148: Sort List.
+
+**Thoughts:** Day 148 locked in! Today I implemented Top-Down Merge Sort on a Linked List. Because linked lists do not have random access, standard sorting algorithms like Quick Sort struggle, making Merge Sort the undisputed best approach. The most critical part of the algorithm is initializing `fast = head.next` to ensure that a list of length 2 actually gets split into two lists of length 1, avoiding an infinite recursion loop. The resulting `O(n log n)` time complexity is perfectly optimal for this data structure!
+
+**Link to work:** [Day 148 - Sort List](./Day148/SortList.java)
