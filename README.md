@@ -1221,3 +1221,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 148 locked in! Today I implemented Top-Down Merge Sort on a Linked List. Because linked lists do not have random access, standard sorting algorithms like Quick Sort struggle, making Merge Sort the undisputed best approach. The most critical part of the algorithm is initializing `fast = head.next` to ensure that a list of length 2 actually gets split into two lists of length 1, avoiding an infinite recursion loop. The resulting `O(n log n)` time complexity is perfectly optimal for this data structure!
 
 **Link to work:** [Day 148 - Sort List](./Day148/SortList.java)
+
+### Day 149: August 23, 2026 🗺️ SPATIAL QUAD TREES 🗺️
+
+**Today's Progress:** Applied Divide and Conquer to 2D spatial partitioning. Solved #427: Construct Quad Tree.
+
+**Thoughts:** Day 149 locked in! Today I explored Quad Trees, a specialized spatial data structure used heavily in rendering and collision detection. The algorithm recursively divides a 2D matrix into four quadrants. To make the code robust and enterprise-ready, I applied the Single Responsibility Principle, separating the "check if uniform" logic from the "recursively split geometry" logic. This made the core Divide and Conquer pattern crystal clear. Tomorrow is Day 150—an absolutely massive milestone!
+
+**Link to work:** [Day 149 - Construct Quad Tree](./Day149/ConstructQuadTree.java)
