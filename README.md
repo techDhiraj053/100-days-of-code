@@ -1229,3 +1229,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 149 locked in! Today I explored Quad Trees, a specialized spatial data structure used heavily in rendering and collision detection. The algorithm recursively divides a 2D matrix into four quadrants. To make the code robust and enterprise-ready, I applied the Single Responsibility Principle, separating the "check if uniform" logic from the "recursively split geometry" logic. This made the core Divide and Conquer pattern crystal clear. Tomorrow is Day 150—an absolutely massive milestone!
 
 **Link to work:** [Day 149 - Construct Quad Tree](./Day149/ConstructQuadTree.java)
+
+### Day 150: August 24, 2026 🏆 DAY 150 MILESTONE: MERGE K LISTS 🏆
+
+**Today's Progress:** Hit 150 continuous days of problem-solving! Solved the classic Hard problem #23: Merge k Sorted Lists.
+
+**Thoughts:** Day 150 is officially in the books! Half a year of continuous momentum. I chose to tackle a Hard problem to celebrate, using a Min-Heap (Priority Queue) to merge `k` sorted linked lists. By maintaining a heap of size `k`, I achieved an optimal `O(N log k)` time complexity. I also upgraded my comparator to `Comparator.comparingInt(node -> node.val)` to prevent any potential integer overflow vulnerabilities that can occur with simple subtraction. This level of consistency is transforming my architectural thinking. Onward to the next 150!
+
+**Link to work:** [Day 150 - Merge k Sorted Lists](./Day150/MergeKSortedLists.java)
