@@ -1237,3 +1237,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 150 is officially in the books! Half a year of continuous momentum. I chose to tackle a Hard problem to celebrate, using a Min-Heap (Priority Queue) to merge `k` sorted linked lists. By maintaining a heap of size `k`, I achieved an optimal `O(N log k)` time complexity. I also upgraded my comparator to `Comparator.comparingInt(node -> node.val)` to prevent any potential integer overflow vulnerabilities that can occur with simple subtraction. This level of consistency is transforming my architectural thinking. Onward to the next 150!
 
 **Link to work:** [Day 150 - Merge k Sorted Lists](./Day150/MergeKSortedLists.java)
+
+### Day 151: August 25, 2026 📈 DIVIDE & CONQUER SUBARRAYS 📈
+
+**Today's Progress:** Tackled the advanced follow-up for #53: Maximum Subarray.
+
+**Thoughts:** Day 151 locked in! I started with Kadane's algorithm, which easily solves this in `O(N)` time and `O(1)` space. However, I wanted to conquer the LeetCode follow-up challenge: implementing the Divide and Conquer approach. I built a custom `SubarrayNode` class to track the total sum, max prefix, max suffix, and max continuous sum for every array segment. This architectural pattern forms the exact basis of a Segment Tree, turning a simple array problem into a scalable blueprint for distributed data processing. Post-milestone momentum feels great!
+
+**Link to work:** [Day 151 - Maximum Subarray](./Day151/MaximumSubarray.java)
