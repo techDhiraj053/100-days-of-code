@@ -1245,3 +1245,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 151 locked in! I started with Kadane's algorithm, which easily solves this in `O(N)` time and `O(1)` space. However, I wanted to conquer the LeetCode follow-up challenge: implementing the Divide and Conquer approach. I built a custom `SubarrayNode` class to track the total sum, max prefix, max suffix, and max continuous sum for every array segment. This architectural pattern forms the exact basis of a Segment Tree, turning a simple array problem into a scalable blueprint for distributed data processing. Post-milestone momentum feels great!
 
 **Link to work:** [Day 151 - Maximum Subarray](./Day151/MaximumSubarray.java)
+
+### Day 152: August 26, 2026 ⭕ CIRCULAR KADANE'S ALGORITHM ⭕
+
+**Today's Progress:** Solved a brilliant mathematical twist on Kadane's Algorithm. Solved #918: Maximum Sum Circular Subarray.
+
+**Thoughts:** Day 152 locked in! Today I took yesterday's Maximum Subarray logic and applied it to a circular array. The trick here is recognizing mathematical duality: a wrapped-around maximum subarray is just the total sum of the array minus the minimum contiguous subarray in the middle. By running Kadane's algorithm twice in a single pass (once to find the max, once to find the min), I solved it in `O(N)` time and `O(1)` space. I also made sure to catch the edge case where all numbers are negative to prevent returning an empty `0` sum. Another elite array algorithm in the toolkit!
+
+**Link to work:** [Day 152 - Maximum Sum Circular Subarray](./Day152/MaximumSumCircularSubarray.java)
