@@ -1253,3 +1253,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 152 locked in! Today I took yesterday's Maximum Subarray logic and applied it to a circular array. The trick here is recognizing mathematical duality: a wrapped-around maximum subarray is just the total sum of the array minus the minimum contiguous subarray in the middle. By running Kadane's algorithm twice in a single pass (once to find the max, once to find the min), I solved it in `O(N)` time and `O(1)` space. I also made sure to catch the edge case where all numbers are negative to prevent returning an empty `0` sum. Another elite array algorithm in the toolkit!
 
 **Link to work:** [Day 152 - Maximum Sum Circular Subarray](./Day152/MaximumSumCircularSubarray.java)
+
+### Day 153: August 27, 2026 🔍 BINARY SEARCH INSERTION 🔍
+
+**Today's Progress:** Solidified O(log N) array traversal. Solved #35: Search Insert Position.
+
+**Thoughts:** Day 153 locked in! Today I implemented a classic Binary Search to find a target's insertion position. The true beauty of this algorithm lies in the termination state of the `while (lowerBound <= upperBound)` loop. When the loop finishes without finding the target, the pointers cross, and the `lowerBound` naturally rests on the exact index where the target belongs to keep the array sorted. It's a mathematically elegant `O(log N)` solution that requires no extra conditional checks at the end.
+
+**Link to work:** [Day 153 - Search Insert Position](./Day153/SearchInsertPosition.java)
