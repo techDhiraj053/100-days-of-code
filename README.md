@@ -1261,3 +1261,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 153 locked in! Today I implemented a classic Binary Search to find a target's insertion position. The true beauty of this algorithm lies in the termination state of the `while (lowerBound <= upperBound)` loop. When the loop finishes without finding the target, the pointers cross, and the `lowerBound` naturally rests on the exact index where the target belongs to keep the array sorted. It's a mathematically elegant `O(log N)` solution that requires no extra conditional checks at the end.
 
 **Link to work:** [Day 153 - Search Insert Position](./Day153/SearchInsertPosition.java)
+
+### Day 154: August 28, 2026 🧮 VIRTUAL ARRAY BINARY SEARCH 🧮
+
+**Today's Progress:** Mastered index mapping for multi-dimensional search. Solved #74: Search a 2D Matrix.
+
+**Thoughts:** Day 154 locked in! Today I took standard Binary Search and applied it to a 2D matrix. Instead of performing multiple searches, I treated the entire $M \times N$ matrix as a single flattened 1D array. By using integer division (`mid / cols`) to find the row and the modulo operator (`mid % cols`) to find the column, I achieved a pure `O(log(M * N))` solution in a single pass. This mathematical index mapping is identical to how RAM handles multi-dimensional arrays under the hood. A perfect way to finish the week!
+
+**Link to work:** [Day 154 - Search a 2D Matrix](./Day154/SearchA2DMatrix.java)
