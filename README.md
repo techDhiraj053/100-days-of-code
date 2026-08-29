@@ -1269,3 +1269,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 154 locked in! Today I took standard Binary Search and applied it to a 2D matrix. Instead of performing multiple searches, I treated the entire $M \times N$ matrix as a single flattened 1D array. By using integer division (`mid / cols`) to find the row and the modulo operator (`mid % cols`) to find the column, I achieved a pure `O(log(M * N))` solution in a single pass. This mathematical index mapping is identical to how RAM handles multi-dimensional arrays under the hood. A perfect way to finish the week!
 
 **Link to work:** [Day 154 - Search a 2D Matrix](./Day154/SearchA2DMatrix.java)
+
+### Day 155: August 29, 2026 🏔️ GRADIENT BINARY SEARCH 🏔️
+
+**Today's Progress:** Solved a classic algorithm trap. Applied Binary Search to an unsorted array for #162: Find Peak Element.
+
+**Thoughts:** Day 155 locked in on a Saturday! Today I tackled a problem that tricks a lot of developers into writing `O(N)` linear scans because the array isn't sorted. However, because the problem defines edges as `-∞`, you can use Binary Search based purely on local slopes (gradients). If `nums[mid] < nums[mid+1]`, you are climbing, so the peak must be to the right. If you are falling, the peak must be at `mid` or to the left. By using the `left < right` template and setting `right = mid` (instead of `mid - 1`), the pointers beautifully converge on a local peak in `O(log n)` time. A masterclass in algorithmic principles!
+
+**Link to work:** [Day 155 - Find Peak Element](./Day155/FindPeakElement.java)
