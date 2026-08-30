@@ -1277,3 +1277,12 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 155 locked in on a Saturday! Today I tackled a problem that tricks a lot of developers into writing `O(N)` linear scans because the array isn't sorted. However, because the problem defines edges as `-∞`, you can use Binary Search based purely on local slopes (gradients). If `nums[mid] < nums[mid+1]`, you are climbing, so the peak must be to the right. If you are falling, the peak must be at `mid` or to the left. By using the `left < right` template and setting `right = mid` (instead of `mid - 1`), the pointers beautifully converge on a local peak in `O(log n)` time. A masterclass in algorithmic principles!
 
 **Link to work:** [Day 155 - Find Peak Element](./Day155/FindPeakElement.java)
+
+### Day 156: August 30, 2026 🔄 ROTATED BINARY SEARCH 🔄
+
+**Today's Progress:** Solved a FAANG classic algorithm. Mastered #33: Search in Rotated Sorted Array.
+
+**Thoughts:** Day 156 locked in! Today I used Binary Search to traverse an array that has been rotated at an unknown pivot. The trick here is accepting that you can't just do normal binary search because the numbers aren't purely ascending. However, if you pick any midpoint, _one of the halves will always be sorted_. By checking if the left side is sorted (`nums[left] <= nums[mid]`), I can determine if my target fits securely in that boundary. If it does, discard the right. If it doesn't, discard the left. It maintains perfect `O(log N)` complexity. A great end to the weekend!
+
+**Link to work:** [Day 156 - Search in Rotated Sorted Array](./Day156/SearchInRotatedSortedArray.java)
+
