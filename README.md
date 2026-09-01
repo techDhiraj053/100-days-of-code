@@ -1286,3 +1286,10 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 156 - Search in Rotated Sorted Array](./Day156/SearchInRotatedSortedArray.java)
 
+### Day 157: September 1, 2026 ⏪ REVERSE IN-PLACE MERGE ⏪
+
+**Today's Progress:** Kicked off September by optimizing array manipulation space complexity. Solved #88: Merge Sorted Array.
+
+**Thoughts:** Day 157 locked in! I initially wrote a standard `O(m + n)` time and `O(m + n)` space merge function using a temporary array. To hit the true optimal solution, I refactored it to use an In-Place Reverse Merge. By setting up three pointers (`p1`, `p2`, and `pMerge`) and starting from the _end_ of the arrays, I was able to safely overwrite the padded zeroes in `nums1` with the largest elements first. This brought the space complexity down to `O(1)` without losing any time efficiency. Working backwards is a brilliant trick for in-place array modifications!
+
+**Link to work:** [Day 157 - Merge Sorted Array](./Day157/MergeSortedArray.java)
