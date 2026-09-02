@@ -1,0 +1,60 @@
+/*
+34. Find First and Last Position of Element in Sorted Array (DAY 158!)
+
+This solution uses two independent Binary Searches to find the boundary indices,
+achieving a strict O(log n) time complexity.
+
+Senior Twist: DRY (Don't Repeat Yourself).
+Instead of writing two nearly identical binary search methods, we abstract 
+the boundary logic into a single `findBound` method. A boolean flag (`isSearchingFirst`) 
+dictates whether the search should aggressively collapse to the left or to the right 
+upon finding a target match. This halves the code footprint and improves maintainability.
+*/
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] result = new int[]{-1, -1};
+        
+        // Fast-fail for empty arrays
+        if (nums == null || nums.length == 0) {
+            return result;
+        }
+
+        result[0] = findBound(nums, target, true);
+        
+        // Minor optimization: If the first search fails, the target doesn't exist.
+        // We can skip the second search entirely!
+        if (result[0] != -1) {
+            result[1] = findBound(nums, target, false);
+        }
+
+        return result;
+    }
+
+    private int findBound(int[] nums, int target, boolean isSearchingFirst) {
+        int left = 0;
+        int right = nums.length - 1;
+        int boundaryIndex = -1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (nums[mid] == target) {
+                boundaryIndex = mid; // Tentatively record the match
+                
+                // If searching for the first occurrence, keep collapsing left.
+                // Otherwise, keep collapsing right.
+                if (isSearchingFirst) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        return boundaryIndex;
+    }
+}

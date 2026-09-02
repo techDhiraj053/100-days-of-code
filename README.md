@@ -1293,3 +1293,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 157 locked in! I initially wrote a standard `O(m + n)` time and `O(m + n)` space merge function using a temporary array. To hit the true optimal solution, I refactored it to use an In-Place Reverse Merge. By setting up three pointers (`p1`, `p2`, and `pMerge`) and starting from the _end_ of the arrays, I was able to safely overwrite the padded zeroes in `nums1` with the largest elements first. This brought the space complexity down to `O(1)` without losing any time efficiency. Working backwards is a brilliant trick for in-place array modifications!
 
 **Link to work:** [Day 157 - Merge Sorted Array](./Day157/MergeSortedArray.java)
+
+### Day 158: September 2, 2026 🎯 BOUNDARY BINARY SEARCH 🎯
+
+**Today's Progress:** Mastered the DRY principle with Binary Search. Solved #34: Find First and Last Position of Element in Sorted Array.
+
+**Thoughts:** Day 158 locked in! Today I used Binary Search to find the exact boundary indices of a target value in an array containing duplicates. Instead of doing a linear scan once the target is found (which ruins the `O(log n)` complexity), I forced the binary search to keep aggressively searching left for the first occurrence, and right for the last occurrence. To elevate the code quality, I applied the DRY (Don't Repeat Yourself) principle, combining two nearly identical methods into a single `findBound` helper function controlled by a boolean flag. I also added a minor optimization to skip the second search if the first search returns `-1`. Clean, enterprise-ready code!
+
+**Link to work:** [Day 158 - Find First and Last Position](./Day158/FindFirstAndLastPosition.java)
