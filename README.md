@@ -1301,3 +1301,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 158 locked in! Today I used Binary Search to find the exact boundary indices of a target value in an array containing duplicates. Instead of doing a linear scan once the target is found (which ruins the `O(log n)` complexity), I forced the binary search to keep aggressively searching left for the first occurrence, and right for the last occurrence. To elevate the code quality, I applied the DRY (Don't Repeat Yourself) principle, combining two nearly identical methods into a single `findBound` helper function controlled by a boolean flag. I also added a minor optimization to skip the second search if the first search returns `-1`. Clean, enterprise-ready code!
 
 **Link to work:** [Day 158 - Find First and Last Position](./Day158/FindFirstAndLastPosition.java)
+
+### Day 159: September 3, 2026 ⬛ SQUARES OF A SORTED ARRAY ⬛
+
+**Today's Progress:** Hit the O(N) follow-up requirement for array sorting. Solved #977: Squares of a Sorted Array.
+
+**Thoughts:** Day 159 in the books! Switched gears to C++ today and wanted to keep my exact, unedited thought process logged. The challenge was to sort the squares in `O(N)` time instead of the trivial `O(N log N)` sort. I solved this by explicitly dividing the array into two separate vectors for negative and positive numbers. Since squaring negative numbers reverses their relative sorted order, I reversed the negative vector after squaring. Finally, I applied a standard two-pointer merge to combine the two sorted halves into the final result. It’s raw, it’s real, and it perfectly nails the algorithmic time constraint!
+
+**Link to work:** [Day 159 - Squares of a Sorted Array](./Day159/SquaresOfASortedArray.cpp)
