@@ -1302,10 +1302,13 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 158 - Find First and Last Position](./Day158/FindFirstAndLastPosition.java)
 
-### Day 159: September 3, 2026 ⬛ SQUARES OF A SORTED ARRAY ⬛
+### Day 159: September 3, 2026 ⬛ SQUARES OF A SORTED ARRAY (C++ & Java) ⬛
 
-**Today's Progress:** Hit the O(N) follow-up requirement for array sorting. Solved #977: Squares of a Sorted Array.
+**Today's Progress:** Hit the O(N) follow-up requirement for array sorting. Solved #977: Squares of a Sorted Array in both C++ and Java.
 
-**Thoughts:** Day 159 in the books! Switched gears to C++ today and wanted to keep my exact, unedited thought process logged. The challenge was to sort the squares in `O(N)` time instead of the trivial `O(N log N)` sort. I solved this by explicitly dividing the array into two separate vectors for negative and positive numbers. Since squaring negative numbers reverses their relative sorted order, I reversed the negative vector after squaring. Finally, I applied a standard two-pointer merge to combine the two sorted halves into the final result. It’s raw, it’s real, and it perfectly nails the algorithmic time constraint!
+**Thoughts:** Day 159 in the books! I wanted to keep my exact, unedited thought process logged, so I wrote this in C++ first, and then immediately ported the exact same logic over to Java. The challenge was to sort the squares in `O(N)` time instead of the trivial `O(N log N)` sort. I solved this by explicitly dividing the array into two separate structures for negative and positive numbers. Since squaring negative numbers reverses their relative sorted order, I reversed the negative list using `Collections.reverse()` after squaring. Finally, I applied a standard two-pointer merge to combine the two sorted halves into the final result. Porting across languages is a great way to solidify syntax!
 
-**Link to work:** [Day 159 - Squares of a Sorted Array](./Day159/SquaresOfASortedArray.cpp)
+**Link to work:**
+
+- [Day 159 - Squares of a Sorted Array (C++)](./Day159/SquaresOfASortedArray.cpp)
+- [Day 159 - Squares of a Sorted Array (Java)](./Day159/SquaresOfASortedArray.java)
