@@ -1312,3 +1312,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 - [Day 159 - Squares of a Sorted Array (C++)](./Day159/SquaresOfASortedArray.cpp)
 - [Day 159 - Squares of a Sorted Array (Java)](./Day159/SquaresOfASortedArray.java)
+
+### Day 160: September 4, 2026 📉 THE ROTATION RESOLVER 📉
+
+**Today's Progress:** Mastered the rotation cliff logic. Solved #153: Find Minimum in Rotated Sorted Array.
+
+**Thoughts:** Day 160 locked in! Wrapping up the week with a brilliant implementation of Binary Search. When looking for the minimum in a rotated array, comparing `mid` to `left` creates messy edge cases. The optimal approach is comparing `mid` to `right`. If `nums[mid] > nums[right]`, the rotation happens to the right, meaning the minimum is strictly to the right. If it's smaller, the right side is sorted, so the minimum is at `mid` or to its left. By setting `right = mid`, I ensure I never jump past the minimum value. A pristine `O(log n)` solution!
+
+**Link to work:** [Day 160 - Find Minimum in Rotated Sorted Array](./Day160/FindMinInRotatedSortedArray.java)
