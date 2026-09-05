@@ -1320,3 +1320,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 160 locked in! Wrapping up the week with a brilliant implementation of Binary Search. When looking for the minimum in a rotated array, comparing `mid` to `left` creates messy edge cases. The optimal approach is comparing `mid` to `right`. If `nums[mid] > nums[right]`, the rotation happens to the right, meaning the minimum is strictly to the right. If it's smaller, the right side is sorted, so the minimum is at `mid` or to its left. By setting `right = mid`, I ensure I never jump past the minimum value. A pristine `O(log n)` solution!
 
 **Link to work:** [Day 160 - Find Minimum in Rotated Sorted Array](./Day160/FindMinInRotatedSortedArray.java)
+
+### Day 161: September 5, 2026 🔪 BINARY SEARCH PARTITIONING 🔪
+
+**Today's Progress:** Solved one of the hardest FAANG questions. Conquered #4: Median of Two Sorted Arrays.
+
+**Thoughts:** Day 161 locked in on a Saturday! Today I took on a legendary Hard-tier problem. The brute force way is to merge the arrays `O(m+n)`, but to hit the optimal `O(log(min(m, n)))`, you have to use Binary Search on the array partitions themselves. By forcing the search onto the smaller array and dynamically calculating the secondary partition, I compared the cross-boundaries (`maxLeftX <= minRightY`). When the cross-comparison validates, you've mathematically isolated the exact median without ever merging a single element. I padded the boundary edge cases with `Integer.MIN_VALUE` and `Integer.MAX_VALUE` to keep the logic clean. Absolute algorithmic peak!
+
+**Link to work:** [Day 161 - Median of Two Sorted Arrays](./Day161/MedianOfTwoSortedArrays.java)
