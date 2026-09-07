@@ -1328,3 +1328,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 161 locked in on a Saturday! Today I took on a legendary Hard-tier problem. The brute force way is to merge the arrays `O(m+n)`, but to hit the optimal `O(log(min(m, n)))`, you have to use Binary Search on the array partitions themselves. By forcing the search onto the smaller array and dynamically calculating the secondary partition, I compared the cross-boundaries (`maxLeftX <= minRightY`). When the cross-comparison validates, you've mathematically isolated the exact median without ever merging a single element. I padded the boundary edge cases with `Integer.MIN_VALUE` and `Integer.MAX_VALUE` to keep the logic clean. Absolute algorithmic peak!
 
 **Link to work:** [Day 161 - Median of Two Sorted Arrays](./Day161/MedianOfTwoSortedArrays.java)
+
+### Day 162: September 7, 2026 ⚖️ QUICKSELECT & HEAPS ⚖️
+
+**Today's Progress:** Mastered array selection algorithms. Solved #215: Kth Largest Element in an Array.
+
+**Thoughts:** Day 162 locked in! I started the week by solving the Kth Largest Element problem. My initial approach used a Java `PriorityQueue` (Min-Heap) to maintain a running window of the top `k` elements, which is clean and runs in `O(N log k)`. However, to hit the absolute FAANG-level optimal solution, I implemented Randomized QuickSelect. By borrowing the partition logic from QuickSort and exclusively recursing into the half where the target index lives, I dropped the average time complexity down to a strict `O(N)` with `O(1)` auxiliary space.
+
+**Link to work:** [Day 162 - Kth Largest Element](./Day162/KthLargestElement.java)
