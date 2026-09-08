@@ -1336,3 +1336,14 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 162 locked in! I started the week by solving the Kth Largest Element problem. My initial approach used a Java `PriorityQueue` (Min-Heap) to maintain a running window of the top `k` elements, which is clean and runs in `O(N log k)`. However, to hit the absolute FAANG-level optimal solution, I implemented Randomized QuickSelect. By borrowing the partition logic from QuickSort and exclusively recursing into the half where the target index lives, I dropped the average time complexity down to a strict `O(N)` with `O(1)` auxiliary space.
 
 **Link to work:** [Day 162 - Kth Largest Element](./Day162/KthLargestElement.java)
+
+
+
+
+### Day 163: September 8, 2026 📈 GREEDY MAX-HEAP ALLOCATION 📈
+
+**Today's Progress:** Mastered dynamic resource allocation. Solved #502: IPO (Hard).
+
+**Thoughts:** Day 163 locked in! Tackled a fantastic Hard problem today that required a Two-Phase Greedy approach. I used a sorted array to pipeline the projects by their `capital` requirement, and a Max-Heap to track the `profits` of all currently affordable projects. By always polling the Max-Heap, I guarantee maximum capital growth for every `k` execution. To make the code enterprise-grade, I replaced the standard `int[][]` 2D array with a custom `Project` object. This encapsulated the fields, removed magic indices, and made the custom `Comparator` incredibly clean.
+
+**Link to work:** [Day 163 - IPO](./Day163/IPO.java)
