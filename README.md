@@ -1337,9 +1337,6 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 162 - Kth Largest Element](./Day162/KthLargestElement.java)
 
-
-
-
 ### Day 163: September 8, 2026 📈 GREEDY MAX-HEAP ALLOCATION 📈
 
 **Today's Progress:** Mastered dynamic resource allocation. Solved #502: IPO (Hard).
@@ -1347,3 +1344,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 163 locked in! Tackled a fantastic Hard problem today that required a Two-Phase Greedy approach. I used a sorted array to pipeline the projects by their `capital` requirement, and a Max-Heap to track the `profits` of all currently affordable projects. By always polling the Max-Heap, I guarantee maximum capital growth for every `k` execution. To make the code enterprise-grade, I replaced the standard `int[][]` 2D array with a custom `Project` object. This encapsulated the fields, removed magic indices, and made the custom `Comparator` incredibly clean.
 
 **Link to work:** [Day 163 - IPO](./Day163/IPO.java)
+
+### Day 164: September 9, 2026 🌐 VIRTUAL MATRIX TRAVERSAL 🌐
+
+**Today's Progress:** Mastered multi-array heap traversals. Solved #373: Find K Pairs with Smallest Sums.
+
+**Thoughts:** Day 164 locked in! Today's problem was a brilliant test of optimization. Generating all possible pairs and sorting them leads to a massive Memory Limit Exceeded error. Instead, I treated the combinations of the two sorted arrays as a Virtual 2D Matrix. By initializing a Min-Heap with just the first column, and pushing the right-neighbor `(i, j + 1)` every time I polled a minimum, I executed a highly efficient BFS across the grid. I also applied safe integer comparators (`Integer.compare`) and encapsulated the matrix coordinates into a custom `Pair` class to remove magic array indices. Clean, optimal, and enterprise-ready!
+
+**Link to work:** [Day 164 - Find K Pairs with Smallest Sums](./Day164/FindKPairsWithSmallestSums.java)
