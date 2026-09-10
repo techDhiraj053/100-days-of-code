@@ -1352,3 +1352,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 164 locked in! Today's problem was a brilliant test of optimization. Generating all possible pairs and sorting them leads to a massive Memory Limit Exceeded error. Instead, I treated the combinations of the two sorted arrays as a Virtual 2D Matrix. By initializing a Min-Heap with just the first column, and pushing the right-neighbor `(i, j + 1)` every time I polled a minimum, I executed a highly efficient BFS across the grid. I also applied safe integer comparators (`Integer.compare`) and encapsulated the matrix coordinates into a custom `Pair` class to remove magic array indices. Clean, optimal, and enterprise-ready!
 
 **Link to work:** [Day 164 - Find K Pairs with Smallest Sums](./Day164/FindKPairsWithSmallestSums.java)
+
+### Day 165: September 10, 2026 ⚖️ TWO-HEAP STREAMING MEDIAN ⚖️
+
+**Today's Progress:** Built a scalable data stream processor. Solved #295: Find Median from Data Stream (Hard).
+
+**Thoughts:** Day 165 locked in! Today I implemented a classic system design architecture: the Two-Heap Median Finder. By storing the smaller half of the data stream in a Max-Heap and the larger half in a Min-Heap, you can access the median instantly in `O(1)` time while inserting new numbers in `O(log N)` time. To make the insertion logic perfectly clean, I used the "Blind Funnel" pattern. Instead of conditionally checking where a number belongs, I blindly push it to the Max-Heap, immediately poll the Max-Heap, and offer that result to the Min-Heap, before finally balancing the sizes. It eliminates complex `if/else` threshold checks and is incredibly elegant!
+
+**Link to work:** [Day 165 - Find Median from Data Stream](./Day165/MedianFinder.java)
