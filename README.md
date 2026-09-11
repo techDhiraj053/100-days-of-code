@@ -1360,3 +1360,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 165 locked in! Today I implemented a classic system design architecture: the Two-Heap Median Finder. By storing the smaller half of the data stream in a Max-Heap and the larger half in a Min-Heap, you can access the median instantly in `O(1)` time while inserting new numbers in `O(log N)` time. To make the insertion logic perfectly clean, I used the "Blind Funnel" pattern. Instead of conditionally checking where a number belongs, I blindly push it to the Max-Heap, immediately poll the Max-Heap, and offer that result to the Min-Heap, before finally balancing the sizes. It eliminates complex `if/else` threshold checks and is incredibly elegant!
 
 **Link to work:** [Day 165 - Find Median from Data Stream](./Day165/MedianFinder.java)
+
+### Day 166: September 11, 2026 ➕ BINARY STRING ADDITION ➕
+
+**Today's Progress:** Mastered string-based bitwise math. Solved #67: Add Binary.
+
+**Thoughts:** Day 166 locked in! Wrapping up the week with a foundational string manipulation problem. The trap here is trying to cast the strings to Java `int` or `long`, which immediately overflows on massive test cases. Instead, I simulated a hardware adder, iterating from right to left, parsing the characters using ASCII math (`charAt(i) - '0'`), and maintaining a `carry` variable. I appended everything to a `StringBuilder` and reversed it at the end for an optimal `O(N)` run. To hit enterprise-level performance, I calculated the exact maximum length the result could be and pre-allocated the `StringBuilder` capacity, preventing any dynamic array resizing under the hood!
+
+**Link to work:** [Day 166 - Add Binary](./Day166/AddBinary.java)
