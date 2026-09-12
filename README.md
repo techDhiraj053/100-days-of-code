@@ -1368,3 +1368,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 166 locked in! Wrapping up the week with a foundational string manipulation problem. The trap here is trying to cast the strings to Java `int` or `long`, which immediately overflows on massive test cases. Instead, I simulated a hardware adder, iterating from right to left, parsing the characters using ASCII math (`charAt(i) - '0'`), and maintaining a `carry` variable. I appended everything to a `StringBuilder` and reversed it at the end for an optimal `O(N)` run. To hit enterprise-level performance, I calculated the exact maximum length the result could be and pre-allocated the `StringBuilder` capacity, preventing any dynamic array resizing under the hood!
 
 **Link to work:** [Day 166 - Add Binary](./Day166/AddBinary.java)
+
+### Day 167: September 12, 2026 🎛️ BITWISE REVERSAL 🎛️
+
+**Today's Progress:** Mastered low-level bit manipulation and logical shifting. Solved #190: Reverse Bits.
+
+**Thoughts:** Day 167 locked in! Spent my Saturday dealing directly with bits. The challenge here in Java is the lack of an `unsigned` integer type. If you use a normal right shift (`>>`) on a negative 32-bit integer, Java pads the new bits with `1`s to maintain the sign, ruining the algorithm. By applying the logical right shift (`>>>`), I forced it to pad with `0`s, allowing me to flawlessly extract the Least Significant Bit (`n & 1`), shift my result left (`result << 1`), and OR them together. I also documented the architecture for the follow-up question: if this needs to run millions of times, you split the integer into 8-bit bytes and use a precomputed cache array of size 256 to drop the operation count from 32 down to just 4 lookups!
+
+**Link to work:** [Day 167 - Reverse Bits](./Day167/ReverseBits.java)
