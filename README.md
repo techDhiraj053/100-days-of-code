@@ -1376,3 +1376,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 167 locked in! Spent my Saturday dealing directly with bits. The challenge here in Java is the lack of an `unsigned` integer type. If you use a normal right shift (`>>`) on a negative 32-bit integer, Java pads the new bits with `1`s to maintain the sign, ruining the algorithm. By applying the logical right shift (`>>>`), I forced it to pad with `0`s, allowing me to flawlessly extract the Least Significant Bit (`n & 1`), shift my result left (`result << 1`), and OR them together. I also documented the architecture for the follow-up question: if this needs to run millions of times, you split the integer into 8-bit bytes and use a precomputed cache array of size 256 to drop the operation count from 32 down to just 4 lookups!
 
 **Link to work:** [Day 167 - Reverse Bits](./Day167/ReverseBits.java)
+
+### Day 168: September 13, 2026 🧮 HAMMING WEIGHT OPTIMIZATION 🧮
+
+**Today's Progress:** Mastered Brian Kernighan's Algorithm. Solved #191: Number of 1 Bits.
+
+**Thoughts:** Day 168 locked in! A solid Sunday session in Ranchi focusing on bitwise efficiency. To find the Hamming weight (number of 1s) of an integer, iterating 32 times is the beginner approach. Instead, I used Brian Kernighan's algorithm: `n & (n - 1)`. This brilliant mathematical trick guarantees that the rightmost `1` is flipped to a `0` on every iteration. This drops the time complexity from `O(32)` to strictly `O(k)`, where `k` is the number of 1s. For the follow-up question (optimizing for heavy repeated calls), I documented the caching approach: splitting the 32-bit integer into 8-bit bytes and using a precomputed array of size 256 for instant `O(1)` lookups!
+
+**Link to work:** [Day 168 - Number of 1 Bits](./Day168/NumberOf1Bits.java)
