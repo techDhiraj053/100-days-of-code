@@ -1384,3 +1384,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 168 locked in! A solid Sunday session in Ranchi focusing on bitwise efficiency. To find the Hamming weight (number of 1s) of an integer, iterating 32 times is the beginner approach. Instead, I used Brian Kernighan's algorithm: `n & (n - 1)`. This brilliant mathematical trick guarantees that the rightmost `1` is flipped to a `0` on every iteration. This drops the time complexity from `O(32)` to strictly `O(k)`, where `k` is the number of 1s. For the follow-up question (optimizing for heavy repeated calls), I documented the caching approach: splitting the 32-bit integer into 8-bit bytes and using a precomputed array of size 256 for instant `O(1)` lookups!
 
 **Link to work:** [Day 168 - Number of 1 Bits](./Day168/NumberOf1Bits.java)
+
+### Day 169: September 14, 2026 ⚡ XOR PAIR ANNIHILATION ⚡
+
+**Today's Progress:** Mastered the commutative and associative properties of bitwise operations. Solved #136: Single Number.
+
+**Thoughts:** Day 169 locked in late from Hazaribagh! Tonight I solved the classic Single Number problem. The brute force way is to use a `HashSet` to track seen numbers, but that violates the `O(1)` space constraint. The true optimal solution relies entirely on the XOR (`^`) operator. Because XORing a number by itself results in `0` (`A ^ A = 0`), and XORing by zero leaves the number unchanged (`A ^ 0 = A`), you can just XOR the entire array together. The order doesn't matter; all the pairs will find each other, annihilate into `0`, and leave only the unique number in the accumulator. Pure mathematical magic!
+
+**Link to work:** [Day 169 - Single Number](./Day169/SingleNumber.java)
