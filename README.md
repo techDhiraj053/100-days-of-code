@@ -1392,3 +1392,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 169 locked in late from Hazaribagh! Tonight I solved the classic Single Number problem. The brute force way is to use a `HashSet` to track seen numbers, but that violates the `O(1)` space constraint. The true optimal solution relies entirely on the XOR (`^`) operator. Because XORing a number by itself results in `0` (`A ^ A = 0`), and XORing by zero leaves the number unchanged (`A ^ 0 = A`), you can just XOR the entire array together. The order doesn't matter; all the pairs will find each other, annihilate into `0`, and leave only the unique number in the accumulator. Pure mathematical magic!
 
 **Link to work:** [Day 169 - Single Number](./Day169/SingleNumber.java)
+
+### Day 170: September 15, 2026 🧠 BITWISE STATE MACHINE 🧠
+
+**Today's Progress:** Advanced from basic XOR to digital logic counters. Solved #137: Single Number II.
+
+**Thoughts:** Day 170 locked in from Hazaribagh! Upgraded yesterday's logic. When elements appear three times instead of two, standard XOR fails because `A ^ A ^ A = A`. Instead of tracking 32 separate bit counts (which is the standard beginner approach), I implemented a bitwise state machine using two variables: `ones` and `twos`. By using the formula `ones = (ones ^ num) & ~twos`, I effectively created a modulo-3 counter for every single bit simultaneously. Any bit that appears a third time gets cleared. At the end of the iteration, the `ones` variable holds the exact binary representation of the unique number. Optimal `O(N)` time and pure `O(1)` space!
+
+**Link to work:** [Day 170 - Single Number II](./Day170/SingleNumberII.java)
