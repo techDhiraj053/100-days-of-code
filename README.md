@@ -1400,3 +1400,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 170 locked in from Hazaribagh! Upgraded yesterday's logic. When elements appear three times instead of two, standard XOR fails because `A ^ A ^ A = A`. Instead of tracking 32 separate bit counts (which is the standard beginner approach), I implemented a bitwise state machine using two variables: `ones` and `twos`. By using the formula `ones = (ones ^ num) & ~twos`, I effectively created a modulo-3 counter for every single bit simultaneously. Any bit that appears a third time gets cleared. At the end of the iteration, the `ones` variable holds the exact binary representation of the unique number. Optimal `O(N)` time and pure `O(1)` space!
 
 **Link to work:** [Day 170 - Single Number II](./Day170/SingleNumberII.java)
+
+### Day 171: September 16, 2026 🧮 32-BIT ACCUMULATOR 🧮
+
+**Today's Progress:** Built a highly scalable bit-counting architecture. Solved #137: Single Number II.
+
+**Thoughts:** Day 171 locked in late at night! Tackled the sequel to Single Number. Because elements appear three times, basic XOR annihilation doesn't work. While you can build a digital logic state-machine using `ones` and `twos`, I opted for the 32-Bit Accumulator method. By iterating through all 32 bit positions and counting how many times a `1` appears across the entire array, you can use modulo math (`count % 3`) to filter out the duplicates. Any bit with a remainder belongs to the unique number. This is the optimal enterprise approach because it is universally scalable—if an interviewer changes the problem to "elements appear 5 times", I just change the modulo to 5. `O(N)` time and `O(1)` space!
+
+**Link to work:** [Day 171 - Single Number II](./Day171/SingleNumberII.java)
