@@ -1408,3 +1408,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 171 locked in late at night! Tackled the sequel to Single Number. Because elements appear three times, basic XOR annihilation doesn't work. While you can build a digital logic state-machine using `ones` and `twos`, I opted for the 32-Bit Accumulator method. By iterating through all 32 bit positions and counting how many times a `1` appears across the entire array, you can use modulo math (`count % 3`) to filter out the duplicates. Any bit with a remainder belongs to the unique number. This is the optimal enterprise approach because it is universally scalable—if an interviewer changes the problem to "elements appear 5 times", I just change the modulo to 5. `O(N)` time and `O(1)` space!
 
 **Link to work:** [Day 171 - Single Number II](./Day171/SingleNumberII.java)
+
+### Day 172: September 17, 2026 ✂️ COMMON PREFIX BITWISE AND ✂️
+
+**Today's Progress:** Deployed Brian Kernighan's algorithm for range operations. Solved #201: Bitwise AND of Numbers Range.
+
+**Thoughts:** Day 172 locked in late night from Hazaribagh! This problem asks for the bitwise AND of an entire range of numbers. A linear loop causes a Time Limit Exceeded (TLE) error on large ranges (like `0` to `2 billion`). The trick is realizing that the bitwise AND of a range is simply the **common binary prefix** of the `left` and `right` bounds, padded with zeros. My initial implementation shifted both numbers right until they matched, then shifted them back left. For the ultimate optimal twist, I brought back Brian Kernighan's algorithm from Day 168! By continually doing `right = right & (right - 1)`, I strip away the differing bits until `right <= left`. It finds the common prefix in just a few lines of code with zero shifting counters!
+
+**Link to work:** [Day 172 - Bitwise AND of Numbers Range](./Day172/BitwiseANDOfNumbersRange.java)
