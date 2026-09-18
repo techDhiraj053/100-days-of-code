@@ -1416,3 +1416,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 172 locked in late night from Hazaribagh! This problem asks for the bitwise AND of an entire range of numbers. A linear loop causes a Time Limit Exceeded (TLE) error on large ranges (like `0` to `2 billion`). The trick is realizing that the bitwise AND of a range is simply the **common binary prefix** of the `left` and `right` bounds, padded with zeros. My initial implementation shifted both numbers right until they matched, then shifted them back left. For the ultimate optimal twist, I brought back Brian Kernighan's algorithm from Day 168! By continually doing `right = right & (right - 1)`, I strip away the differing bits until `right <= left`. It finds the common prefix in just a few lines of code with zero shifting counters!
 
 **Link to work:** [Day 172 - Bitwise AND of Numbers Range](./Day172/BitwiseANDOfNumbersRange.java)
+
+### Day 173: September 18, 2026 🪞 HALF-REVERSAL PALINDROME 🪞
+
+**Today's Progress:** Mastered overflow-safe integer manipulation. Solved #9: Palindrome Number.
+
+**Thoughts:** Day 173 locked in on a Friday night from Patna! Tonight I tackled Palindrome Number. Converting to a string is the easy way out, but doing it mathematically using modulo (`% 10`) and division (`/ 10`) is the true algorithmic test. My initial approach reversed the entire integer. However, reversing large integers can theoretically cause a 32-bit overflow. To optimize this, I implemented the Half-Reversal strategy. By stopping the `while` loop exactly when the remaining `x` becomes less than or equal to the `reversedHalf`, I cut the processing time in half and completely eliminated any possibility of integer overflow. Clean, safe, and lightning fast!
+
+**Link to work:** [Day 173 - Palindrome Number](./Day173/PalindromeNumber.java)
