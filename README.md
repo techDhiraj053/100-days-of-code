@@ -1424,3 +1424,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 173 locked in on a Friday night from Patna! Tonight I tackled Palindrome Number. Converting to a string is the easy way out, but doing it mathematically using modulo (`% 10`) and division (`/ 10`) is the true algorithmic test. My initial approach reversed the entire integer. However, reversing large integers can theoretically cause a 32-bit overflow. To optimize this, I implemented the Half-Reversal strategy. By stopping the `while` loop exactly when the remaining `x` becomes less than or equal to the `reversedHalf`, I cut the processing time in half and completely eliminated any possibility of integer overflow. Clean, safe, and lightning fast!
 
 **Link to work:** [Day 173 - Palindrome Number](./Day173/PalindromeNumber.java)
+
+### Day 174: September 19, 2026 ➕ ARRAY CARRY PROPAGATION ➕
+
+**Today's Progress:** Mastered overflow-safe array arithmetic. Solved #66: Plus One.
+
+**Thoughts:** Day 174 locked in on a Saturday night from Patna! Tonight's problem was a great exercise in avoiding unnecessary type conversions. Trying to convert a 100-length array into a `Long` to add `1` will cause a massive overflow. Instead, I manipulated the array directly from right to left. The logic is beautifully simple: if the digit is less than 9, increment it and immediately return (an `O(1)` short-circuit). If it's a 9, set it to 0 and let the loop continue, naturally propagating the carry. If the loop finishes, the array was entirely 9s (like `999`). I exploited the fact that Java initializes new arrays with zeros, so creating a new array of size `N + 1` and setting the first index to `1` instantly gives the correct answer without any extra copying loops!
+
+**Link to work:** [Day 174 - Plus One](./Day174/PlusOne.java)
