@@ -1432,3 +1432,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 174 locked in on a Saturday night from Patna! Tonight's problem was a great exercise in avoiding unnecessary type conversions. Trying to convert a 100-length array into a `Long` to add `1` will cause a massive overflow. Instead, I manipulated the array directly from right to left. The logic is beautifully simple: if the digit is less than 9, increment it and immediately return (an `O(1)` short-circuit). If it's a 9, set it to 0 and let the loop continue, naturally propagating the carry. If the loop finishes, the array was entirely 9s (like `999`). I exploited the fact that Java initializes new arrays with zeros, so creating a new array of size `N + 1` and setting the first index to `1` instantly gives the correct answer without any extra copying loops!
 
 **Link to work:** [Day 174 - Plus One](./Day174/PlusOne.java)
+
+### Day 175: September 20, 2026 ✖️ FACTORIAL ZERO BOTTLENECK ✖️
+
+**Today's Progress:** Deployed Legendre's formula for prime factorization counting. Solved #172: Factorial Trailing Zeroes.
+
+**Thoughts:** Day 175 locked in on a Sunday night in Patna! Tonight's problem was a pure math trick. Calculating a factorial directly is impossible for large numbers due to integer overflow, even with `BigInteger`. But trailing zeroes are just a byproduct of how many times `10` is multiplied into the final number. Since `10 = 2 * 5`, and there is an abundance of `2`s in any factorial, the number of `5`s acts as the bottleneck. By simply dividing `n` by `5` repeatedly (which mathematically counts the factors of `5`, `25`, `125`, etc.), you can find the exact number of trailing zeroes in `O(log_5 N)` time and `O(1)` space without ever calculating the actual factorial!
+
+**Link to work:** [Day 175 - Factorial Trailing Zeroes](./Day175/FactorialTrailingZeroes.java)
