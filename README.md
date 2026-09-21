@@ -1440,3 +1440,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 175 locked in on a Sunday night in Patna! Tonight's problem was a pure math trick. Calculating a factorial directly is impossible for large numbers due to integer overflow, even with `BigInteger`. But trailing zeroes are just a byproduct of how many times `10` is multiplied into the final number. Since `10 = 2 * 5`, and there is an abundance of `2`s in any factorial, the number of `5`s acts as the bottleneck. By simply dividing `n` by `5` repeatedly (which mathematically counts the factors of `5`, `25`, `125`, etc.), you can find the exact number of trailing zeroes in `O(log_5 N)` time and `O(1)` space without ever calculating the actual factorial!
 
 **Link to work:** [Day 175 - Factorial Trailing Zeroes](./Day175/FactorialTrailingZeroes.java)
+
+### Day 176: September 21, 2026 📐 STRICT 32-BIT BINARY ROOT 📐
+
+**Today's Progress:** Deployed Binary Search and algebraic overflow prevention. Solved #69: Sqrt(x).
+
+**Thoughts:** Day 176 locked in on a Monday night in Patna! Finding the square root of a number without built-in functions is a classic algorithm test. Since the sequence of potential answers is sorted, it's a perfect use case for Binary Search `O(log x)`. I optimized the initial boundaries by setting `right = x / 2`, cutting the search space down instantly. The main trap here is that `mid * mid` easily overflows a 32-bit integer. While casting to `long` works, I implemented the strict 32-bit enterprise solution: by algebraically rewriting the check as `mid <= x / mid`, the calculation stays completely bounded within 32 bits, eliminating the need for a 64-bit cast entirely!
+
+**Link to work:** [Day 176 - Sqrt(x)](./Day176/SqrtX.java)
