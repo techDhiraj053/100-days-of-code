@@ -1448,3 +1448,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 176 locked in on a Monday night in Patna! Finding the square root of a number without built-in functions is a classic algorithm test. Since the sequence of potential answers is sorted, it's a perfect use case for Binary Search `O(log x)`. I optimized the initial boundaries by setting `right = x / 2`, cutting the search space down instantly. The main trap here is that `mid * mid` easily overflows a 32-bit integer. While casting to `long` works, I implemented the strict 32-bit enterprise solution: by algebraically rewriting the check as `mid <= x / mid`, the calculation stays completely bounded within 32 bits, eliminating the need for a 64-bit cast entirely!
 
 **Link to work:** [Day 176 - Sqrt(x)](./Day176/SqrtX.java)
+
+### Day 177: September 22, 2026 📈 BINARY EXPONENTIATION 📈
+
+**Today's Progress:** Deployed logarithmic scaling and hardware-level arithmetic. Solved #50: Pow(x, n).
+
+**Thoughts:** Day 177 locked in on a Tuesday night! Calculating a power seems simple until you get hit with a Time Limit Exceeded error for looping 2 billion times. The optimal approach is Binary Exponentiation, which drops the time complexity to a blisteringly fast `O(log N)` by squaring the base and halving the power on every iteration. I made sure to cast the exponent to a `long` before processing; otherwise, negating `-2147483648` (for negative exponents) causes a fatal 32-bit overflow. To push the performance even further, I stripped out the modulo `%` and division `/` operators, replacing them with bitwise AND (`& 1`) and right-shift (`>>= 1`) operations, which execute much faster at the CPU level!
+
+**Link to work:** [Day 177 - Pow(x, n)](./Day177/PowXN.java)
