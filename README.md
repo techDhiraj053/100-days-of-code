@@ -1456,3 +1456,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 177 locked in on a Tuesday night! Calculating a power seems simple until you get hit with a Time Limit Exceeded error for looping 2 billion times. The optimal approach is Binary Exponentiation, which drops the time complexity to a blisteringly fast `O(log N)` by squaring the base and halving the power on every iteration. I made sure to cast the exponent to a `long` before processing; otherwise, negating `-2147483648` (for negative exponents) causes a fatal 32-bit overflow. To push the performance even further, I stripped out the modulo `%` and division `/` operators, replacing them with bitwise AND (`& 1`) and right-shift (`>>= 1`) operations, which execute much faster at the CPU level!
 
 **Link to work:** [Day 177 - Pow(x, n)](./Day177/PowXN.java)
+
+### Day 178: September 23, 2026 📐 GCD VECTOR PACKING 📐
+
+**Today's Progress:** Conquered 2D computational geometry precision issues. Solved #149: Max Points on a Line.
+
+**Thoughts:** Day 178 locked in! Wednesday night in India, taking on one of LeetCode's most notorious Hard problems. To find collinear points, calculating slope as a `double` introduces floating-point precision errors that ruin the solution on edge cases. I completely avoided doubles by expressing the slope as an irreducible fraction using the Greatest Common Divisor (GCD). By standardizing the signs and tracking the vector occurrences from an anchor point, I hit the optimal `O(N^2)` bound. To achieve enterprise-level performance, I swapped out the String hash keys (`"dx/dy"`) for Bitwise Packed Primitives. I shifted `dx` by 32 bits into a `long` and bitwise-OR'd it with `dy`. This eliminated all Garbage Collection overhead in the inner loop and made hashing lightning fast!
+
+**Link to work:** [Day 178 - Max Points on a Line](./Day178/MaxPointsOnALine.java)
