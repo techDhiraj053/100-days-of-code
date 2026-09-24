@@ -1464,3 +1464,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 178 locked in! Wednesday night in India, taking on one of LeetCode's most notorious Hard problems. To find collinear points, calculating slope as a `double` introduces floating-point precision errors that ruin the solution on edge cases. I completely avoided doubles by expressing the slope as an irreducible fraction using the Greatest Common Divisor (GCD). By standardizing the signs and tracking the vector occurrences from an anchor point, I hit the optimal `O(N^2)` bound. To achieve enterprise-level performance, I swapped out the String hash keys (`"dx/dy"`) for Bitwise Packed Primitives. I shifted `dx` by 32 bits into a `long` and bitwise-OR'd it with `dy`. This eliminated all Garbage Collection overhead in the inner loop and made hashing lightning fast!
 
 **Link to work:** [Day 178 - Max Points on a Line](./Day178/MaxPointsOnALine.java)
+
+### Day 179: September 24, 2026 🧗 FIBONACCI STAIRS 🧗
+
+**Today's Progress:** Mastered Space-Optimized Dynamic Programming. Solved #70: Climbing Stairs.
+
+**Thoughts:** Day 179 locked in from India! Dropped back to a classic DP problem tonight. The problem essentially asks to compute the Fibonacci sequence because the ways to reach step `n` is exactly the sum of the ways to reach `n-1` and `n-2`. Instead of using an array of size `n` which costs `O(n)` space, I used a sliding window tracking only the last two states (`prev1` and `prev2`), dropping the space complexity to `O(1)`. I also added documentation for the ultimate mathematical twist: Binet's Formula. By leveraging the Golden Ratio, you can actually solve this in pure `O(1)` mathematical time without looping at all!
+
+**Link to work:** [Day 179 - Climbing Stairs](./Day179/ClimbingStairs.java)
