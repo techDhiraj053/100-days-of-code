@@ -1472,3 +1472,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 179 locked in from India! Dropped back to a classic DP problem tonight. The problem essentially asks to compute the Fibonacci sequence because the ways to reach step `n` is exactly the sum of the ways to reach `n-1` and `n-2`. Instead of using an array of size `n` which costs `O(n)` space, I used a sliding window tracking only the last two states (`prev1` and `prev2`), dropping the space complexity to `O(1)`. I also added documentation for the ultimate mathematical twist: Binet's Formula. By leveraging the Golden Ratio, you can actually solve this in pure `O(1)` mathematical time without looping at all!
 
 **Link to work:** [Day 179 - Climbing Stairs](./Day179/ClimbingStairs.java)
+
+### Day 180: September 25, 2026 💰 THE 6-MONTH HEIST 💰
+
+**Today's Progress:** Hit 180 continuous days of coding! Solved #198: House Robber.
+
+**Thoughts:** Day 180 locked in on a Friday night! Exactly six months of unbroken algorithmic momentum. Tonight I solved a classic Dynamic Programming problem: House Robber. The underlying pattern is exactly the same as Climbing Stairs. Instead of allocating an entire `int[] dp` array which costs `O(N)` memory, I recognized that the decision formula `dp[i] = max(dp[i-1], dp[i-2] + nums[i])` only ever requires knowing the previous two states. By utilizing a sliding window approach with two variables, I squashed the space complexity down to `O(1)`. For the enterprise touch, I applied Domain-Driven Naming to make the DP state transition self-documenting without needing comments.
+
+**Link to work:** [Day 180 - House Robber](./Day180/HouseRobber.java)
