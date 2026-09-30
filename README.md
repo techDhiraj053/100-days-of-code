@@ -1488,3 +1488,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 182 locked in on a Sunday evening from Kolkata! Tonight I tackled Word Break. A naive recursive approach results in overlapping subproblems and a massive `O(2^n)` TLE. I solved this using a 1D Dynamic Programming array where `dp[i]` stores whether the string up to index `i` can be perfectly segmented. To push the performance from the standard `O(N^3)` down to a highly optimized `O(N * L)`, I implemented a Lookback Bound. By finding the longest word in the dictionary first, I restricted the inner loop to only check substrings up to that `maxLength`. This prevents the algorithm from wasting CPU cycles evaluating massive chunks of text that could never match a dictionary word anyway. Clean, optimal, and heavily optimized!
 
 **Link to work:** [Day 182 - Word Break](./Day182/WordBreak.java)
+
+### Day 185: September 30, 2026 🪙 UNBOUNDED KNAPSACK 🪙
+
+**Today's Progress:** Mastered branchless 1D Dynamic Programming. Solved #322: Coin Change.
+
+**Thoughts:** Day 185 locked in! Wednesday evening in Kolkata, taking on the classic Coin Change problem. This is a variation of the Unbounded Knapsack problem. I used a 1D DP array to track the minimum coins needed for every amount up to the target. To avoid the infamous `Integer.MAX_VALUE + 1` overflow bug, I initialized the array with `amount + 1` acting as infinity. To optimize the CPU performance, I applied loop inversion. By looping through the `coins` first, I started my inner `amount` loop exactly at the current coin's value. This completely eliminated the bounds-checking `if` statement, resulting in a tight, branchless inner loop that the Java compiler can heavily optimize!
+
+**Link to work:** [Day 185 - Coin Change](./Day185/CoinChange.java)
