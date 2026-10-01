@@ -1,5 +1,5 @@
 /*
-139. Word Break (Dynamic Programming - DAY 182!)
+139. Word Break (Dynamic Programming - DAY 181!)
 
 This solution determines if a string can be segmented into dictionary words.
 Time Complexity: O(N * L) where N is string length and L is max word length.
