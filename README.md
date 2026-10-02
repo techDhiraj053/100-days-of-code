@@ -1504,3 +1504,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 183 locked in from Kolkata! Kicking off October with a legendary algorithm. The standard DP approach to LIS is `O(N^2)`. I went straight for the `O(N log N)` optimal solution using the Patience Sorting technique. By maintaining a `tails` array that stores the smallest tail of all increasing subsequences of length `i+1`, you can just binary search where the current number belongs. For my senior twist, I removed the manual binary search `while` loop and implemented Java's built-in `Arrays.binarySearch()`. It natively returns `-(insertion point) - 1` when an element isn't found, making the code incredibly concise and production-safe!
 
 **Link to work:** [Day 183 - Longest Increasing Subsequence](./Day183/LongestIncreasingSubsequence.java)
+
+### Day 184: October 2, 2026 🔺 BOTTOM-UP TRIANGLE DP 🔺
+
+**Today's Progress:** Mastered Bottom-Up DP state collapsing. Solved #120: Triangle.
+
+**Thoughts:** Day 184 locked in from Kolkata on Gandhi Jayanti! Today I tackled a classic pathfinding problem on a Triangle array. Doing this top-down with recursion requires a lot of tricky bounds checking. Instead, I inverted the problem and went bottom-up. By initializing a 1D DP array with the bottom row and iteratively collapsing the minimum paths upwards, the final answer naturally floats to the `0`th index. This satisfies the follow-up constraint by using strictly `O(N)` extra space instead of an `N x N` matrix. I specifically chose to allocate this `O(N)` array rather than directly mutating the input list, adhering to enterprise software best practices regarding immutability and pure functions!
+
+**Link to work:** [Day 184 - Triangle](./Day184/Triangle.java)
