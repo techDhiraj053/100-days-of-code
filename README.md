@@ -1512,3 +1512,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 184 locked in from Kolkata on Gandhi Jayanti! Today I tackled a classic pathfinding problem on a Triangle array. Doing this top-down with recursion requires a lot of tricky bounds checking. Instead, I inverted the problem and went bottom-up. By initializing a 1D DP array with the bottom row and iteratively collapsing the minimum paths upwards, the final answer naturally floats to the `0`th index. This satisfies the follow-up constraint by using strictly `O(N)` extra space instead of an `N x N` matrix. I specifically chose to allocate this `O(N)` array rather than directly mutating the input list, adhering to enterprise software best practices regarding immutability and pure functions!
 
 **Link to work:** [Day 184 - Triangle](./Day184/Triangle.java)
+
+### Day 185: October 3, 2026 🗺️ 1D MINIMUM PATH DP 🗺️
+
+**Today's Progress:** Compressed a 2D matrix DP state into a 1D array. Solved #64: Minimum Path Sum.
+
+**Thoughts:** Day 185 locked in from Kolkata! Saturday afternoon coding session focusing on Grid DP. The standard approach for finding the minimum path sum is to build an `m x n` matrix to store the results of every subproblem. However, since a cell only depends on the value directly above it and directly to its left, storing the entire grid history is a waste of memory. I optimized the space complexity from `O(m * n)` down to `O(n)` using a 1D array. By updating the array from left to right, `dp[j]` elegantly holds the "top" value from the previous row just before being overwritten, and `dp[j-1]` holds the "left" value from the current row. Zero mutation of the input array, `100%` enterprise ready!
+
+**Link to work:** [Day 185 - Minimum Path Sum](./Day185/MinimumPathSum.java)
