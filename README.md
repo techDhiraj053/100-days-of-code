@@ -1520,3 +1520,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 185 locked in from Kolkata! Saturday afternoon coding session focusing on Grid DP. The standard approach for finding the minimum path sum is to build an `m x n` matrix to store the results of every subproblem. However, since a cell only depends on the value directly above it and directly to its left, storing the entire grid history is a waste of memory. I optimized the space complexity from `O(m * n)` down to `O(n)` using a 1D array. By updating the array from left to right, `dp[j]` elegantly holds the "top" value from the previous row just before being overwritten, and `dp[j-1]` holds the "left" value from the current row. Zero mutation of the input array, `100%` enterprise ready!
 
 **Link to work:** [Day 185 - Minimum Path Sum](./Day185/MinimumPathSum.java)
+
+### Day 186: October 4, 2026 🚧 1D OBSTACLE AVOIDANCE 🚧
+
+**Today's Progress:** Applied 1D state compression to path counting with constraints. Solved #63: Unique Paths II.
+
+**Thoughts:** Day 186 locked in! A solid Sunday afternoon session in Kolkata. I took yesterday's 1D space optimization pattern and applied it to path counting with obstacles. The standard approach requires a full `O(m * n)` 2D matrix, but since any cell's path count only relies on the cell directly above and to its left, a single `O(n)` 1D array is all you need. The transition formula `dp[j] += dp[j-1]` perfectly captures both directions. If the robot hits an obstacle, I just set `dp[j] = 0`, elegantly killing that path for any subsequent calculations. The code is concise, branch-optimized, and enterprise-ready!
+
+**Link to work:** [Day 186 - Unique Paths II](./Day186/UniquePathsII.java)
