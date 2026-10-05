@@ -1528,3 +1528,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 186 locked in! A solid Sunday afternoon session in Kolkata. I took yesterday's 1D space optimization pattern and applied it to path counting with obstacles. The standard approach requires a full `O(m * n)` 2D matrix, but since any cell's path count only relies on the cell directly above and to its left, a single `O(n)` 1D array is all you need. The transition formula `dp[j] += dp[j-1]` perfectly captures both directions. If the robot hits an obstacle, I just set `dp[j] = 0`, elegantly killing that path for any subsequent calculations. The code is concise, branch-optimized, and enterprise-ready!
 
 **Link to work:** [Day 186 - Unique Paths II](./Day186/UniquePathsII.java)
+
+### Day 187: October 5, 2026 🪞 DUPLICATE CENTER SKIP 🪞
+
+**Today's Progress:** Optimized Palindrome expansion bypassing 2D DP. Solved #5: Longest Palindromic Substring.
+
+**Thoughts:** Day 187 locked in! Late Monday night coding session from Darbhanga. Tackled one of the most famous string problems. Beginners usually fall into the trap of using a 2D `boolean[][] dp` array which consumes `O(N^2)` memory and crashes on large inputs. I used the "Expand Around Center" technique which requires strictly `O(1)` space. To make it enterprise-grade, I applied the "Duplicate Center Skip" optimization. Instead of expanding twice per index (once for odd, once for even), I treated consecutive identical characters as a single core center. This skips redundant checks, elegantly handles both odd and even lengths simultaneously, and actually forces the time complexity down to `O(N)` for strings with heavily repeated characters!
+
+**Link to work:** [Day 187 - Longest Palindromic Substring](./Day187/LongestPalindromicSubstring.java)
