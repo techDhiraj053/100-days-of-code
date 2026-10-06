@@ -1536,3 +1536,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 187 locked in! Late Monday night coding session from Darbhanga. Tackled one of the most famous string problems. Beginners usually fall into the trap of using a 2D `boolean[][] dp` array which consumes `O(N^2)` memory and crashes on large inputs. I used the "Expand Around Center" technique which requires strictly `O(1)` space. To make it enterprise-grade, I applied the "Duplicate Center Skip" optimization. Instead of expanding twice per index (once for odd, once for even), I treated consecutive identical characters as a single core center. This skips redundant checks, elegantly handles both odd and even lengths simultaneously, and actually forces the time complexity down to `O(N)` for strings with heavily repeated characters!
 
 **Link to work:** [Day 187 - Longest Palindromic Substring](./Day187/LongestPalindromicSubstring.java)
+
+### Day 188: October 6, 2026 🧵 1D STRING INTERLEAVING 🧵
+
+**Today's Progress:** Applied 1D state compression to string matching. Solved #97: Interleaving String.
+
+**Thoughts:** Day 188 locked in from Jamshedpur! Tuesday night grind. I solved a classic string DP problem tonight: Interleaving String. The standard logical approach is to build a 2D boolean array to track matching states across `s1` and `s2`. However, the follow-up explicitly challenged me to use only `O(s2.length)` space. I applied the same 1D state compression technique I used for grid pathfinding last week. Since the current state only relies on the state immediately above it (a valid match with `s1`) and to its left (a valid match with `s2`), a single 1D array sliding downwards handles the entire validation perfectly. Zero memory waste, 100% optimal!
+
+**Link to work:** [Day 188 - Interleaving String](./Day188/InterleavingString.java)
