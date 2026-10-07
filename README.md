@@ -1544,3 +1544,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 188 locked in from Jamshedpur! Tuesday night grind. I solved a classic string DP problem tonight: Interleaving String. The standard logical approach is to build a 2D boolean array to track matching states across `s1` and `s2`. However, the follow-up explicitly challenged me to use only `O(s2.length)` space. I applied the same 1D state compression technique I used for grid pathfinding last week. Since the current state only relies on the state immediately above it (a valid match with `s1`) and to its left (a valid match with `s2`), a single 1D array sliding downwards handles the entire validation perfectly. Zero memory waste, 100% optimal!
 
 **Link to work:** [Day 188 - Interleaving String](./Day188/InterleavingString.java)
+
+### Day 189: October 7, 2026 🧬 1D EDIT DISTANCE 🧬
+
+**Today's Progress:** Mastered diagonal state tracking for 1D space compression. Solved #72: Edit Distance.
+
+**Thoughts:** Day 189 locked in! Wednesday night coding session from Jamshedpur. I took on Edit Distance (Levenshtein Distance), which is the ultimate test of 2D string DP. The standard matrix solution requires `O(M * N)` space. I applied 1D state compression to bring the memory down to `O(N)`. Unlike pathfinding grids, Edit Distance requires looking at the top-left diagonal cell for character replacements. To achieve this in a 1D array, I used a floating `prev` variable to capture the array value _just before_ it gets overwritten, storing it safely to be used as the diagonal in the next column's calculation. This beautifully simulates a full 2D matrix using just a single array and one primitive variable!
+
+**Link to work:** [Day 189 - Edit Distance](./Day189/EditDistance.java)
