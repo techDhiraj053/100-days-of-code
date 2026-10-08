@@ -1552,3 +1552,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 189 locked in! Wednesday night coding session from Jamshedpur. I took on Edit Distance (Levenshtein Distance), which is the ultimate test of 2D string DP. The standard matrix solution requires `O(M * N)` space. I applied 1D state compression to bring the memory down to `O(N)`. Unlike pathfinding grids, Edit Distance requires looking at the top-left diagonal cell for character replacements. To achieve this in a 1D array, I used a floating `prev` variable to capture the array value _just before_ it gets overwritten, storing it safely to be used as the diagonal in the next column's calculation. This beautifully simulates a full 2D matrix using just a single array and one primitive variable!
 
 **Link to work:** [Day 189 - Edit Distance](./Day189/EditDistance.java)
+
+### Day 190: October 8, 2026 📈 4-STATE FINITE STATE MACHINE 📈
+
+**Today's Progress:** Solved a Hard stock problem using O(1) state transitions. Solved #123: Best Time to Buy and Sell Stock III.
+
+**Thoughts:** Day 190 locked in! Thursday night grind from Bokaro Steel City. This Hard problem restricts you to exactly two transactions. The standard approach requires iterating left-to-right and right-to-left to build two `O(N)` arrays tracking regional max profits. I bypassed all of that memory overhead by implementing a 4-state Finite State Machine. By tracking the exact account balance through `buy1 -> sell1 -> buy2 -> sell2`, I evaluated all four transitions in a single `O(N)` pass, squashing the space complexity to `O(1)`. For the enterprise twist, I renamed the states to domain-driven accounting terms to clarify how the profit from transaction 1 acts as capital for transaction 2. I also documented the "Same-Day Trade" secret: sequentially updating `sell` right after `buy` on the same day is perfectly safe because `-price + price = 0`, keeping the FSM completely branchless!
+
+**Link to work:** [Day 190 - Best Time to Buy and Sell Stock III](./Day190/BestTimeToBuyAndSellStockIII.java)
