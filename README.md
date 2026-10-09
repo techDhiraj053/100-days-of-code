@@ -1560,3 +1560,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 190 locked in! Thursday night grind from Bokaro Steel City. This Hard problem restricts you to exactly two transactions. The standard approach requires iterating left-to-right and right-to-left to build two `O(N)` arrays tracking regional max profits. I bypassed all of that memory overhead by implementing a 4-state Finite State Machine. By tracking the exact account balance through `buy1 -> sell1 -> buy2 -> sell2`, I evaluated all four transitions in a single `O(N)` pass, squashing the space complexity to `O(1)`. For the enterprise twist, I renamed the states to domain-driven accounting terms to clarify how the profit from transaction 1 acts as capital for transaction 2. I also documented the "Same-Day Trade" secret: sequentially updating `sell` right after `buy` on the same day is perfectly safe because `-price + price = 0`, keeping the FSM completely branchless!
 
 **Link to work:** [Day 190 - Best Time to Buy and Sell Stock III](./Day190/BestTimeToBuyAndSellStockIII.java)
+
+### Day 191: October 9, 2026 🏭 ALGORITHMIC ROUTING & SCALED FSM 🏭
+
+**Today's Progress:** Generalized FSM states and implemented dynamic strategy routing. Solved #188: Best Time to Buy and Sell Stock IV.
+
+**Thoughts:** Day 191 locked in from Bokaro on a Friday evening! Today was the final boss of the basic stock problem variations. The challenge is to scale to exactly `k` transactions. I dynamically scaled yesterday's logic using two 1D arrays (`buy` and `sell`) of size `k+1`, maintaining an incredibly efficient `O(K)` space complexity. The true FAANG-level optimization here is the fast-fail boundary check: if `k >= n/2`, you can literally trade on every single profitable day, effectively meaning `k` is unlimited. I used this constraint to route the data to a blistering `O(N)` Greedy algorithm instead of the `O(N * K)` DP loops. I refactored the solution using the Single Responsibility Principle, separating the greedy and DP logic into distinct private methods, leaving the main function as a clean, highly readable enterprise router!
+
+**Link to work:** [Day 191 - Best Time to Buy and Sell Stock IV](./Day191/BestTimeToBuyAndSellStockIV.java)
