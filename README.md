@@ -1568,3 +1568,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 191 locked in from Bokaro on a Friday evening! Today was the final boss of the basic stock problem variations. The challenge is to scale to exactly `k` transactions. I dynamically scaled yesterday's logic using two 1D arrays (`buy` and `sell`) of size `k+1`, maintaining an incredibly efficient `O(K)` space complexity. The true FAANG-level optimization here is the fast-fail boundary check: if `k >= n/2`, you can literally trade on every single profitable day, effectively meaning `k` is unlimited. I used this constraint to route the data to a blistering `O(N)` Greedy algorithm instead of the `O(N * K)` DP loops. I refactored the solution using the Single Responsibility Principle, separating the greedy and DP logic into distinct private methods, leaving the main function as a clean, highly readable enterprise router!
 
 **Link to work:** [Day 191 - Best Time to Buy and Sell Stock IV](./Day191/BestTimeToBuyAndSellStockIV.java)
+
+### Day 192: October 10, 2026 🟩 1D MAXIMAL SQUARE 🟩
+
+**Today's Progress:** Applied Edit Distance's diagonal tracking to 2D geometry. Solved #221: Maximal Square.
+
+**Thoughts:** Day 192 locked in on a Saturday night from Bokaro! I optimized a classic 2D matrix DP problem down to `O(N)` space. The formula to find the maximal square ending at a cell is `1 + min(top, left, top-left)`. Instead of storing the entire matrix, I reused a single 1D array. I implemented the `prev` variable trick I learned from Edit Distance to track the top-left diagonal right before it gets overwritten by the loop. The biggest enterprise "gotcha" here is state bleed: because the 1D array reuses values from the row above, if the current matrix character is `'0'`, you MUST explicitly overwrite `dp[j] = 0` to erase the old data, otherwise you calculate massive phantom squares. Zero bugs, minimal memory!
+
+**Link to work:** [Day 192 - Maximal Square](./Day192/MaximalSquare.java)
