@@ -1576,3 +1576,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 192 locked in on a Saturday night from Bokaro! I optimized a classic 2D matrix DP problem down to `O(N)` space. The formula to find the maximal square ending at a cell is `1 + min(top, left, top-left)`. Instead of storing the entire matrix, I reused a single 1D array. I implemented the `prev` variable trick I learned from Edit Distance to track the top-left diagonal right before it gets overwritten by the loop. The biggest enterprise "gotcha" here is state bleed: because the 1D array reuses values from the row above, if the current matrix character is `'0'`, you MUST explicitly overwrite `dp[j] = 0` to erase the old data, otherwise you calculate massive phantom squares. Zero bugs, minimal memory!
 
 **Link to work:** [Day 192 - Maximal Square](./Day192/MaximalSquare.java)
+
+### Day 193: October 11, 2026 ☎️ COMBINATORIAL BACKTRACKING ☎️
+
+**Today's Progress:** Shifted domains into combinatorial search algorithms. Solved #17: Letter Combinations of a Phone Number.
+
+**Thoughts:** Day 193 locked in on a Sunday night from Bokaro! Wrapping up the weekend by transitioning from Dynamic Programming into Backtracking. Today's problem is the quintessential introduction to Depth-First Search (DFS) combinatorial generation. I mapped the phone digits to an array (avoiding HashMap overhead) and used recursion to build the strings. To make this production-ready, I refactored the string concatenation into a mutable `StringBuilder`. By following the strict backtracking template (Choose -> Explore -> Un-choose via `deleteCharAt`), I completely eliminated the massive Garbage Collection overhead caused by instantiating new immutable String objects on every recursive call!
+
+**Link to work:** [Day 193 - Letter Combinations of a Phone Number](./Day193/LetterCombinationsOfPhoneNumber.java)
