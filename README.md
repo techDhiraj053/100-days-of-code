@@ -1584,3 +1584,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 193 locked in on a Sunday night from Bokaro! Wrapping up the weekend by transitioning from Dynamic Programming into Backtracking. Today's problem is the quintessential introduction to Depth-First Search (DFS) combinatorial generation. I mapped the phone digits to an array (avoiding HashMap overhead) and used recursion to build the strings. To make this production-ready, I refactored the string concatenation into a mutable `StringBuilder`. By following the strict backtracking template (Choose -> Explore -> Un-choose via `deleteCharAt`), I completely eliminated the massive Garbage Collection overhead caused by instantiating new immutable String objects on every recursive call!
 
 **Link to work:** [Day 193 - Letter Combinations of a Phone Number](./Day193/LetterCombinationsOfPhoneNumber.java)
+
+### Day 194: October 12, 2026 🎭 CATALAN BACKTRACKING 🎭
+
+**Today's Progress:** Deployed mathematical tree pruning for string generation. Solved #22: Generate Parentheses.
+
+**Thoughts:** Day 194 locked in on a Monday evening from Bokaro! Today I solved a classic combinatorial backtracking problem. Instead of generating every possible string of length `2n` and writing a slow `isValid()` validation loop, I used dynamic pruning. By maintaining two integer counters (`open` and `close`), I only append a `)` if it mathematically balances a previously opened `(`. This relies on Catalan number properties to prune invalid recursion branches instantly. Fixed a quick syntax typo (`2n` to `2 * n`) and used a mutable `StringBuilder` to completely eliminate object reallocation overhead!
+
+**Link to work:** [Day 194 - Generate Parentheses](./Day194/GenerateParentheses.java)
