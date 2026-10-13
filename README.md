@@ -1592,3 +1592,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 194 locked in on a Monday evening from Bokaro! Today I solved a classic combinatorial backtracking problem. Instead of generating every possible string of length `2n` and writing a slow `isValid()` validation loop, I used dynamic pruning. By maintaining two integer counters (`open` and `close`), I only append a `)` if it mathematically balances a previously opened `(`. This relies on Catalan number properties to prune invalid recursion branches instantly. Fixed a quick syntax typo (`2n` to `2 * n`) and used a mutable `StringBuilder` to completely eliminate object reallocation overhead!
 
 **Link to work:** [Day 194 - Generate Parentheses](./Day194/GenerateParentheses.java)
+
+### Day 195: October 13, 2026 🌳 EARLY BRANCH PRUNING 🌳
+
+**Today's Progress:** Mastered backtracking optimizations via sorting and pruning. Solved #39: Combination Sum.
+
+**Thoughts:** Day 195 locked in! Tuesday evening grind from Bokaro. I tackled the classic Combination Sum problem today. The logic relies on DFS Backtracking to explore all combinations. To allow infinite reuse of a number without generating duplicate permutations, you pass the current loop index `i` into the recursive call instead of `i + 1`. While my base logic worked perfectly, I added a senior-level optimization: Early Branch Pruning. By explicitly sorting the `candidates` array first, I can evaluate `remain - candidates[i] < 0` inside the loop. If it's negative, I instantly `break` the loop, knowing full well that all subsequent elements in the sorted array will also exceed the target. This drastically trims the recursive decision tree!
+
+**Link to work:** [Day 195 - Combination Sum](./Day195/CombinationSum.java)
