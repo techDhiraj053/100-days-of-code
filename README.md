@@ -1600,3 +1600,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 195 locked in! Tuesday evening grind from Bokaro. I tackled the classic Combination Sum problem today. The logic relies on DFS Backtracking to explore all combinations. To allow infinite reuse of a number without generating duplicate permutations, you pass the current loop index `i` into the recursive call instead of `i + 1`. While my base logic worked perfectly, I added a senior-level optimization: Early Branch Pruning. By explicitly sorting the `candidates` array first, I can evaluate `remain - candidates[i] < 0` inside the loop. If it's negative, I instantly `break` the loop, knowing full well that all subsequent elements in the sorted array will also exceed the target. This drastically trims the recursive decision tree!
 
 **Link to work:** [Day 195 - Combination Sum](./Day195/CombinationSum.java)
+
+### Day 196: October 14, 2026 🔄 IN-PLACE PERMUTATIONS 🔄
+
+**Today's Progress:** Eliminated backtracking memory overhead using array partitioning. Solved #46: Permutations.
+
+**Thoughts:** Day 196 locked in on a Wednesday night from Dhanbad! Today I tackled generating all permutations of an array. The standard DFS approach requires a `boolean[] used` array to track which elements are active, plus a temporary list to build the paths. I optimized this by switching to an In-Place Swapping algorithm. By maintaining a `startIndex`, I can swap elements to the front of the array to "lock" them in, leaving the rest of the array open for further recursive swapping. When the recursion unwinds, I simply swap them back. This entirely eliminated the extra memory structures, keeping the state purely within the original array bounds!
+
+**Link to work:** [Day 196 - Permutations](./Day196/Permutations.java)
