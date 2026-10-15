@@ -1608,3 +1608,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 196 locked in on a Wednesday night from Dhanbad! Today I tackled generating all permutations of an array. The standard DFS approach requires a `boolean[] used` array to track which elements are active, plus a temporary list to build the paths. I optimized this by switching to an In-Place Swapping algorithm. By maintaining a `startIndex`, I can swap elements to the front of the array to "lock" them in, leaving the rest of the array open for further recursive swapping. When the recursion unwinds, I simply swap them back. This entirely eliminated the extra memory structures, keeping the state purely within the original array bounds!
 
 **Link to work:** [Day 196 - Permutations](./Day196/Permutations.java)
+
+### Day 197: October 15, 2026 🎯 INDEPENDENT TWO-POINTER LOGIC 🎯
+
+**Today's Progress:** Built the optimal sorting and two-pointer logic entirely from scratch. Solved #15: 3Sum.
+
+**Thoughts:** Day 197 locked in on a Thursday afternoon from Dhanbad! Today I tackled the legendary 3Sum problem. I decided to build the logic entirely on my own without any external modifications. I sorted the array first, locked in one pointer `i`, and used a Two-Pointer approach (`left` and `right`) to find the remaining sum. The trickiest part of 3Sum is avoiding duplicate triplets, which I handled by strategically placing `while` loops to skip adjacent identical numbers for both the outer loop and the inner pointers. Turns out, this independent logic I built is actually the globally optimal `O(N^2)` standard for this problem! I'll refine the structural syntax in a future streak, but the core engine is 100% mine and flawlessly optimal.
+
+**Link to work:** [Day 197 - 3Sum](./Day197/ThreeSum.java)
