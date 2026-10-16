@@ -1616,3 +1616,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 197 locked in on a Thursday afternoon from Dhanbad! Today I tackled the legendary 3Sum problem. I decided to build the logic entirely on my own without any external modifications. I sorted the array first, locked in one pointer `i`, and used a Two-Pointer approach (`left` and `right`) to find the remaining sum. The trickiest part of 3Sum is avoiding duplicate triplets, which I handled by strategically placing `while` loops to skip adjacent identical numbers for both the outer loop and the inner pointers. Turns out, this independent logic I built is actually the globally optimal `O(N^2)` standard for this problem! I'll refine the structural syntax in a future streak, but the core engine is 100% mine and flawlessly optimal.
 
 **Link to work:** [Day 197 - 3Sum](./Day197/ThreeSum.java)
+
+### Day 198: October 16, 2026 🧲 TWO-POINTER ABSOLUTE DISTANCE 🧲
+
+**Today's Progress:** Adapted my custom Two-Pointer engine to track absolute mathematical proximity. Solved #16: 3Sum Closest.
+
+**Thoughts:** Day 198 locked in on a Friday afternoon from Dhanbad! Following up on yesterday's 3Sum logic, I applied the exact same optimal `O(N^2)` Two-Pointer architecture to find the closest sum to a target. I kept the code completely original and untouched. The core logic hinges on maintaining a `closestSum` variable and updating it whenever `Math.abs(target - sum)` yields a smaller distance. The best optimization I added was the early return: if `sum == target`, the absolute difference is 0, meaning it's impossible to get any closer, so we immediately return the sum and terminate the algorithm. Solid, independent algorithmic logic!
+
+**Link to work:** [Day 198 - 3Sum Closest](./Day198/ThreeSumClosest.java)
