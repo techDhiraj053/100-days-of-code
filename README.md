@@ -1624,3 +1624,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 198 locked in on a Friday afternoon from Dhanbad! Following up on yesterday's 3Sum logic, I applied the exact same optimal `O(N^2)` Two-Pointer architecture to find the closest sum to a target. I kept the code completely original and untouched. The core logic hinges on maintaining a `closestSum` variable and updating it whenever `Math.abs(target - sum)` yields a smaller distance. The best optimization I added was the early return: if `sum == target`, the absolute difference is 0, meaning it's impossible to get any closer, so we immediately return the sum and terminate the algorithm. Solid, independent algorithmic logic!
 
 **Link to work:** [Day 198 - 3Sum Closest](./Day198/ThreeSumClosest.java)
+
+### Day 199: October 17, 2026 👑 O(1) QUEEN VALIDATION 👑
+
+**Today's Progress:** Optimized matrix constraints using mathematical state arrays. Solved #51: N-Queens.
+
+**Thoughts:** Day 199 locked in! Saturday night grind from Dhanbad. Tackled the legendary N-Queens problem. The core algorithm is a classic DFS backtracking approach where you attempt to place a queen row by row. My original `isSafe` function used `for` loops to scan the column and diagonals, which costs `O(N)` time per check. I optimized this by leveraging matrix mathematics. Since anti-diagonals share a constant `row + col` sum, and main diagonals share a constant `row - col` difference, I replaced the loops with three `boolean[]` tracking arrays. This upgraded the safety check to an instant `O(1)` lookup, heavily optimizing the massive recursive tree!
+
+**Link to work:** [Day 199 - N-Queens](./Day199/NQueens.java)
