@@ -1632,3 +1632,12 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 199 locked in! Saturday night grind from Dhanbad. Tackled the legendary N-Queens problem. The core algorithm is a classic DFS backtracking approach where you attempt to place a queen row by row. My original `isSafe` function used `for` loops to scan the column and diagonals, which costs `O(N)` time per check. I optimized this by leveraging matrix mathematics. Since anti-diagonals share a constant `row + col` sum, and main diagonals share a constant `row - col` difference, I replaced the loops with three `boolean[]` tracking arrays. This upgraded the safety check to an instant `O(1)` lookup, heavily optimizing the massive recursive tree!
 
 **Link to work:** [Day 199 - N-Queens](./Day199/NQueens.java)
+
+
+### Day 201: October 19, 2026 🧮 BITMASKED POWER SETS 🧮
+
+**Today's Progress:** Eliminated DFS recursion using pure bitwise combinatorics. Solved #78: Subsets.
+
+**Thoughts:** Day 201 locked in! Monday night grind from Jamshedpur. Kicking off the 200+ era with a classic power set problem. While the standard approach uses DFS backtracking (which I wrote flawlessly), I applied a massive senior optimization: Bitmasking. Since every subset can be represented by a binary state of inclusion/exclusion, we can just loop from `0` to `2^N - 1`. For every number, its binary representation tells us exactly which array indices to include! This drops the recursive overhead completely and processes in a tight, iterative, CPU-friendly loop. I also pre-allocated the `result` list with exactly `1 << n` capacity to prevent expensive dynamic array resizing.
+
+**Link to work:** [Day 201 - Subsets](./Day201/Subsets.java)
