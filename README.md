@@ -1633,11 +1633,18 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 199 - N-Queens](./Day199/NQueens.java)
 
+### Day 200: October 19, 2026 🧮 BITMASKED POWER SETS (DOUBLE CENTURY!) 🧮
 
-### Day 201: October 19, 2026 🧮 BITMASKED POWER SETS 🧮
+**Today's Progress:** Hit the massive 200-Day streak! Eliminated DFS recursion using pure bitwise combinatorics. Solved #78: Subsets.
 
-**Today's Progress:** Eliminated DFS recursion using pure bitwise combinatorics. Solved #78: Subsets.
+**Thoughts:** Day 200 locked in! Monday night grind from Jamshedpur hitting a massive double century! While the standard approach uses DFS backtracking (which I wrote flawlessly), I applied a massive senior optimization: Bitmasking. Since every subset can be represented by a binary state of inclusion/exclusion, we can just loop from `0` to `2^N - 1`. For every number, its binary representation tells us exactly which array indices to include! This drops the recursive overhead completely and processes in a tight, iterative, CPU-friendly loop. I also pre-allocated the `result` list with exactly `1 << n` capacity to prevent expensive dynamic array resizing. 200 days of unbroken momentum!
 
-**Thoughts:** Day 201 locked in! Monday night grind from Jamshedpur. Kicking off the 200+ era with a classic power set problem. While the standard approach uses DFS backtracking (which I wrote flawlessly), I applied a massive senior optimization: Bitmasking. Since every subset can be represented by a binary state of inclusion/exclusion, we can just loop from `0` to `2^N - 1`. For every number, its binary representation tells us exactly which array indices to include! This drops the recursive overhead completely and processes in a tight, iterative, CPU-friendly loop. I also pre-allocated the `result` list with exactly `1 << n` capacity to prevent expensive dynamic array resizing.
+**Link to work:** [Day 200 - Subsets](./Day200/Subsets.java)
 
-**Link to work:** [Day 201 - Subsets](./Day201/Subsets.java)
+### Day 201: October 20, 2026 🔍 GRID SEARCH PRUNING 🔍
+
+**Today's Progress:** Answered the advanced follow-up with frequency pruning. Solved #79: Word Search.
+
+**Thoughts:** Day 201 locked in! Tuesday evening grind from Dhanbad. Today I implemented a classic Backtracking algorithm to find a word in a 2D character grid. My baseline code used in-place state modification (temporarily changing the grid value to `#`) to completely eliminate the need for an `O(M * N)` boolean `visited` matrix. To push it to the FAANG tier, I answered the problem's follow-up: Search Pruning. Before running the explosive `O(4^L)` DFS, I pre-compute the frequency of all letters on the board. If the board lacks the required letters, I exit instantly. Furthermore, if the word's starting letter is highly abundant but its ending letter is rare, I reverse the word before searching! This massive branch-reduction trick kills thousands of useless DFS calls before they even start.
+
+**Link to work:** [Day 201 - Word Search](./Day201/WordSearch.java)
