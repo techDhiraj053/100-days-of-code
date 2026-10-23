@@ -1656,3 +1656,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 202 locked in from Jamshedpur! Thursday afternoon session. I tackled Palindrome Partitioning, which is a classic Backtracking problem. My baseline DFS logic correctly navigated the decision tree by selecting substrings and validating them. However, creating new `String` objects via `s.substring()` just to check if they are palindromes is highly inefficient inside an explosive `O(2^N)` recursive tree. I upgraded the architecture by precomputing all valid palindromes using a 2D Dynamic Programming matrix. This allowed the backtracking loop to verify if a segment is a palindrome in strict `O(1)` time before branching, completely removing the redundant string traversals!
 
 **Link to work:** [Day 202 - Palindrome Partitioning](./Day202/PalindromePartitioning.java)
+
+### Day 203: October 23, 2026 ⚖️ O(log(min(M,N))) PARTITION SEARCH ⚖️
+
+**Today's Progress:** Mastered complex binary search array partitioning. Solved #4: Median of Two Sorted Arrays.
+
+**Thoughts:** Day 203 locked in on a Friday night from Jamshedpur! Tackled one of the most notoriously tricky Hard problems on LeetCode. Instead of merging the two arrays in `O(M+N)` time, I implemented a strict `O(log(min(M,N)))` algorithm by performing a binary search exclusively on the smaller array. The trick is to find a "cut" in both arrays where all elements on the left are smaller than all elements on the right. Fixed a small syntax typo in my mathematical derivation for `cut2`. As a senior-level optimization, I replaced standard division `/ 2` with the unsigned right bit-shift `>>> 1` to guarantee absolute protection against integer overflow during midpoint calculations!
+
+**Link to work:** [Day 203 - Median of Two Sorted Arrays](./Day203/MedianOfTwoSortedArrays.java)
