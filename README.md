@@ -1664,3 +1664,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 203 locked in on a Friday night from Jamshedpur! Tackled one of the most notoriously tricky Hard problems on LeetCode. Instead of merging the two arrays in `O(M+N)` time, I implemented a strict `O(log(min(M,N)))` algorithm by performing a binary search exclusively on the smaller array. The trick is to find a "cut" in both arrays where all elements on the left are smaller than all elements on the right. Fixed a small syntax typo in my mathematical derivation for `cut2`. As a senior-level optimization, I replaced standard division `/ 2` with the unsigned right bit-shift `>>> 1` to guarantee absolute protection against integer overflow during midpoint calculations!
 
 **Link to work:** [Day 203 - Median of Two Sorted Arrays](./Day203/MedianOfTwoSortedArrays.java)
+
+### Day 204: October 24, 2026 🔄 VIRTUAL INFINITY BINARY SEARCH 🔄
+
+**Today's Progress:** Solved a classic shifted array problem using flat boundary mapping. Solved #33: Search in Rotated Sorted Array.
+
+**Thoughts:** Day 204 logged on a Saturday afternoon from Jamshedpur. The standard solution for this problem involves finding the midpoint, determining whether the left or right half is strictly increasing, and then nesting another set of conditions to see if the target falls within that sorted boundary. I refined this by removing the nested blocks entirely using the "Virtual Infinity" trick. By evaluating whether the midpoint and the target are on the same side of the original starting index (`nums[0]`), I can mask out-of-bounds halves with `MAX_VALUE` or `MIN_VALUE`. This gracefully tricks the algorithm into executing a perfectly standard, flat binary search while completely ignoring the rotated discontinuity!
+
+**Link to work:** [Day 204 - Search in Rotated Sorted Array](./Day204/SearchInRotatedSortedArray.java)
