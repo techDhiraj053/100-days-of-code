@@ -1672,3 +1672,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 204 logged on a Saturday afternoon from Jamshedpur. The standard solution for this problem involves finding the midpoint, determining whether the left or right half is strictly increasing, and then nesting another set of conditions to see if the target falls within that sorted boundary. I refined this by removing the nested blocks entirely using the "Virtual Infinity" trick. By evaluating whether the midpoint and the target are on the same side of the original starting index (`nums[0]`), I can mask out-of-bounds halves with `MAX_VALUE` or `MIN_VALUE`. This gracefully tricks the algorithm into executing a perfectly standard, flat binary search while completely ignoring the rotated discontinuity!
 
 **Link to work:** [Day 204 - Search in Rotated Sorted Array](./Day204/SearchInRotatedSortedArray.java)
+
+### Day 205: October 26, 2026 🔍 DRY BINARY SEARCH BOUNDARIES 🔍
+
+**Today's Progress:** Solved a lower/upper bound array problem using unified logic. Solved #34: Find First and Last Position of Element in Sorted Array.
+
+**Thoughts:** Day 205 logged from Jamshedpur on a Monday afternoon! Today's challenge involved finding the range of a target number in a sorted array containing duplicates. The naive approach is to binary search for the target and then linearly scan left and right, but that degrades to `O(N)` time. The optimal way is to run two separate `O(log N)` binary searches—one to find the strict lower bound and one for the strict upper bound. To elevate my code to FAANG enterprise standards, I applied the DRY (Don't Repeat Yourself) principle. Instead of writing two nearly identical search functions, I merged them into a single `findBound` helper method that uses a boolean flag to determine whether to squeeze the left or right pointer upon finding a match!
+
+**Link to work:** [Day 205 - Find First and Last Position](./Day205/FindFirstAndLastPosition.java)
