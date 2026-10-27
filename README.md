@@ -1680,3 +1680,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 205 logged from Jamshedpur on a Monday afternoon! Today's challenge involved finding the range of a target number in a sorted array containing duplicates. The naive approach is to binary search for the target and then linearly scan left and right, but that degrades to `O(N)` time. The optimal way is to run two separate `O(log N)` binary searches—one to find the strict lower bound and one for the strict upper bound. To elevate my code to FAANG enterprise standards, I applied the DRY (Don't Repeat Yourself) principle. Instead of writing two nearly identical search functions, I merged them into a single `findBound` helper method that uses a boolean flag to determine whether to squeeze the left or right pointer upon finding a match!
 
 **Link to work:** [Day 205 - Find First and Last Position](./Day205/FindFirstAndLastPosition.java)
+
+### Day 206: October 27, 2026 🎯 LOOP INVARIANT INSERTION 🎯
+
+**Today's Progress:** Mastered the mathematical proof behind binary search insertion. Solved #35: Search Insert Position.
+
+**Thoughts:** Day 206 logged from Ranchi on a Tuesday evening! Today I tackled a foundational binary search problem. The goal is to either find a target in a sorted array or return the index where it should be inserted. My baseline logic was flawless: run a standard binary search and return the `left` pointer when the loop terminates. I also explored the "Loop Invariant" theory behind why this works: when the loop breaks (`left > right`), the `left` pointer exactly equals the number of elements strictly smaller than the target, which perfectly aligns with the 0-based insertion index. Combined with the `>>> 1` bitwise shift for safe midpoint division, this is a mathematically bulletproof `O(log N)` solution!
+
+**Link to work:** [Day 206 - Search Insert Position](./Day206/SearchInsertPosition.java)
