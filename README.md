@@ -1688,3 +1688,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 206 logged from Ranchi on a Tuesday evening! Today I tackled a foundational binary search problem. The goal is to either find a target in a sorted array or return the index where it should be inserted. My baseline logic was flawless: run a standard binary search and return the `left` pointer when the loop terminates. I also explored the "Loop Invariant" theory behind why this works: when the loop breaks (`left > right`), the `left` pointer exactly equals the number of elements strictly smaller than the target, which perfectly aligns with the 0-based insertion index. Combined with the `>>> 1` bitwise shift for safe midpoint division, this is a mathematically bulletproof `O(log N)` solution!
 
 **Link to work:** [Day 206 - Search Insert Position](./Day206/SearchInsertPosition.java)
+
+### Day 207: October 28, 2026 🇳🇱 DUTCH NATIONAL FLAG 🇳🇱
+
+**Today's Progress:** Mastered in-place array partitioning using three pointers. Solved #75: Sort Colors.
+
+**Thoughts:** Day 207 locked in on a Wednesday afternoon from Ranchi! Today I tackled a classic array sorting problem. The naive approach is a two-pass counting sort, but I successfully answered the follow-up by implementing Dijkstra's Dutch National Flag algorithm for a single-pass `O(N)` solution with `O(1)` space. By maintaining three pointers (`low`, `mid`, `high`), I dynamically routed 0s to the front, 2s to the back, and left 1s in the middle. To make the code production-ready, I applied the Single Responsibility Principle and extracted the inline swapping logic into a private helper method, making the main `while` loop incredibly clean and readable!
+
+**Link to work:** [Day 207 - Sort Colors](./Day207/SortColors.java)
