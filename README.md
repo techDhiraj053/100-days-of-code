@@ -1696,3 +1696,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 207 locked in on a Wednesday afternoon from Ranchi! Today I tackled a classic array sorting problem. The naive approach is a two-pass counting sort, but I successfully answered the follow-up by implementing Dijkstra's Dutch National Flag algorithm for a single-pass `O(N)` solution with `O(1)` space. By maintaining three pointers (`low`, `mid`, `high`), I dynamically routed 0s to the front, 2s to the back, and left 1s in the middle. To make the code production-ready, I applied the Single Responsibility Principle and extracted the inline swapping logic into a private helper method, making the main `while` loop incredibly clean and readable!
 
 **Link to work:** [Day 207 - Sort Colors](./Day207/SortColors.java)
+
+### Day 208: October 29, 2026 ⏩ COMBINATORIAL FAST-FORWARD ⏩
+
+**Today's Progress:** Mastered range counting in sorted arrays to avoid O(N^3) iteration. Solved Triplets with Smaller Sum (GeeksforGeeks).
+
+**Thoughts:** Day 208 locked in on a Thursday afternoon from Jamshedpur! Continuing my Two-Pointer mastery, I tackled a problem that asks to count triplets with a sum strictly less than a given target. After sorting the array and anchoring one pointer, I used the classic left/right squeezing technique. The ultimate FAANG-level optimization here is the combinatorial counting: `count += right - left;`. Because the array is sorted, if the current triplet is valid, we mathematically guarantee that all elements between the `left` and `right` pointers will also form valid triplets with the current `left`. Instead of looping to count them, we instantly calculate the difference, keeping the algorithm strictly at a blistering `O(N^2)` time complexity!
+
+**Link to work:** [Day 208 - Triplets with Smaller Sum](./Day208/TripletsWithSmallerSum.java)
