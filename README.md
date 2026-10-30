@@ -1704,3 +1704,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 208 locked in on a Thursday afternoon from Jamshedpur! Continuing my Two-Pointer mastery, I tackled a problem that asks to count triplets with a sum strictly less than a given target. After sorting the array and anchoring one pointer, I used the classic left/right squeezing technique. The ultimate FAANG-level optimization here is the combinatorial counting: `count += right - left;`. Because the array is sorted, if the current triplet is valid, we mathematically guarantee that all elements between the `left` and `right` pointers will also form valid triplets with the current `left`. Instead of looping to count them, we instantly calculate the difference, keeping the algorithm strictly at a blistering `O(N^2)` time complexity!
 
 **Link to work:** [Day 208 - Triplets with Smaller Sum](./Day208/TripletsWithSmallerSum.java)
+
+### Day 209: October 30, 2026 🗺️ 1D TO 2D MAPPING 🗺️
+
+**Today's Progress:** Mastered coordinate flattening to run binary search on a matrix. Solved #74: Search a 2D Matrix.
+
+**Thoughts:** Day 209 locked in on a Friday night from Jamshedpur! Today's problem required finding a target in a strictly sorted 2D matrix. While you could run `O(log M)` to find the row and `O(log N)` to find the column, the most elegant mathematical solution is to treat the entire matrix as a flat `1D` array of length `M * N`. I set the boundary to `m * n - 1` and ran a standard binary search. Inside the loop, the magic happens: you can instantly map the 1D `mid` index back to a 2D coordinate using `row = mid / n` and `col = mid % n`. Wrapped it up with my standard `>>> 1` bitwise shift to protect against integer overflow. Pure, optimal `O(log(M*N))` execution!
+
+**Link to work:** [Day 209 - Search a 2D Matrix](./Day209/SearchA2DMatrix.java)
