@@ -1712,3 +1712,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 209 locked in on a Friday night from Jamshedpur! Today's problem required finding a target in a strictly sorted 2D matrix. While you could run `O(log M)` to find the row and `O(log N)` to find the column, the most elegant mathematical solution is to treat the entire matrix as a flat `1D` array of length `M * N`. I set the boundary to `m * n - 1` and ran a standard binary search. Inside the loop, the magic happens: you can instantly map the 1D `mid` index back to a 2D coordinate using `row = mid / n` and `col = mid % n`. Wrapped it up with my standard `>>> 1` bitwise shift to protect against integer overflow. Pure, optimal `O(log(M*N))` execution!
 
 **Link to work:** [Day 209 - Search a 2D Matrix](./Day209/SearchA2DMatrix.java)
+
+### Day 211: November 1, 2026 🌲 THREAD-SAFE POST-ORDER DFS 🌲
+
+**Today's Progress:** Solved a Hard tree pathing problem using state-encapsulated post-order traversal. Solved #124: Binary Tree Maximum Path Sum.
+
+**Thoughts:** Day 211 locked in on a Sunday evening from Jamshedpur! Tackled one of the most famous Hard binary tree problems today. The algorithmic core relies on a bottom-up post-order DFS. At each node, I calculate the max gain from the left and right children, instantly pruning any negative branches using `Math.max(0, gain)`. I then evaluate the "V-shaped" path through the current node against a global maximum, while returning only the best straight-line path to the parent. For my senior-level optimization, I removed the global instance variable and encapsulated the tracking state inside a 1-element array passed by reference. This simple architectural change makes the DFS completely thread-safe for enterprise backends!
+
+**Link to work:** [Day 211 - Binary Tree Maximum Path Sum](./Day211/BinaryTreeMaximumPathSum.java)
