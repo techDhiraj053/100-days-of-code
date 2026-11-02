@@ -1720,3 +1720,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 211 locked in on a Sunday evening from Jamshedpur! Tackled one of the most famous Hard binary tree problems today. The algorithmic core relies on a bottom-up post-order DFS. At each node, I calculate the max gain from the left and right children, instantly pruning any negative branches using `Math.max(0, gain)`. I then evaluate the "V-shaped" path through the current node against a global maximum, while returning only the best straight-line path to the parent. For my senior-level optimization, I removed the global instance variable and encapsulated the tracking state inside a 1-element array passed by reference. This simple architectural change makes the DFS completely thread-safe for enterprise backends!
 
 **Link to work:** [Day 211 - Binary Tree Maximum Path Sum](./Day211/BinaryTreeMaximumPathSum.java)
+
+### Day 212: November 2, 2026 🚪 EARLY-EXIT BINARY SEARCH 🚪
+
+**Today's Progress:** Mastered the rotation anomaly using pointer convergence. Solved #153: Find Minimum in Rotated Sorted Array.
+
+**Thoughts:** Day 212 logged from Jamshedpur on a Monday night! I am continuing my deep dive into binary search anomalies. Today's problem required finding the minimum value in a sorted array that has been rotated an unknown number of times. The core logic relies on comparing `nums[mid]` against `nums[right]`. If `mid` is greater, the pivot (minimum) is forced into the right half. Otherwise, it's at `mid` or in the left half. For my senior-level optimization, I added an "Early Exit" condition. If `nums[left] < nums[right]`, the current search window is already perfectly sorted, meaning we can instantly return `nums[left]` without calculating any more midpoints. This drastically trims redundant iterations on large datasets!
+
+**Link to work:** [Day 212 - Find Minimum in Rotated Sorted Array](./Day212/FindMinimumInRotatedSortedArray.java)
