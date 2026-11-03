@@ -1728,3 +1728,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 212 logged from Jamshedpur on a Monday night! I am continuing my deep dive into binary search anomalies. Today's problem required finding the minimum value in a sorted array that has been rotated an unknown number of times. The core logic relies on comparing `nums[mid]` against `nums[right]`. If `mid` is greater, the pivot (minimum) is forced into the right half. Otherwise, it's at `mid` or in the left half. For my senior-level optimization, I added an "Early Exit" condition. If `nums[left] < nums[right]`, the current search window is already perfectly sorted, meaning we can instantly return `nums[left]` without calculating any more midpoints. This drastically trims redundant iterations on large datasets!
 
 **Link to work:** [Day 212 - Find Minimum in Rotated Sorted Array](./Day212/FindMinimumInRotatedSortedArray.java)
+
+### Day 213: November 3, 2026 🪵 ITERATIVE CALL STACK SIMULATION 🪵
+
+**Today's Progress:** Converted a recursive tree traversal into an explicit iterative stack. Solved #94: Binary Tree Inorder Traversal.
+
+**Thoughts:** Day 213 locked in on a Tuesday night from Jamshedpur! Kicked off binary tree traversals today. The baseline recursive DFS code is trivial and takes about 5 lines. But the real challenge was the LeetCode follow-up: doing it iteratively. In enterprise systems, deep recursion can trigger a fatal `StackOverflowError` because the JVM execution stack is strictly limited. I solved this by explicitly simulating the call stack using a modern `ArrayDeque`. By manually pushing nodes as I traverse left, and popping them to process before moving right, I shifted the memory allocation from the execution stack to the massive JVM Heap. This makes the traversal bulletproof for massively unbalanced production trees!
+
+**Link to work:** [Day 213 - Binary Tree Inorder Traversal](./Day213/BinaryTreeInorderTraversal.java)
