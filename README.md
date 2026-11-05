@@ -1736,3 +1736,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 213 locked in on a Tuesday night from Jamshedpur! Kicked off binary tree traversals today. The baseline recursive DFS code is trivial and takes about 5 lines. But the real challenge was the LeetCode follow-up: doing it iteratively. In enterprise systems, deep recursion can trigger a fatal `StackOverflowError` because the JVM execution stack is strictly limited. I solved this by explicitly simulating the call stack using a modern `ArrayDeque`. By manually pushing nodes as I traverse left, and popping them to process before moving right, I shifted the memory allocation from the execution stack to the massive JVM Heap. This makes the traversal bulletproof for massively unbalanced production trees!
 
 **Link to work:** [Day 213 - Binary Tree Inorder Traversal](./Day213/BinaryTreeInorderTraversal.java)
+
+### Day 215: November 5, 2026 🌳 INORDER STRUCTURAL VALIDATION 🌳
+
+**Today's Progress:** Mastered structural tree validation without primitive type hacking. Solved #98: Validate Binary Search Tree.
+
+**Thoughts:** Day 215 locked in! Thursday night grind from Jamshedpur. Today I validated whether a given binary tree is a legitimate BST. My initial logic used a top-down DFS passing `Long.MIN_VALUE` and `Long.MAX_VALUE` as boundaries to safely bypass LeetCode's tricky edge cases. However, I refactored this into a FAANG-tier enterprise solution by leveraging the fundamental property of BSTs: their Inorder Traversal is strictly increasing. Instead of boundaries, I wrote an Inorder DFS that simply compares the current node to a `prev` node pointer. To keep it completely thread-safe (like my Day 211 architecture), I encapsulated the `prev` state in a 1-element `TreeNode[]` array. This completely eliminates the need for `long` data types and relies purely on structural logic!
+
+**Link to work:** [Day 215 - Validate Binary Search Tree](./Day215/ValidateBinarySearchTree.java)
