@@ -1737,10 +1737,21 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 **Link to work:** [Day 213 - Binary Tree Inorder Traversal](./Day213/BinaryTreeInorderTraversal.java)
 
-### Day 215: November 5, 2026 🌳 INORDER STRUCTURAL VALIDATION 🌳
+### Day 214: November 5, 2026 🌳 INORDER STRUCTURAL VALIDATION 🌳
 
 **Today's Progress:** Mastered structural tree validation without primitive type hacking. Solved #98: Validate Binary Search Tree.
 
-**Thoughts:** Day 215 locked in! Thursday night grind from Jamshedpur. Today I validated whether a given binary tree is a legitimate BST. My initial logic used a top-down DFS passing `Long.MIN_VALUE` and `Long.MAX_VALUE` as boundaries to safely bypass LeetCode's tricky edge cases. However, I refactored this into a FAANG-tier enterprise solution by leveraging the fundamental property of BSTs: their Inorder Traversal is strictly increasing. Instead of boundaries, I wrote an Inorder DFS that simply compares the current node to a `prev` node pointer. To keep it completely thread-safe (like my Day 211 architecture), I encapsulated the `prev` state in a 1-element `TreeNode[]` array. This completely eliminates the need for `long` data types and relies purely on structural logic!
+**Thoughts:** Day 214 locked in! Thursday night grind from Jamshedpur. Today I validated whether a given binary tree is a legitimate BST. My initial logic used a top-down DFS passing `Long.MIN_VALUE` and `Long.MAX_VALUE` as boundaries to safely bypass LeetCode's tricky edge cases. However, I refactored this into a FAANG-tier enterprise solution by leveraging the fundamental property of BSTs: their Inorder Traversal is strictly increasing. Instead of boundaries, I wrote an Inorder DFS that simply compares the current node to a `prev` node pointer. To keep it completely thread-safe (like my Day 211 architecture), I encapsulated the `prev` state in a 1-element `TreeNode[]` array. This completely eliminates the need for `long` data types and relies purely on structural logic!
 
-**Link to work:** [Day 215 - Validate Binary Search Tree](./Day215/ValidateBinarySearchTree.java)
+**Link to work:** [Day 214 - Validate Binary Search Tree](./Day215/ValidateBinarySearchTree.java)
+
+### Day 215: November 6, 2026 🪟 SLIDING WINDOW MASTERY 🪟
+
+**Today's Progress:** Mastered both Fixed and Variable sliding window patterns. Solved Max Sum Subarray of Size K (GFG) & #209: Minimum Size Subarray Sum.
+
+**Thoughts:** Day 215 locked in! Friday afternoon grind from Jamshedpur bringing a double-header today. I dove deep into the Sliding Window technique. For the fixed window problem, I optimized the code to use a clean `i - k` mathematical offset to add the new element and drop the old one simultaneously. For the variable window problem, I applied the "Hire and Fire" (Acquire and Release) mental model. By aggressively expanding the `high` pointer until the target sum is reached, and then shrinking the `low` pointer to find the minimal possible length, both algorithms maintain a flawless `O(N)` time complexity with `O(1)` auxiliary space.
+
+**Link to work:**
+
+- [Day 215 - Max Sum Subarray](./Day215/MaxSumSubarray.java)
+- [Day 215 - Min Size Subarray Sum](./Day215/MinSizeSubarraySum.java)
