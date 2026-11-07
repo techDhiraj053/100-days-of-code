@@ -1755,3 +1755,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 
 - [Day 215 - Max Sum Subarray](./Day215/MaxSumSubarray.java)
 - [Day 215 - Min Size Subarray Sum](./Day215/MinSizeSubarraySum.java)
+
+### Day 216: November 7, 2026 🪞 ITERATIVE SYMMETRY 🪞
+
+**Today's Progress:** Mastered checking tree symmetry iteratively using a Queue. Solved #101: Symmetric Tree.
+
+**Thoughts:** Day 216 locked in on a Saturday night from Bokaro Steel City! Today I tackled tree symmetry. My first instinct was the classic recursive `isMirror` helper method, which perfectly checks the outer (`left.left == right.right`) and inner (`left.right == right.left`) children. It was absolutely flawless. However, to crush the LeetCode follow-up challenge and push my skills to the FAANG level, I rewrote the solution completely iteratively. By using a `Queue` to enqueue pairs of nodes sequentially and evaluating them in a `while` loop, I successfully removed the dependency on the JVM call stack, completely eliminating any risk of `StackOverflowError` on massive trees!
+
+**Link to work:** [Day 216 - Symmetric Tree](./Day216/SymmetricTree.java)
