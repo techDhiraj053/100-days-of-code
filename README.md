@@ -1763,3 +1763,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 216 locked in on a Saturday night from Bokaro Steel City! Today I tackled tree symmetry. My first instinct was the classic recursive `isMirror` helper method, which perfectly checks the outer (`left.left == right.right`) and inner (`left.right == right.left`) children. It was absolutely flawless. However, to crush the LeetCode follow-up challenge and push my skills to the FAANG level, I rewrote the solution completely iteratively. By using a `Queue` to enqueue pairs of nodes sequentially and evaluating them in a `while` loop, I successfully removed the dependency on the JVM call stack, completely eliminating any risk of `StackOverflowError` on massive trees!
 
 **Link to work:** [Day 216 - Symmetric Tree](./Day216/SymmetricTree.java)
+
+### Day 217: November 9, 2026 🧑‍💼 TWO-POINTER MANAGER/EMPLOYEE 🧑‍💼
+
+**Today's Progress:** Mastered in-place array modification using fast/slow pointers. Solved #26: Remove Duplicates from Sorted Array.
+
+**Thoughts:** Day 217 locked in on a Monday afternoon from Jamshedpur! Started the week with a classic array manipulation problem. My initial mental model was spot on: using an "employee" pointer to scan ahead and a "manager" pointer to record valid data in-place. To upgrade this to FAANG enterprise standards, I unified the variables. Instead of tracking the array index and the total unique count separately, I used a single `insertIndex` pointer which mathematically represents both! Combined with a clean `for` loop, the entire deduplication logic collapsed into a beautiful, highly readable 4-line block running in strict `O(N)` time and `O(1)` space.
+
+**Link to work:** [Day 217 - Remove Duplicates](./Day217/RemoveDuplicates.java)
