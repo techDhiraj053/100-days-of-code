@@ -1771,3 +1771,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 217 locked in on a Monday afternoon from Jamshedpur! Started the week with a classic array manipulation problem. My initial mental model was spot on: using an "employee" pointer to scan ahead and a "manager" pointer to record valid data in-place. To upgrade this to FAANG enterprise standards, I unified the variables. Instead of tracking the array index and the total unique count separately, I used a single `insertIndex` pointer which mathematically represents both! Combined with a clean `for` loop, the entire deduplication logic collapsed into a beautiful, highly readable 4-line block running in strict `O(N)` time and `O(1)` space.
 
 **Link to work:** [Day 217 - Remove Duplicates](./Day217/RemoveDuplicates.java)
+
+### Day 218: November 10, 2026 🌊 BFS LEVEL SNAPSHOTS 🌊
+
+**Today's Progress:** Mastered Breadth-First Search level grouping using Queue snapshots. Solved #102: Binary Tree Level Order Traversal.
+
+**Thoughts:** Day 218 locked in from Bokaro Steel City on a Tuesday night! Today I implemented a classic BFS algorithm to traverse a tree level by level. The critical algorithmic trick here is taking a snapshot of the queue's size (`int size = q.size()`) right before starting a `for` loop. This flawlessly isolates the current level's nodes from the new children being pushed to the back of the queue. For my senior-level optimization, I swapped out `LinkedList` for `ArrayDeque`. In modern Java, `ArrayDeque` is the superior choice for a Queue because it avoids the massive Garbage Collection overhead of allocating individual node objects, relying instead on a highly cache-efficient circular array!
+
+**Link to work:** [Day 218 - Binary Tree Level Order Traversal](./Day218/BinaryTreeLevelOrderTraversal.java)
