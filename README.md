@@ -1779,3 +1779,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 218 locked in from Bokaro Steel City on a Tuesday night! Today I implemented a classic BFS algorithm to traverse a tree level by level. The critical algorithmic trick here is taking a snapshot of the queue's size (`int size = q.size()`) right before starting a `for` loop. This flawlessly isolates the current level's nodes from the new children being pushed to the back of the queue. For my senior-level optimization, I swapped out `LinkedList` for `ArrayDeque`. In modern Java, `ArrayDeque` is the superior choice for a Queue because it avoids the massive Garbage Collection overhead of allocating individual node objects, relying instead on a highly cache-efficient circular array!
 
 **Link to work:** [Day 218 - Binary Tree Level Order Traversal](./Day218/BinaryTreeLevelOrderTraversal.java)
+
+### Day 219: November 11, 2026 📏 1-LINER RECURSIVE DEPTH 📏
+
+**Today's Progress:** Mastered tree height calculation using declarative recursion. Solved #104: Maximum Depth of Binary Tree.
+
+**Thoughts:** Day 219 locked in on a Wednesday night from Bokaro Steel City! Today I tackled a fundamental binary tree property: maximum depth. My initial approach was a standard post-order DFS that calculated the left and right depths, then returned `1 + max(left, right)`. To push this to FAANG code-review standards, I refactored the entire logic into a beautiful, single-line declarative statement using a ternary operator. I also reviewed the enterprise trade-offs: while this recursive DFS is elegant, a massive, strictly unbalanced tree could cause a `StackOverflowError` in a Java backend. In such high-risk production environments, my iterative `ArrayDeque` BFS from yesterday would be the safest fallback for calculating depth!
+
+**Link to work:** [Day 219 - Maximum Depth of Binary Tree](./Day219/MaximumDepthOfBinaryTree.java)
