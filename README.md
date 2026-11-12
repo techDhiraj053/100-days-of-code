@@ -1787,3 +1787,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 219 locked in on a Wednesday night from Bokaro Steel City! Today I tackled a fundamental binary tree property: maximum depth. My initial approach was a standard post-order DFS that calculated the left and right depths, then returned `1 + max(left, right)`. To push this to FAANG code-review standards, I refactored the entire logic into a beautiful, single-line declarative statement using a ternary operator. I also reviewed the enterprise trade-offs: while this recursive DFS is elegant, a massive, strictly unbalanced tree could cause a `StackOverflowError` in a Java backend. In such high-risk production environments, my iterative `ArrayDeque` BFS from yesterday would be the safest fallback for calculating depth!
 
 **Link to work:** [Day 219 - Maximum Depth of Binary Tree](./Day219/MaximumDepthOfBinaryTree.java)
+
+### Day 220: November 12, 2026 🌳 O(N) TREE RECONSTRUCTION 🌳
+
+**Today's Progress:** Mastered binary tree reconstruction using Hash Maps and thread-safe recursion. Solved #105: Construct Binary Tree from Preorder and Inorder Traversal.
+
+**Thoughts:** Day 220 locked in on a Thursday night from Bokaro Steel City! Today I tackled a heavy FAANG classic: rebuilding a full binary tree from just its preorder and inorder traversal arrays. The preorder array tells us the root, and the inorder array tells us exactly what belongs in the left and right subtrees. To hit the strict `O(N)` time complexity required by top-tier companies, I mapped the inorder values to their indices using a `HashMap` for `O(1)` instant lookups. For my senior-level optimization, I removed the global class variables and encapsulated my `preIndex` state inside a 1-element array, passing both the index and the map down the recursion stack. This makes the algorithm completely thread-safe for multi-threaded production servers!
+
+**Link to work:** [Day 220 - Construct Binary Tree](./Day220/ConstructBinaryTree.java)
