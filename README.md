@@ -1795,3 +1795,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 220 locked in on a Thursday night from Bokaro Steel City! Today I tackled a heavy FAANG classic: rebuilding a full binary tree from just its preorder and inorder traversal arrays. The preorder array tells us the root, and the inorder array tells us exactly what belongs in the left and right subtrees. To hit the strict `O(N)` time complexity required by top-tier companies, I mapped the inorder values to their indices using a `HashMap` for `O(1)` instant lookups. For my senior-level optimization, I removed the global class variables and encapsulated my `preIndex` state inside a 1-element array, passing both the index and the map down the recursion stack. This makes the algorithm completely thread-safe for multi-threaded production servers!
 
 **Link to work:** [Day 220 - Construct Binary Tree](./Day220/ConstructBinaryTree.java)
+
+### Day 221: November 13, 2026 ⚖️ BINARY SEARCH TREE SYNERGY ⚖️
+
+**Today's Progress:** Mastered building height-balanced BSTs using Binary Search logic. Solved #108: Convert Sorted Array to Binary Search Tree.
+
+**Thoughts:** Day 221 locked in on a Friday night from Bokaro Steel City! Today I tackled converting a sorted array into a height-balanced Binary Search Tree. The mathematical realization here is beautiful: constructing a balanced BST from a sorted array is identical to tracing the paths of a Binary Search algorithm. By repeatedly finding the exact midpoint of the current array segment, setting it as the root, and recursively sending the left and right halves to become the left and right subtrees, the tree naturally balances itself. To make the code FAANG-ready, I implemented my signature unsigned bitwise shift `>>> 1` for the `mid` calculation to guarantee absolute safety against integer overflows!
+
+**Link to work:** [Day 221 - Convert Sorted Array to BST](./Day221/ConvertSortedArrayToBST.java)
