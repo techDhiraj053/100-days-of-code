@@ -1803,3 +1803,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 221 locked in on a Friday night from Bokaro Steel City! Today I tackled converting a sorted array into a height-balanced Binary Search Tree. The mathematical realization here is beautiful: constructing a balanced BST from a sorted array is identical to tracing the paths of a Binary Search algorithm. By repeatedly finding the exact midpoint of the current array segment, setting it as the root, and recursively sending the left and right halves to become the left and right subtrees, the tree naturally balances itself. To make the code FAANG-ready, I implemented my signature unsigned bitwise shift `>>> 1` for the `mid` calculation to guarantee absolute safety against integer overflows!
 
 **Link to work:** [Day 221 - Convert Sorted Array to BST](./Day221/ConvertSortedArrayToBST.java)
+
+### Day 223: November 15, 2026 🧵 O(1) IN-PLACE FLATTENING 🧵
+
+**Today's Progress:** Mastered in-place pointer manipulation to flatten a tree without extra memory. Solved #114: Flatten Binary Tree to Linked List.
+
+**Thoughts:** Day 223 locked in on a Sunday night from Bokaro! Wrapped up the weekend by tackling a classic tree restructuring problem. My initial approach was to use a global `ArrayList` to store the pre-order traversal and then manually rewire the pointers. While it worked, it failed the `O(1)` space follow-up challenge and introduced a nasty multi-threading race condition by using a class-level variable. To upgrade this to a true FAANG-tier solution, I implemented a Morris Traversal style algorithm. For any node with a left child, I deployed a "runner" pointer to find the rightmost node of that left subtree, hooked it up to the original right child, and shifted the whole block to the right. This completely flattened the tree in strict `O(N)` time and `O(1)` space with zero recursion!
+
+**Link to work:** [Day 223 - Flatten Binary Tree](./Day223/FlattenBinaryTree.java)
