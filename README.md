@@ -1811,3 +1811,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 223 locked in on a Sunday night from Bokaro! Wrapped up the weekend by tackling a classic tree restructuring problem. My initial approach was to use a global `ArrayList` to store the pre-order traversal and then manually rewire the pointers. While it worked, it failed the `O(1)` space follow-up challenge and introduced a nasty multi-threading race condition by using a class-level variable. To upgrade this to a true FAANG-tier solution, I implemented a Morris Traversal style algorithm. For any node with a left child, I deployed a "runner" pointer to find the rightmost node of that left subtree, hooked it up to the original right child, and shifted the whole block to the right. This completely flattened the tree in strict `O(N)` time and `O(1)` space with zero recursion!
 
 **Link to work:** [Day 223 - Flatten Binary Tree](./Day223/FlattenBinaryTree.java)
+
+### Day 223: November 16, 2026 👀 BFS RIGHT SIDE VIEW 👀
+
+**Today's Progress:** Mastered extracting the rightmost nodes of a tree using level-order snapshots. Solved #199: Binary Tree Right Side View.
+
+**Thoughts:** Day 223 locked in on a Monday night from Bokaro! Started the week by figuring out how to view a binary tree purely from the right side. I instantly recognized that this is a perfect use case for Breadth-First Search (BFS). By reusing my Queue size snapshot technique from Day 218, I isolated each level of the tree. Inside the processing loop, tracking `i == size - 1` effortlessly grabbed the last node visible on that level before moving on. To keep the code up to enterprise standards, I implemented `ArrayDeque` for maximum cache efficiency and avoided the garbage collection overhead of a standard `LinkedList`.
+
+**Link to work:** [Day 223 - Binary Tree Right Side View](./Day223/BinaryTreeRightSideView.java)
