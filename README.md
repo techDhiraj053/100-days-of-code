@@ -1819,3 +1819,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 223 locked in on a Monday night from Bokaro! Started the week by figuring out how to view a binary tree purely from the right side. I instantly recognized that this is a perfect use case for Breadth-First Search (BFS). By reusing my Queue size snapshot technique from Day 218, I isolated each level of the tree. Inside the processing loop, tracking `i == size - 1` effortlessly grabbed the last node visible on that level before moving on. To keep the code up to enterprise standards, I implemented `ArrayDeque` for maximum cache efficiency and avoided the garbage collection overhead of a standard `LinkedList`.
 
 **Link to work:** [Day 223 - Binary Tree Right Side View](./Day223/BinaryTreeRightSideView.java)
+
+### Day 224: November 17, 2026 🪟 PRIMITIVE ARRAY SLIDING WINDOW 🪟
+
+**Today's Progress:** Mastered string manipulation using a highly optimized sliding window. Solved Longest Substring with K Uniques (GeeksforGeeks).
+
+**Thoughts:** Day 224 locked in on a Tuesday night from Bokaro! Today I revisited my favorite algorithmic pattern: the Variable Sliding Window (Acquire and Release). The problem asks for the longest substring with exactly `K` unique characters. My core logic correctly expanded the `high` pointer to add characters and shrank the `low` pointer whenever the unique count exceeded `K`. To elevate the code to FAANG standards, I ripped out the `HashMap` and replaced it with a fixed `int[26]` frequency array. Since the problem guarantees lowercase English letters, mapping characters to indices (`ch - 'a'`) eliminates all Object autoboxing and hash hashing overhead, yielding a blisteringly fast `O(N)` time and strict `O(1)` space execution!
+
+**Link to work:** [Day 224 - Longest Substring with K Uniques](./Day224/LongestKUniqueSubstr.java)
