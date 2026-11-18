@@ -1827,3 +1827,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 224 locked in on a Tuesday night from Bokaro! Today I revisited my favorite algorithmic pattern: the Variable Sliding Window (Acquire and Release). The problem asks for the longest substring with exactly `K` unique characters. My core logic correctly expanded the `high` pointer to add characters and shrank the `low` pointer whenever the unique count exceeded `K`. To elevate the code to FAANG standards, I ripped out the `HashMap` and replaced it with a fixed `int[26]` frequency array. Since the problem guarantees lowercase English letters, mapping characters to indices (`ch - 'a'`) eliminates all Object autoboxing and hash hashing overhead, yielding a blisteringly fast `O(N)` time and strict `O(1)` space execution!
 
 **Link to work:** [Day 224 - Longest Substring with K Uniques](./Day224/LongestKUniqueSubstr.java)
+
+### Day 225: November 18, 2026 🧺 CONSTRAINT-DRIVEN HASHING 🧺
+
+**Today's Progress:** Recognized pattern similarities and leveraged constraints for primitive hashing. Solved #904: Fruit Into Baskets.
+
+**Thoughts:** Day 225 locked in on a Wednesday afternoon from Bokaro! Today's problem was a brilliant disguise. Reading the description about collecting fruits in two baskets, I immediately recognized it was just a clone of yesterday's "Longest Substring with K Uniques" problem, but specifically with `K = 2`. My initial sliding window using a `HashMap` worked perfectly. However, I noticed a massive hint in the constraints: `0 <= fruits[i] < fruits.length`. This guarantee meant I could entirely replace the `HashMap` with a primitive `int[]` frequency array. By eliminating Java's Object autoboxing and hash overhead, the exact same "Hire and Fire" pointer logic ran phenomenally faster while remaining perfectly optimal at `O(N)` time!
+
+**Link to work:** [Day 225 - Fruit Into Baskets](./Day225/FruitIntoBaskets.java)
