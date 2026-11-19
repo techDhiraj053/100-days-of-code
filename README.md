@@ -1835,3 +1835,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 225 locked in on a Wednesday afternoon from Bokaro! Today's problem was a brilliant disguise. Reading the description about collecting fruits in two baskets, I immediately recognized it was just a clone of yesterday's "Longest Substring with K Uniques" problem, but specifically with `K = 2`. My initial sliding window using a `HashMap` worked perfectly. However, I noticed a massive hint in the constraints: `0 <= fruits[i] < fruits.length`. This guarantee meant I could entirely replace the `HashMap` with a primitive `int[]` frequency array. By eliminating Java's Object autoboxing and hash overhead, the exact same "Hire and Fire" pointer logic ran phenomenally faster while remaining perfectly optimal at `O(N)` time!
 
 **Link to work:** [Day 225 - Fruit Into Baskets](./Day225/FruitIntoBaskets.java)
+
+### Day 226: November 19, 2026 🔄 #226 ON DAY 226 🔄
+
+**Today's Progress:** Switched gears to JavaScript and mastered in-place binary tree inversion. Solved #226: Invert Binary Tree.
+
+**Thoughts:** Day 226 locked in with Problem #226! My initial recursive DFS in JavaScript worked cleanly in `O(N)` time by swapping the left and right pointers at each node. To level it up for production JS environments, I refactored it into an iterative DFS using an explicit stack array to prevent V8 call stack overflow errors on deeply skewed trees, and replaced the temporary variable swap with clean ES6 array destructuring.
+
+**Link to work:** [Day 226 - Invert Binary Tree](./Day226/InvertBinaryTree.js)
