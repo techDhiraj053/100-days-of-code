@@ -1843,3 +1843,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 226 locked in with Problem #226! My initial recursive DFS in JavaScript worked cleanly in `O(N)` time by swapping the left and right pointers at each node. To level it up for production JS environments, I refactored it into an iterative DFS using an explicit stack array to prevent V8 call stack overflow errors on deeply skewed trees, and replaced the temporary variable swap with clean ES6 array destructuring.
 
 **Link to work:** [Day 226 - Invert Binary Tree](./Day226/InvertBinaryTree.js)
+
+### Day 227: November 20, 2026 🪟 SELF-BUILT SLIDING WINDOW 🪟
+
+**Today's Progress:** Built an optimal variable sliding window solution from scratch. Solved #3: Longest Substring Without Repeating Characters.
+
+**Thoughts:** Day 227 locked in on a Friday afternoon from Ranchi! Solved one of LeetCode's most iconic medium problems completely on my own logic. By tracking the dynamic window length `k = high - low + 1` and comparing it against `map.size()`, I could instantly detect duplicates whenever `map.size() < k` and shrink the window from `low` until all characters were unique again. Runs cleanly in `O(N)` time!
+
+**Link to work:** [Day 227 - Longest Substring Without Repeating Characters](./Day227/LongestSubstringWithoutRepeatingCharacters.java)
