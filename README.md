@@ -1851,3 +1851,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 227 locked in on a Friday afternoon from Ranchi! Solved one of LeetCode's most iconic medium problems completely on my own logic. By tracking the dynamic window length `k = high - low + 1` and comparing it against `map.size()`, I could instantly detect duplicates whenever `map.size() < k` and shrink the window from `low` until all characters were unique again. Runs cleanly in `O(N)` time!
 
 **Link to work:** [Day 227 - Longest Substring Without Repeating Characters](./Day227/LongestSubstringWithoutRepeatingCharacters.java)
+
+### Day 228: November 23, 2026 🔍 EARLY-EXIT BST INORDER 🔍
+
+**Today's Progress:** Mastered finding the k-th smallest element in a BST using pruned inorder traversal in JavaScript. Solved #230: Kth Smallest Element in a BST.
+
+**Thoughts:** Day 228 locked in on a Monday night from Bokaro Steel City! Leveraged the fundamental BST property that an inorder traversal visits nodes in strictly ascending order. By tracking a local counter and adding an early-exit condition (`answer !== null`), the traversal immediately halts once the `k`-th node is found—achieving an optimal `O(H + k)` runtime without scanning unnecessary branches. Also reviewed the Augmented BST approach for handling frequent insertions and deletions in `O(H)` query time.
+
+**Link to work:** [Day 228 - Kth Smallest Element in a BST](./Day228/KthSmallestElementInBST.js)
