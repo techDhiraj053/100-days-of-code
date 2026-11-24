@@ -1859,3 +1859,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 228 locked in on a Monday night from Bokaro Steel City! Leveraged the fundamental BST property that an inorder traversal visits nodes in strictly ascending order. By tracking a local counter and adding an early-exit condition (`answer !== null`), the traversal immediately halts once the `k`-th node is found—achieving an optimal `O(H + k)` runtime without scanning unnecessary branches. Also reviewed the Augmented BST approach for handling frequent insertions and deletions in `O(H)` query time.
 
 **Link to work:** [Day 228 - Kth Smallest Element in a BST](./Day228/KthSmallestElementInBST.js)
+
+### Day 229: November 24, 2026 🌲 BOTTOM-UP LCA SEARCH 🌲
+
+**Today's Progress:** Mastered finding the Lowest Common Ancestor in a general binary tree using bottom-up DFS in JavaScript. Solved #236: Lowest Common Ancestor of a Binary Tree.
+
+**Thoughts:** Day 229 locked in on a Tuesday night from Bokaro Steel City! Tackled one of the most classic binary tree interview problems today. Using a clean post-order DFS, each subtree bubbles up either the found target node (`p` or `q`) or `null`. The first ancestor where both left and right recursive calls return non-null values is guaranteed to be the Lowest Common Ancestor—while early matching cleanly handles the case where a node is an ancestor of the other. Runs in optimal `O(N)` time and `O(H)` stack space!
+
+**Link to work:** [Day 229 - Lowest Common Ancestor of a Binary Tree](./Day229/LowestCommonAncestorOfBinaryTree.js)
