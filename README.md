@@ -1875,3 +1875,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 230 locked in on a Wednesday night from Bokaro Steel City! Celebrated the 230-day milestone by solving Path Sum III. Since valid paths can start and end at any downward node—and nodes can hold negative values—I used an outer recursion to treat every node as a potential starting point and an inner DFS to track the remaining target sum without stopping early on a match. Also reviewed the `O(N)` Prefix Sum + HashMap backtracking optimization for single-pass linear runtime in FAANG interviews.
 
 **Link to work:** [Day 230 - Path Sum III](./Day230/PathSumIII.js)
+
+### Day 231: November 26, 2026 🔤 DOMINANT-CHAR SLIDING WINDOW 🔤
+
+**Today's Progress:** Mastered frequency-based window validity checks using primitive character arrays in Java. Solved #424: Longest Repeating Character Replacement.
+
+**Thoughts:** Day 231 locked in on a Thursday morning from Bokaro Steel City! Built a variable sliding window solution using a primitive `int[256]` frequency table to avoid HashMap overhead. The key invariant is tracking `length - maxCount`: as long as the non-dominant characters inside the current window stay within `k`, the window remains valid and can expand. Runs in `O(N)` time and `O(1)` auxiliary space!
+
+**Link to work:** [Day 231 - Longest Repeating Character Replacement](./Day231/LongestRepeatingCharacterReplacement.java)
