@@ -1883,3 +1883,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 231 locked in on a Thursday morning from Bokaro Steel City! Built a variable sliding window solution using a primitive `int[256]` frequency table to avoid HashMap overhead. The key invariant is tracking `length - maxCount`: as long as the non-dominant characters inside the current window stay within `k`, the window remains valid and can expand. Runs in `O(N)` time and `O(1)` auxiliary space!
 
 **Link to work:** [Day 231 - Longest Repeating Character Replacement](./Day231/LongestRepeatingCharacterReplacement.java)
+
+### Day 232: November 27, 2026 📏 SINGLE-PASS TREE DIAMETER 📏
+
+**Today's Progress:** Mastered finding the longest path between any two nodes in a binary tree using bottom-up DFS in JavaScript. Solved #543: Diameter of Binary Tree.
+
+**Thoughts:** Day 232 locked in on a Friday afternoon from Patna! Avoided the naive `O(N^2)` repeated height-calculation trap by tracking the maximum `leftHeight + rightHeight` sum directly inside a single post-order height DFS. Returning `0` for null nodes cleanly aligns the sum with edge counts while updating the global maximum across every potential turning point in `O(N)` time and `O(H)` stack space.
+
+**Link to work:** [Day 232 - Diameter of Binary Tree](./Day232/DiameterOfBinaryTree.js)
