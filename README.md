@@ -1891,3 +1891,11 @@ This journey has fundamentally changed how I approach problem-solving, data stru
 **Thoughts:** Day 232 locked in on a Friday afternoon from Patna! Avoided the naive `O(N^2)` repeated height-calculation trap by tracking the maximum `leftHeight + rightHeight` sum directly inside a single post-order height DFS. Returning `0` for null nodes cleanly aligns the sum with edge counts while updating the global maximum across every potential turning point in `O(N)` time and `O(H)` stack space.
 
 **Link to work:** [Day 232 - Diameter of Binary Tree](./Day232/DiameterOfBinaryTree.js)
+
+### Day 233: November 28, 2026 🔗 IN-PLACE LINKED LIST DEDUPLICATION 🔗
+
+**Today's Progress:** Mastered single-pass in-place pointer rewiring on sorted singly linked lists in Java. Solved #83: Remove Duplicates from Sorted List.
+
+**Thoughts:** Day 233 locked in on a Saturday morning from Bokaro Steel City! Leveraged the sorted property of the linked list so all duplicate values sit adjacent to one another. By holding the `current` pointer steady whenever `current.val == current.next.val` and bypassing `current.next`, consecutive runs of duplicates are cleanly unlinked in a single pass with `O(N)` time and `O(1)` auxiliary space.
+
+**Link to work:** [Day 233 - Remove Duplicates from Sorted List](./Day233/RemoveDuplicatesFromSortedList.java)
